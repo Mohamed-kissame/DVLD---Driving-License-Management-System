@@ -1,0 +1,179 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\pepole\\addeditpepole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:pepole\\addeditpepole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\pepole\\addeditpepole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:pepole\\addeditpepole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\pepole\\pepole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:pepole\\pepole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\pepole\\pepole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:pepole\\pepole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\pepole\\showdetailperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:pepole\\showdetailperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{886827C1-3FD0-439E-86EF-AA8C720EAE84}|..\\BussniesDVLDLayer\\BussniesDVLDLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\dvld\\bussniesdvldlayer\\clspepole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D785F7B6-9810-43DB-8DBB-CB736624BF28}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\dvld\\dataaccesslayer\\clspepoledata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{886827C1-3FD0-439E-86EF-AA8C720EAE84}|..\\BussniesDVLDLayer\\BussniesDVLDLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\dvld\\bussniesdvldlayer\\clscountry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D785F7B6-9810-43DB-8DBB-CB736624BF28}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\dvld\\dataaccesslayer\\clscountrydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pepole.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\Pepole\\Pepole.cs",
+              "RelativeDocumentMoniker": "Pepole\\Pepole.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\Pepole\\Pepole.cs [Design]",
+              "RelativeToolTip": "Pepole\\Pepole.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T21:55:10.413Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Pepole.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\Pepole\\Pepole.cs",
+              "RelativeDocumentMoniker": "Pepole\\Pepole.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\Pepole\\Pepole.cs",
+              "RelativeToolTip": "Pepole\\Pepole.cs",
+              "ViewState": "AgIAAHABAAAAAAAAAAAhwJ4BAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T21:55:12.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddEditPepole.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\Pepole\\AddEditPepole.cs",
+              "RelativeDocumentMoniker": "Pepole\\AddEditPepole.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\Pepole\\AddEditPepole.cs*",
+              "RelativeToolTip": "Pepole\\AddEditPepole.cs*",
+              "ViewState": "AgIAADcBAAAAAAAAAAAhwEgBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T09:09:31.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddEditPepole.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\Pepole\\AddEditPepole.cs",
+              "RelativeDocumentMoniker": "Pepole\\AddEditPepole.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\Pepole\\AddEditPepole.cs [Design]*",
+              "RelativeToolTip": "Pepole\\AddEditPepole.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-19T08:52:01.868Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShowDetailPerson.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\Pepole\\ShowDetailPerson.cs",
+              "RelativeDocumentMoniker": "Pepole\\ShowDetailPerson.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\Pepole\\ShowDetailPerson.cs [Design]",
+              "RelativeToolTip": "Pepole\\ShowDetailPerson.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T10:42:17.489Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "clsPepole.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\BussniesDVLDLayer\\clsPepole.cs",
+              "RelativeDocumentMoniker": "..\\BussniesDVLDLayer\\clsPepole.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\BussniesDVLDLayer\\clsPepole.cs",
+              "RelativeToolTip": "..\\BussniesDVLDLayer\\clsPepole.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAQwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T07:52:39.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "clsPepoleData.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DataAccessLayer\\clsPepoleData.cs",
+              "RelativeDocumentMoniker": "..\\DataAccessLayer\\clsPepoleData.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DataAccessLayer\\clsPepoleData.cs",
+              "RelativeToolTip": "..\\DataAccessLayer\\clsPepoleData.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAswDUAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T07:41:42.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "clsCountryData.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DataAccessLayer\\clsCountryData.cs",
+              "RelativeDocumentMoniker": "..\\DataAccessLayer\\clsCountryData.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DataAccessLayer\\clsCountryData.cs",
+              "RelativeToolTip": "..\\DataAccessLayer\\clsCountryData.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwCUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T09:10:12.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "clsCountry.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\BussniesDVLDLayer\\clsCountry.cs",
+              "RelativeDocumentMoniker": "..\\BussniesDVLDLayer\\clsCountry.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\BussniesDVLDLayer\\clsCountry.cs",
+              "RelativeToolTip": "..\\BussniesDVLDLayer\\clsCountry.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-20T09:15:38.086Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

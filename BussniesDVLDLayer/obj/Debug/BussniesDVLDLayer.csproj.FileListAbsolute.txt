@@ -1,0 +1,9 @@
+C:\Users\mkiss\OneDrive\Bureau\DVLD\BussniesDVLDLayer\bin\Debug\BussniesDVLDLayer.dll
+C:\Users\mkiss\OneDrive\Bureau\DVLD\BussniesDVLDLayer\bin\Debug\BussniesDVLDLayer.pdb
+C:\Users\mkiss\OneDrive\Bureau\DVLD\BussniesDVLDLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\mkiss\OneDrive\Bureau\DVLD\BussniesDVLDLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\mkiss\OneDrive\Bureau\DVLD\BussniesDVLDLayer\obj\Debug\BussniesDVLDLayer.csproj.AssemblyReference.cache
+C:\Users\mkiss\OneDrive\Bureau\DVLD\BussniesDVLDLayer\obj\Debug\BussniesDVLDLayer.csproj.CoreCompileInputs.cache
+C:\Users\mkiss\OneDrive\Bureau\DVLD\BussniesDVLDLayer\obj\Debug\Bussnies.31C39C61.Up2Date
+C:\Users\mkiss\OneDrive\Bureau\DVLD\BussniesDVLDLayer\obj\Debug\BussniesDVLDLayer.dll
+C:\Users\mkiss\OneDrive\Bureau\DVLD\BussniesDVLDLayer\obj\Debug\BussniesDVLDLayer.pdb
