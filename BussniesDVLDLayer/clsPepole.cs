@@ -28,8 +28,6 @@ namespace BussniesDVLDLayer
 
         public string _LastName { get; set; }
 
-        public bool _Gender { get; set; }
-
         public DateTime _BirthOfDate { get; set; }
 
         public string _Addrress { get; set; }
