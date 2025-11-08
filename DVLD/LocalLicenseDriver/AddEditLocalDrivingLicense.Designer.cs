@@ -343,6 +343,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddEditLocalDrivingLicense";
             this.Text = "AddEditLocalDrivingLicense";
+            this.Activated += new System.EventHandler(this.AddEditLocalDrivingLicense_Activated);
             this.Load += new System.EventHandler(this.AddEditLocalDrivingLicense_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

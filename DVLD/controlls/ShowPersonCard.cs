@@ -67,7 +67,7 @@ namespace DVLD.controlls
         {
             _PersonID = _Pepole._PersonID;
             lblID.Text = _PersonID.ToString();
-            lblName.Text = _Pepole.FullName();
+            lblName.Text = _Pepole.FullName;
             lblNationalNo.Text = _Pepole._NationaleNumber;
             lblGendor.Text = _Pepole._Gender;
             lblEmail.Text = _Pepole._Email;

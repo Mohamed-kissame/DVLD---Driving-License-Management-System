@@ -36,6 +36,13 @@ namespace DVLD.controlls
            
         }
 
+        public void FilterFocus() { 
+        
+           
+            txtSearch.Focus();
+
+        }
+
 
         private void FindBy()
         {

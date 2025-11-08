@@ -167,9 +167,19 @@ namespace DVLD
         private void manageApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+         
+
+        }
+
+        private void replaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void localDriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             LocalLicenseDriver.LocalDrivingLicenseApp Local = new LocalLicenseDriver.LocalDrivingLicenseApp();
             Local.Show();
-
         }
     }
 }
