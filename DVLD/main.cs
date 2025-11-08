@@ -7,7 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD.ApplicationTypes;
+using DVLD.Classes;
+using DVLD.controlls;
 using DVLD.Pepole;
+using DVLD.TestTypes;
+using DVLD.Users;
 
 namespace DVLD
 {
@@ -21,6 +26,12 @@ namespace DVLD
         public main(Login LoginForm ,string UserName)
         {
             InitializeComponent();
+
+            _username = UserName;
+            _loginTime = DateTime.Now;
+            _LoginForm = LoginForm;
+
+            SetupModernUI();
         }
 
         private void SetupModernUI()
@@ -82,6 +93,8 @@ namespace DVLD
             public override Color ImageMarginGradientMiddle => Color.White;
             public override Color ImageMarginGradientEnd => Color.White;
         }
+    
+
 
         private void accountSeToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -90,7 +103,7 @@ namespace DVLD
 
         private void pepoleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             Pepole.Pepole pepole = new DVLD.Pepole.Pepole();
             
             pepole.ShowDialog();
@@ -98,6 +111,64 @@ namespace DVLD
 
         private void main_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void signToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+            _LoginForm.Show();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Users.Users user = new Users.Users();
+           
+            user.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+      
+
+        private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowUserInfo show = new ShowUserInfo(LoginInfo.SelectUserInfo._UserID);
+            show.Show();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePassword change = new ChangePassword(LoginInfo.SelectUserInfo._UserID);
+            change.Show();
+        }
+
+        private void drivingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageApplicationToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Manage_Application_Types Application = new Manage_Application_Types();
+            Application.Show();
+        }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TestTypes.TestTypes Test = new TestTypes.TestTypes();
+            Test.Show();
+        }
+
+        private void manageApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            LocalLicenseDriver.LocalDrivingLicenseApp Local = new LocalLicenseDriver.LocalDrivingLicenseApp();
+            Local.Show();
 
         }
     }

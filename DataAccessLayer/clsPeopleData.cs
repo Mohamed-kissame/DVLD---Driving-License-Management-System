@@ -6,23 +6,25 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.SqlServer.Server;
 
 namespace DataAccessLayer
 {
-    public class clsPepoleData
+    public class clsPeopleData
     {
 
 
         static public bool GetAllPepolesByID(int ID, ref string NumberNationale, ref string FirstName, ref string SecondName, ref string ThiredName, ref string LastName
-            , ref DateTime DateOfBirth, ref bool Gender, ref string Address , ref string Phone , ref string Email, ref int Nationality, ref string ImagePath)
+            , ref DateTime DateOfBirth, ref string Gender, ref string Address , ref string Phone , ref string Email, ref int Nationality, ref string ImagePath)
         {
 
             bool isFound = false;
+           
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = "Select * From Pepole Where PersonID = @PersonID";
+                string Query = "Select * From People Where PersonID = @PersonID";
 
                 using (SqlCommand command = new SqlCommand(Query, connection))
                 {
@@ -47,20 +49,33 @@ namespace DataAccessLayer
                                 ThiredName = (string)reader["ThirdName"];
                                 LastName = (string)reader["LastName"];
                                 DateOfBirth = (DateTime)reader["DateOfBirth"];
-                                Gender = (bool)reader["Gendor"];
+                                bool genderBit = Convert.ToBoolean(reader["Gendor"]);  
+                                Gender = Convert.ToString(genderBit ? "Female" : "Man");
                                 Address = (string)reader["Address"];
                                 Phone = (string)reader["Phone"];
                                 Email = (string)reader["Email"];
                                 Nationality = Convert.ToInt32(reader["NationalityCountryID"]);
-                                ImagePath = (string)reader["IamgePath"];
+                                if (reader["ImagePath"] != DBNull.Value)
+                                {
+
+                                    ImagePath = (string)reader["ImagePath"];
+                                }
+                                else
+                                {
+                                    ImagePath = "";
+                                }
+
 
                             }
                         }
 
 
                     }
-                    catch (Exception ex)
+                    catch (DataException ex)
                     {
+
+                        Console.WriteLine(ex.Message);
+                        
                        
                     }
                 }
@@ -74,7 +89,7 @@ namespace DataAccessLayer
 
 
         static public bool GetAllPepolesByNational(string NumberNationale , ref int ID, ref string FirstName, ref string SecondName, ref string ThiredName, ref string LastName
-            , ref DateTime DateOfBirth, ref bool Gender, ref string Address, ref string Phone, ref string Email, ref int Nationality, ref string ImagePath)
+            , ref DateTime DateOfBirth, ref string Gender, ref string Address, ref string Phone, ref string Email, ref int Nationality, ref string ImagePath)
         {
 
             bool isFound = false;
@@ -82,12 +97,12 @@ namespace DataAccessLayer
             using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = "Select  PersonID , NationalNo , FirstName , SecondName , ThirdName , LastName , CASE WHEN Gendor = 0 THEN 'Male' ELSE 'Female' END AS Gender, Countries.CountryName as Nationality, Email , Phone , Address , ImagePath From Pepole join Countries on Pepole.NationalityCountryID = Countries.CountryID Where NationalNo = @NumberNationale";
+                string Query = "Select * From People Where NationalNo = @NationalNo";
 
                 using (SqlCommand command = new SqlCommand(Query, connection))
                 {
 
-                    command.Parameters.AddWithValue("@NumberNationale", NumberNationale);
+                    command.Parameters.AddWithValue("@NationalNo", NumberNationale);
 
                     try
                     {
@@ -106,13 +121,22 @@ namespace DataAccessLayer
                                 SecondName = (string)reader["SecondName"];
                                 ThiredName = (string)reader["ThirdName"];
                                 LastName = (string)reader["LastName"];
-                                DateOfBirth = (DateTime)reader["BirthOfDate"];
-                                Gender = (bool)reader["Gendor"];
+                                DateOfBirth = (DateTime)reader["DateOfBirth"];
+                                bool genderBit = Convert.ToBoolean(reader["Gendor"]);
+                                Gender = Convert.ToString(genderBit ? "Female" : "Male");
                                 Address = (string)reader["Address"];
                                 Phone = (string)reader["Phone"];
                                 Email = (string)reader["Email"];
                                 Nationality = (int)reader["NationalityCountryID"];
-                                ImagePath = (string)reader["IamgePath"];
+                                if (reader["ImagePath"] != DBNull.Value)
+                                {
+
+                                    ImagePath = (string)reader["ImagePath"];
+                                }
+                                else
+                                {
+                                    ImagePath = "";
+                                }
                             }
                         }
 
@@ -132,7 +156,7 @@ namespace DataAccessLayer
         }
 
 
-        static public int AddNewPerson(string NationalNo, string FirstName , string SecondName , string ThirdName , string LastName , DateTime DateOfBirth , bool Gendor , string Address , string Phone 
+        static public int AddNewPerson(string NationalNo, string FirstName , string SecondName , string ThirdName , string LastName , DateTime DateOfBirth , string Gendor , string Address , string Phone 
             , string Email , int Nationality , string ImagePath)
         {
 
@@ -140,7 +164,7 @@ namespace DataAccessLayer
             using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = @"Insert Into Pepole (NationalNo , FirstName , SecondName , ThirdName , LastName , DateOfBirth , Gendor , Address 
+                string Query = @"Insert Into People (NationalNo , FirstName , SecondName , ThirdName , LastName , DateOfBirth , Gendor , Address 
                                , Phone , Email , NationalityCountryID , ImagePath) 
                                 Values(@NationalNo , @FirstName , @SecondName , @ThirdName , @LastName , @DateOfBirth , @Gendor , @Address , @Phone , @Email , @NationalityCountryID , @ImagePath);
                                 Select SCOPE_IDENTITY();";
@@ -158,7 +182,7 @@ namespace DataAccessLayer
                     command.Parameters.AddWithValue("@ThirdName", ThirdName);
                     command.Parameters.AddWithValue("@LastName", LastName);
                     command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
-                    command.Parameters.AddWithValue("@Gendor", Gendor);
+                    command.Parameters.AddWithValue("@Gendor", Convert.ToBoolean(Gendor));
                     command.Parameters.AddWithValue("@Address", Address);
                     command.Parameters.AddWithValue("@Phone", Phone);
                     command.Parameters.AddWithValue("@Email", Email);
@@ -170,7 +194,7 @@ namespace DataAccessLayer
                         connection.Open();
                         object result = command.ExecuteScalar();
 
-                        connection.Close();
+                        
 
                         if (result != null && int.TryParse(result.ToString(), out int insertedId))
                         {
@@ -206,7 +230,7 @@ namespace DataAccessLayer
             using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = "DELETE FROM Pepole Where PersonID = @PersonID";
+                string Query = "DELETE FROM People Where PersonID = @PersonID";
 
                 using(SqlCommand command = new SqlCommand(Query, connection))
                 {
@@ -222,7 +246,7 @@ namespace DataAccessLayer
                     }catch(Exception ex)
                     {
 
-                        return false;
+                       
 
                     }
 
@@ -236,7 +260,7 @@ namespace DataAccessLayer
         }
 
         static public bool UpdatePerson(int Id, string NationalNo, string FirstName, string SecondName, string ThirdName, string LastName
-            , DateTime DateOfBirth, bool Gender, string Address, string Phone, string Email , int Nationality, string ImagePath)
+            , DateTime DateOfBirth, string Gender, string Address, string Phone, string Email , int Nationality, string ImagePath)
         {
 
             int RowsAffected = 0;
@@ -245,7 +269,7 @@ namespace DataAccessLayer
             using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = @"UPDATE Pepole 
+                string Query = @"UPDATE People 
                                   Set 
                                       NationalNo = @NationalNo,
                                       FirstName = @FirstName,
@@ -272,7 +296,7 @@ namespace DataAccessLayer
                     command.Parameters.AddWithValue("@ThirdName", ThirdName);
                     command.Parameters.AddWithValue("@LastName", LastName);
                     command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
-                    command.Parameters.AddWithValue("@Gendor", Gender);
+                    command.Parameters.AddWithValue("@Gendor", Convert.ToBoolean(Gender));
                     command.Parameters.AddWithValue("@Address", Address);
                     command.Parameters.AddWithValue("@Phone", Phone);
                     command.Parameters.AddWithValue("@Email", Email);
@@ -310,7 +334,7 @@ namespace DataAccessLayer
             using(SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = "SELECT PersonID , NationalNo , FirstName , SecondName , ThirdName, LastName , CASE WHEN Gendor = 0 THEN 'Male' ELSE 'Female' END AS Gender , DateOfBirth , Countries.CountryName as Nationality , Phone , Email From Pepole join Countries on Pepole.NationalityCountryID = Countries.CountryID ";
+                string Query = "SELECT PersonID , NationalNo , FirstName , LastName , CASE WHEN Gendor = 0 THEN 'Male' ELSE 'Female' END AS Gender , DateOfBirth , Countries.CountryName as Nationality , Phone , Email From People join Countries on People.NationalityCountryID = Countries.CountryID ";
 
                 using(SqlCommand command = new SqlCommand(Query, connection))
                 {
@@ -387,7 +411,7 @@ namespace DataAccessLayer
             using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = "Select Found = Case When Exists(Select 1 From Users Where PersonID = 1025) THEN 1 Else 0 END";
+                string Query = "Select Found = 1 From Users Where PersonID = @PersonID";
 
                 using (SqlCommand command = new SqlCommand(Query, connection))
                 {
@@ -425,7 +449,7 @@ namespace DataAccessLayer
             using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = "Select Found = Case When Exists(Select 1 From Pepole Where NationalNo = @NationalNo) Then 1 Else 0 END";
+                string Query = "Select Found = 1 From People Where NationalNo = @NationalNo";
 
                 using (SqlCommand command = new SqlCommand(Query, connection))
                 {

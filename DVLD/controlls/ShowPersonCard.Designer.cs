@@ -100,11 +100,12 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lblID);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 23);
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(928, 364);
+            this.groupBox1.Size = new System.Drawing.Size(934, 371);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Person Information";
@@ -207,6 +208,7 @@
             this.pBPicture.Location = new System.Drawing.Point(714, 98);
             this.pBPicture.Name = "pBPicture";
             this.pBPicture.Size = new System.Drawing.Size(191, 181);
+            this.pBPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBPicture.TabIndex = 18;
             this.pBPicture.TabStop = false;
             // 
@@ -391,7 +393,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "ShowPersonCard";
-            this.Size = new System.Drawing.Size(934, 392);
+            this.Size = new System.Drawing.Size(934, 371);
             this.Load += new System.EventHandler(this.ShowPersonCard_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

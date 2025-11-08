@@ -18,7 +18,8 @@ namespace DVLD.Pepole
         {
             InitializeComponent();
 
-            showPersonCard1._PersonID = Person;
+            showPersonCard1.LoadPersonData(Person);
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -26,11 +27,8 @@ namespace DVLD.Pepole
             Close();
         }
 
-        private void ShowDetailPerson_Load(object sender, EventArgs e)
-        {
+        private void ShowDetailPerson_Load(object sender, EventArgs e) { }
 
-
-
-        }
+        
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.showPersonCard1 = new DVLD.controlls.ShowPersonCard();
             this.btnClose = new System.Windows.Forms.Button();
+            this.showPersonCard1 = new DVLD.controlls.ShowPersonCard();
             this.SuspendLayout();
             // 
             // label1
@@ -44,13 +44,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Person Information";
             // 
-            // showPersonCard1
-            // 
-            this.showPersonCard1.Location = new System.Drawing.Point(12, 50);
-            this.showPersonCard1.Name = "showPersonCard1";
-            this.showPersonCard1.Size = new System.Drawing.Size(945, 378);
-            this.showPersonCard1.TabIndex = 1;
-            // 
             // btnClose
             // 
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -61,6 +54,13 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // showPersonCard1
+            // 
+            this.showPersonCard1.Location = new System.Drawing.Point(12, 50);
+            this.showPersonCard1.Name = "showPersonCard1";
+            this.showPersonCard1.Size = new System.Drawing.Size(945, 378);
+            this.showPersonCard1.TabIndex = 1;
             // 
             // ShowDetailPerson
             // 

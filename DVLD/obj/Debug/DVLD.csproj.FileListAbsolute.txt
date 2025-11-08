@@ -37,3 +37,17 @@ C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\bin\Debug\DataAccessLayer.pdb
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Pepole.AddEditPepole.resources
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.controlls.ShowPersonCard.resources
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Pepole.ShowDetailPerson.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Login.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Users.Users.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.controlls.showPersonCardByFilter.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Users.AddEditUser.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.controlls.ShowUserInfo.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.controlls.ShowUserCard.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Users.ChangePassword.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.ApplicationTypes.Manage_Application_Types.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.ApplicationTypes.EditApplication.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.TestTypes.EditTestTypes.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.TestTypes.TestTypes.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.LocalLicenseDriver.AddEditLocalDrivingLicense.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.LocalLicenseDriver.LocalDrivingLicenseApp.resources

@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditPepole));
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNationalNo = new System.Windows.Forms.TextBox();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.mtbNationlaNNo = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -55,7 +55,7 @@
             this.rBFemale = new System.Windows.Forms.RadioButton();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.rdMale = new System.Windows.Forms.RadioButton();
-            this.pbGender = new System.Windows.Forms.PictureBox();
+            this.pbPicture = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtLastNAme = new System.Windows.Forms.TextBox();
             this.txtThirdName = new System.Windows.Forms.TextBox();
@@ -75,12 +75,13 @@
             this.lblID = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGender)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -90,23 +91,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(445, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Add New Person";
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblTitle.Location = new System.Drawing.Point(445, 19);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(152, 25);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Add New Person";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtNationalNo);
             this.groupBox1.Controls.Add(this.txtPhone);
             this.groupBox1.Controls.Add(this.txtEmail);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.mtbNationlaNNo);
             this.groupBox1.Controls.Add(this.pictureBox11);
             this.groupBox1.Controls.Add(this.pictureBox10);
             this.groupBox1.Controls.Add(this.pictureBox7);
@@ -125,7 +126,7 @@
             this.groupBox1.Controls.Add(this.rBFemale);
             this.groupBox1.Controls.Add(this.pictureBox9);
             this.groupBox1.Controls.Add(this.rdMale);
-            this.groupBox1.Controls.Add(this.pbGender);
+            this.groupBox1.Controls.Add(this.pbPicture);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtLastNAme);
             this.groupBox1.Controls.Add(this.txtThirdName);
@@ -147,36 +148,41 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // txtNationalNo
+            // 
+            this.txtNationalNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNationalNo.Location = new System.Drawing.Point(195, 79);
+            this.txtNationalNo.Name = "txtNationalNo";
+            this.txtNationalNo.Size = new System.Drawing.Size(153, 26);
+            this.txtNationalNo.TabIndex = 41;
+            this.txtNationalNo.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalNo_Validating);
+            // 
             // txtPhone
             // 
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhone.Location = new System.Drawing.Point(577, 118);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(179, 26);
-            this.txtPhone.TabIndex = 47;
+            this.txtPhone.TabIndex = 8;
             // 
             // txtEmail
             // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Location = new System.Drawing.Point(195, 162);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(153, 26);
-            this.txtEmail.TabIndex = 46;
+            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(577, 74);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(179, 26);
-            this.dateTimePicker1.TabIndex = 45;
+            this.dateTimePicker1.TabIndex = 5;
             this.dateTimePicker1.Value = new System.DateTime(2025, 9, 20, 0, 0, 0, 0);
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // mtbNationlaNNo
-            // 
-            this.mtbNationlaNNo.Location = new System.Drawing.Point(195, 77);
-            this.mtbNationlaNNo.Name = "mtbNationlaNNo";
-            this.mtbNationlaNNo.Size = new System.Drawing.Size(153, 26);
-            this.mtbNationlaNNo.TabIndex = 41;
-            this.mtbNationlaNNo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbNationlaNNo_MaskInputRejected);
             // 
             // pictureBox11
             // 
@@ -247,9 +253,10 @@
             // llbRemove
             // 
             this.llbRemove.AutoSize = true;
-            this.llbRemove.Location = new System.Drawing.Point(871, 320);
+            this.llbRemove.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.llbRemove.Location = new System.Drawing.Point(860, 321);
             this.llbRemove.Name = "llbRemove";
-            this.llbRemove.Size = new System.Drawing.Size(68, 20);
+            this.llbRemove.Size = new System.Drawing.Size(70, 22);
             this.llbRemove.TabIndex = 35;
             this.llbRemove.TabStop = true;
             this.llbRemove.Text = "Remove";
@@ -258,21 +265,23 @@
             // llbImage
             // 
             this.llbImage.AutoSize = true;
+            this.llbImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.llbImage.Location = new System.Drawing.Point(856, 268);
             this.llbImage.Name = "llbImage";
-            this.llbImage.Size = new System.Drawing.Size(83, 20);
+            this.llbImage.Size = new System.Drawing.Size(85, 22);
             this.llbImage.TabIndex = 34;
             this.llbImage.TabStop = true;
             this.llbImage.Text = "Set Image";
+            this.llbImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbImage_LinkClicked);
             // 
             // cbCountry
             // 
+            this.cbCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbCountry.FormattingEnabled = true;
             this.cbCountry.Location = new System.Drawing.Point(577, 160);
             this.cbCountry.Name = "cbCountry";
             this.cbCountry.Size = new System.Drawing.Size(179, 28);
-            this.cbCountry.TabIndex = 31;
-            this.cbCountry.SelectedIndexChanged += new System.EventHandler(this.cbCountry_SelectedIndexChanged);
+            this.cbCountry.TabIndex = 10;
             // 
             // lblCountry
             // 
@@ -319,6 +328,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ImageIndex = 1;
@@ -335,20 +345,21 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress.Location = new System.Drawing.Point(202, 207);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(554, 110);
-            this.txtAddress.TabIndex = 25;
+            this.txtAddress.TabIndex = 11;
             // 
             // rBFemale
             // 
             this.rBFemale.AutoSize = true;
+            this.rBFemale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rBFemale.Location = new System.Drawing.Point(309, 117);
             this.rBFemale.Name = "rBFemale";
-            this.rBFemale.Size = new System.Drawing.Size(87, 24);
-            this.rBFemale.TabIndex = 23;
-            this.rBFemale.TabStop = true;
+            this.rBFemale.Size = new System.Drawing.Size(85, 24);
+            this.rBFemale.TabIndex = 7;
             this.rBFemale.Text = "Female";
             this.rBFemale.UseVisualStyleBackColor = true;
             this.rBFemale.CheckedChanged += new System.EventHandler(this.rBFemale_CheckedChanged);
@@ -366,25 +377,25 @@
             // rdMale
             // 
             this.rdMale.AutoSize = true;
+            this.rdMale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rdMale.Location = new System.Drawing.Point(195, 118);
             this.rdMale.Name = "rdMale";
-            this.rdMale.Size = new System.Drawing.Size(68, 24);
-            this.rdMale.TabIndex = 21;
-            this.rdMale.TabStop = true;
+            this.rdMale.Size = new System.Drawing.Size(66, 24);
+            this.rdMale.TabIndex = 6;
             this.rdMale.Text = "Male";
             this.rdMale.UseVisualStyleBackColor = true;
             this.rdMale.CheckedChanged += new System.EventHandler(this.rdMale_CheckedChanged);
             // 
-            // pbGender
+            // pbPicture
             // 
-            this.pbGender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbGender.Image = global::DVLD.Properties.Resources.man;
-            this.pbGender.Location = new System.Drawing.Point(792, 74);
-            this.pbGender.Name = "pbGender";
-            this.pbGender.Size = new System.Drawing.Size(201, 170);
-            this.pbGender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbGender.TabIndex = 20;
-            this.pbGender.TabStop = false;
+            this.pbPicture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbPicture.Image = global::DVLD.Properties.Resources.man;
+            this.pbPicture.Location = new System.Drawing.Point(792, 74);
+            this.pbPicture.Name = "pbPicture";
+            this.pbPicture.Size = new System.Drawing.Size(201, 170);
+            this.pbPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPicture.TabIndex = 20;
+            this.pbPicture.TabStop = false;
             // 
             // label9
             // 
@@ -398,31 +409,35 @@
             // 
             // txtLastNAme
             // 
+            this.txtLastNAme.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLastNAme.Location = new System.Drawing.Point(792, 33);
             this.txtLastNAme.Name = "txtLastNAme";
             this.txtLastNAme.Size = new System.Drawing.Size(201, 26);
-            this.txtLastNAme.TabIndex = 15;
+            this.txtLastNAme.TabIndex = 3;
             // 
             // txtThirdName
             // 
+            this.txtThirdName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtThirdName.Location = new System.Drawing.Point(577, 35);
             this.txtThirdName.Name = "txtThirdName";
             this.txtThirdName.Size = new System.Drawing.Size(179, 26);
-            this.txtThirdName.TabIndex = 14;
+            this.txtThirdName.TabIndex = 2;
             // 
             // txtSecondName
             // 
+            this.txtSecondName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSecondName.Location = new System.Drawing.Point(382, 35);
             this.txtSecondName.Name = "txtSecondName";
             this.txtSecondName.Size = new System.Drawing.Size(164, 26);
-            this.txtSecondName.TabIndex = 13;
+            this.txtSecondName.TabIndex = 1;
             // 
             // txtFirstName
             // 
+            this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFirstName.Location = new System.Drawing.Point(195, 35);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(153, 26);
-            this.txtFirstName.TabIndex = 12;
+            this.txtFirstName.TabIndex = 0;
             // 
             // pictureBox6
             // 
@@ -558,16 +573,22 @@
             this.errorProvider1.ContainerControl = this;
             this.errorProvider1.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProvider1.Icon")));
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // AddEditPepole
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(1032, 507);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddEditPepole";
             this.Text = "AddEditPepole";
@@ -578,7 +599,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbGender)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -593,7 +614,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -613,7 +634,7 @@
         private System.Windows.Forms.TextBox txtThirdName;
         private System.Windows.Forms.TextBox txtSecondName;
         private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.PictureBox pbGender;
+        private System.Windows.Forms.PictureBox pbPicture;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.RadioButton rdMale;
         private System.Windows.Forms.RadioButton rBFemale;
@@ -634,9 +655,10 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.MaskedTextBox mtbNationlaNNo;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox txtNationalNo;
     }
 }

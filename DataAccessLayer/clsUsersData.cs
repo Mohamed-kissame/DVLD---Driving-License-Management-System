@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -233,7 +235,7 @@ namespace DataAccessLayer
             using(SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = "SELECT UserID , Users.PersonID , Pepole.FirstName + ' ' + Pepole.LastName as FullName , UserName , IsActive From Users join Pepole On Users.PersonID = Pepole.PersonID";
+                string Query = "SELECT UserID , Users.PersonID , People.FirstName + ' ' + People.LastName as FullName , UserName , IsActive From Users join People On Users.PersonID = People.PersonID";
 
                 using(SqlCommand command = new SqlCommand(Query , connection))
                 {
@@ -320,8 +322,8 @@ namespace DataAccessLayer
                 using(SqlCommand command = new SqlCommand(Query , connection))
                 {
 
+                    command.Parameters.AddWithValue("@Password", Password);
                     command.Parameters.AddWithValue("@UserID", UserId);
-                    command.Parameters.AddWithValue("@Password", UserId);
 
                     try
                     {
@@ -330,6 +332,15 @@ namespace DataAccessLayer
                         RowAffected = command.ExecuteNonQuery();
 
                     }catch(Exception ex)
-    {
+                    {
+
+                    }
+                }
+                   
+            }
+
+            return RowAffected > 0;
+        }
+
     }
 }

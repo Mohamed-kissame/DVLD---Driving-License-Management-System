@@ -71,7 +71,7 @@ namespace DVLD.controlls
         public void RefreshPepole()
         {
 
-            _dt = clsPepole.GetAllPepole();
+            _dt = clsPeople.GetAllPepole();
 
             _dv = new DataView(_dt);
 

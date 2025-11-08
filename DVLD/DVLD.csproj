@@ -40,6 +40,9 @@
     <Reference Include="Fizzler, Version=1.2.1.0, Culture=neutral, PublicKeyToken=4ebff4844e382110, processorArchitecture=MSIL">
       <HintPath>packages\Fizzler.1.2.1\lib\netstandard2.0\Fizzler.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>packages\FontAwesome.Sharp.6.6.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.WinForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\FontAwesome.WinForms.1.0.5\lib\net472\FontAwesome.WinForms.dll</HintPath>
     </Reference>
@@ -52,6 +55,8 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="Svg, Version=3.4.0.0, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
       <HintPath>packages\Svg.3.4.3\lib\net462\Svg.dll</HintPath>
     </Reference>
@@ -71,6 +76,7 @@
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -80,8 +86,24 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationTypes\EditApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationTypes\EditApplication.Designer.cs">
+      <DependentUpon>EditApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationTypes\Manage Application Types.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationTypes\Manage Application Types.Designer.cs">
+      <DependentUpon>Manage Application Types.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\clsUtilty.cs" />
+    <Compile Include="Classes\clsValidation.cs" />
+    <Compile Include="Classes\LoginInfo.cs" />
     <Compile Include="controlls\FillDataGrade.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,6 +115,36 @@
     </Compile>
     <Compile Include="controlls\ShowPersonCard.Designer.cs">
       <DependentUpon>ShowPersonCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controlls\showPersonCardByFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlls\showPersonCardByFilter.Designer.cs">
+      <DependentUpon>showPersonCardByFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controlls\ShowUserCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlls\ShowUserCard.Designer.cs">
+      <DependentUpon>ShowUserCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalLicenseDriver\AddEditLocalDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalLicenseDriver\AddEditLocalDrivingLicense.Designer.cs">
+      <DependentUpon>AddEditLocalDrivingLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalLicenseDriver\LocalDrivingLicenseApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalLicenseDriver\LocalDrivingLicenseApp.Designer.cs">
+      <DependentUpon>LocalDrivingLicenseApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -120,11 +172,68 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestTypes\EditTestTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestTypes\EditTestTypes.Designer.cs">
+      <DependentUpon>EditTestTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestTypes\TestTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestTypes\TestTypes.Designer.cs">
+      <DependentUpon>TestTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\AddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\AddEditUser.Designer.cs">
+      <DependentUpon>AddEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\ShowUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\ShowUserInfo.Designer.cs">
+      <DependentUpon>ShowUserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ApplicationTypes\EditApplication.resx">
+      <DependentUpon>EditApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationTypes\Manage Application Types.resx">
+      <DependentUpon>Manage Application Types.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controlls\FillDataGrade.resx">
       <DependentUpon>FillDataGrade.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controlls\ShowPersonCard.resx">
       <DependentUpon>ShowPersonCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlls\showPersonCardByFilter.resx">
+      <DependentUpon>showPersonCardByFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controlls\ShowUserCard.resx">
+      <DependentUpon>ShowUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalLicenseDriver\AddEditLocalDrivingLicense.resx">
+      <DependentUpon>AddEditLocalDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalLicenseDriver\LocalDrivingLicenseApp.resx">
+      <DependentUpon>LocalDrivingLicenseApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
@@ -148,6 +257,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TestTypes\EditTestTypes.resx">
+      <DependentUpon>EditTestTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestTypes\TestTypes.resx">
+      <DependentUpon>TestTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\AddEditUser.resx">
+      <DependentUpon>AddEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\ShowUserInfo.resx">
+      <DependentUpon>ShowUserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -169,7 +296,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Users\" />
+    <None Include="Resources\user%284%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\application.png" />
@@ -227,6 +354,90 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\Country.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user%285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driving--vehicle-license-department-system-high-resolution-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driving--vehicle-license-department-system-high-resolution-logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driving--vehicle-license-department-system-high-resolution-logo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driving--vehicle-license-department-system-high-resolution-logo%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driving--vehicle-license-department-system-high-resolution-logo%281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account-recovery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\id-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user%287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal-info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user%288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control-system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\standards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-bin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\license.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\programmer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

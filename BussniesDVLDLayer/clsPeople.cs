@@ -8,9 +8,8 @@ using DataAccessLayer;
 
 namespace BussniesDVLDLayer
 {
-    public class clsPepole
+    public class clsPeople
     {
-
 
         enum enMode { AddNew = 0 , Update = 1};
 
@@ -22,13 +21,15 @@ namespace BussniesDVLDLayer
 
         public string _FirstNAme { get; set; }
 
-        public string _SecondName { get; set; }
+        public string _SecondName { get; set ; }
 
         public string _ThierdName { get; set; }
 
         public string _LastName { get; set; }
 
         public DateTime _BirthOfDate { get; set; }
+
+        public string _Gender { get; set; }
 
         public string _Addrress { get; set; }
 
@@ -40,13 +41,23 @@ namespace BussniesDVLDLayer
 
         public string _ImagePath { get; set; }
 
-        public string FullName()
+        public string FullName
         {
-            return _FirstNAme + " " + _SecondName + " " + _ThierdName + " " + _LastName;
+            get
+            {
 
+                if (!string.IsNullOrEmpty(_SecondName) && string.IsNullOrEmpty(_ThierdName))
+
+                    return _FirstNAme + " " + _SecondName + " " + _ThierdName + " " + _LastName;
+
+                else
+
+                    return _FirstNAme + " " + _LastName;
+            }
         }
 
-        public clsPepole()
+
+        public clsPeople()
         {
 
             _PersonID = -1;
@@ -55,7 +66,7 @@ namespace BussniesDVLDLayer
             _SecondName = "";
             _ThierdName = "";
             _LastName = "";
-            _Gender = false;
+            _Gender = "";
             _BirthOfDate = DateTime.Now;
             _Addrress = "";
             _Phone = "";
@@ -66,8 +77,8 @@ namespace BussniesDVLDLayer
 
         }
        
-        private clsPepole(int PepoleID, string NationaelNumber , string FirstName , string SecondName , string ThierdName , string LastName 
-            , DateTime BirthOfDate, bool Gender , string Address , string Phone , string Email , int Nationality, string IamgePath)
+        private clsPeople(int PepoleID, string NationaelNumber , string FirstName , string SecondName , string ThierdName , string LastName 
+            , DateTime BirthOfDate, string Gender , string Address , string Phone , string Email , int Nationality, string IamgePath)
         {
 
             this._PersonID = PepoleID;
@@ -88,17 +99,32 @@ namespace BussniesDVLDLayer
         }
         
 
-        public static clsPepole Find(int PersonID)
+        public static clsPeople Find(int PersonID)
         {
             string NationlaNo = "", FirstName = "", SecondName = "", ThierdName = "", LastName = "", Phone = "", Email = "", Address = "", ImagePath = "";
             DateTime DateOfBirth = DateTime.Now;
             int Nationality = -1;
-            bool Gender = false;
+            string Gender = "";
 
-            if(clsPepoleData.GetAllPepolesByID(PersonID, ref NationlaNo, ref FirstName, ref SecondName, ref ThierdName, ref LastName
+            if(clsPeopleData.GetAllPepolesByID(PersonID, ref NationlaNo, ref FirstName, ref SecondName, ref ThierdName, ref LastName
                , ref DateOfBirth , ref Gender, ref Address , ref Phone, ref Email, ref Nationality , ref ImagePath))
 
-                return new clsPepole(PersonID, NationlaNo, FirstName, SecondName, ThierdName, LastName, DateOfBirth, Gender , Address, Phone, Email, Nationality, ImagePath);
+                return new clsPeople(PersonID, NationlaNo, FirstName, SecondName, ThierdName, LastName, DateOfBirth, Gender , Address, Phone, Email, Nationality, ImagePath);
+            else
+                return null;
+        }
+
+        public static clsPeople Find(string NationalNo)
+        {
+           string FirstName = "", SecondName = "", ThierdName = "", LastName = "", Phone = "", Email = "", Address = "", ImagePath = "";
+            DateTime DateOfBirth = DateTime.Now;
+            int PesronId = -1 ,Nationality = -1;
+            string Gender = "";
+
+            if (clsPeopleData.GetAllPepolesByNational(NationalNo, ref PesronId , ref FirstName, ref SecondName, ref ThierdName, ref LastName
+               , ref DateOfBirth, ref Gender, ref Address, ref Phone, ref Email, ref Nationality, ref ImagePath))
+
+                return new clsPeople(PesronId, NationalNo, FirstName, SecondName, ThierdName, LastName, DateOfBirth, Gender, Address, Phone, Email, Nationality, ImagePath);
             else
                 return null;
         }
@@ -106,7 +132,7 @@ namespace BussniesDVLDLayer
         private bool _AddNew()
         {
 
-             this._PersonID = clsPepoleData.AddNewPerson(this._NationaleNumber, this._FirstNAme, this._SecondName, this._ThierdName, this._LastName,
+             this._PersonID = clsPeopleData.AddNewPerson(this._NationaleNumber, this._FirstNAme, this._SecondName, this._ThierdName, this._LastName,
                  this._BirthOfDate, this._Gender, this._Addrress, this._Phone, this._Email, this._Nationality, this._ImagePath);
 
             return (this._PersonID != -1);
@@ -116,20 +142,20 @@ namespace BussniesDVLDLayer
         private bool _Update()
         {
 
-            return clsPepoleData.UpdatePerson(this._PersonID, this._NationaleNumber, this._FirstNAme, this._SecondName, this._ThierdName, this._LastName
+            return clsPeopleData.UpdatePerson(this._PersonID, this._NationaleNumber, this._FirstNAme, this._SecondName, this._ThierdName, this._LastName
                 , this._BirthOfDate, this._Gender, this._Addrress, this._Phone, this._Email, this._Nationality, this._ImagePath);
         }
      
         public static bool DeletePerson(int ID)
         {
 
-            return clsPepoleData.DeletePersonById(ID);
+            return clsPeopleData.DeletePersonById(ID);
         }
 
         public static DataTable GetAllPepole()
         {
 
-            return clsPepoleData.ListAllPepole();
+            return clsPeopleData.ListAllPepole();
         }
 
 
@@ -159,19 +185,19 @@ namespace BussniesDVLDLayer
         public static bool isExistsByID(int ID)
         {
 
-            return clsPepoleData.IsExistsByID(ID);
+            return clsPeopleData.IsExistsByID(ID);
         }
 
 
         public static bool isExistsInUser(int PersonID)
         {
-            return clsPepoleData.IsExistsInUser(PersonID);
+            return clsPeopleData.IsExistsInUser(PersonID);
         }
 
         public static bool isExistsByNationalNo(string NationalNo)
         {
 
-            return clsPepoleData.IsExistsByNationalNo(NationalNo);
+            return clsPeopleData.IsExistsByNationalNo(NationalNo);
         }
 
     }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccessLayer;
 
 namespace BussniesDVLDLayer
 {
@@ -128,13 +130,25 @@ namespace BussniesDVLDLayer
             return clsUsersData.DeleteUser(UserID);
         }
 
-        public static DataTable GetAllUsers()
+        public static DataTable  GetAllUsers()
         {
 
             return clsUsersData.ListUsers();
         }
 
         public static bool UserIsExistsWithPassword(string UserName , string Password)
-    {
+        {
+
+            return clsUsersData.UserIsExists(UserName, Password);
+        }
+
+        public static bool ChangePassword(int UserId , string Password)
+        {
+
+            return clsUsersData.ChangePassword(UserId, Password);
+
+        }
+
+
     }
 }
