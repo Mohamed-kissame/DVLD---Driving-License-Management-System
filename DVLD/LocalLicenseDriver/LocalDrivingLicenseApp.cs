@@ -110,5 +110,11 @@ namespace DVLD.LocalLicenseDriver
             
 
         }
+
+        private void editApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddEditLocalDrivingLicense AddEdit = new AddEditLocalDrivingLicense();
+            AddEdit.Show();
+        }
     }
 }
