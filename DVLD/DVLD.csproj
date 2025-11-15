@@ -101,6 +101,7 @@
     <Compile Include="ApplicationTypes\Manage Application Types.Designer.cs">
       <DependentUpon>Manage Application Types.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\clsFormat.cs" />
     <Compile Include="Classes\clsUtilty.cs" />
     <Compile Include="Classes\clsValidation.cs" />
     <Compile Include="Classes\LoginInfo.cs" />

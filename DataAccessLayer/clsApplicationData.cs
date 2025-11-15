@@ -314,6 +314,50 @@ namespace DataAccessLayer
             return ActiveApplication;
         }
 
+        public static int GetActiveApplicationIDForLicenseClass(int PersonID, int ApplicationTypeID, int LicenseClassID)
+        {
+            int ActiveApplicationID = -1;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
+            {
+
+                string query = @"SELECT ActiveApplicationID=Applications.ApplicationID  
+                            From
+                            Applications INNER JOIN
+                            LocalDrivingLicenseApplications ON Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID
+                            WHERE ApplicantPersonID = @ApplicantPersonID 
+                            and ApplicationTypeID=@ApplicationTypeID 
+							and LocalDrivingLicenseApplications.LicenseClassID = @LicenseClassID
+                            and ApplicationStatus=1";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+
+                    command.Parameters.AddWithValue("@ApplicantPersonID", PersonID);
+                    command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
+                    command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
+                    try
+                    {
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+
+
+                        if (result != null && int.TryParse(result.ToString(), out int AppID))
+                        {
+                            ActiveApplicationID = AppID;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        
+                        return ActiveApplicationID;
+                    }
+                }
+            }
+
+            return ActiveApplicationID;
+        }
+
         public static bool DoesPersonHaveActiveApplication(int PersonID , int ApplicationTypeID)
         {
 

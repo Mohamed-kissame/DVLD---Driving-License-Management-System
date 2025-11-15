@@ -13,17 +13,14 @@ namespace DVLD.LocalLicenseDriver
 {
     public partial class LocalDrivingLicenseApp : Form
     {
+
+        private DataTable _dtAllLocalDrivingLicenseApplications;
+
         public LocalDrivingLicenseApp()
         {
             InitializeComponent();
 
         }
-
-
-        private static DataTable _dt = ClsLicenseDrivingLocal.GetAllLicense();
-
-        private static DataTable _dtLicenseDrivingLocal = _dt.DefaultView.ToTable(false, "LocalDrivingLicenseApplicationID", "ClassName", "NationalNo", "FullName", "ApplicationDate", "PassedTestCount", "Status");
-
 
         private void UpdateRecordCount(int Count)
         {
@@ -65,20 +62,6 @@ namespace DVLD.LocalLicenseDriver
         }
 
 
-        private void FillFilter()
-        {
-
-
-            foreach(DataColumn dt in _dt.Columns)
-            {
-
-                comboBox1.Items.Add(dt.ColumnName);
-            }
-
-            comboBox1.SelectedIndex = 0;
-
-        }
-
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -99,14 +82,38 @@ namespace DVLD.LocalLicenseDriver
         private void LocalDrivingLicenseApp_Load(object sender, EventArgs e)
         {
 
-            dataGridView1.DataSource = _dtLicenseDrivingLocal;
+            _dtAllLocalDrivingLicenseApplications = ClsLicenseDrivingLocal.GetAllLicense();
+            dataGridView1.DataSource = _dtAllLocalDrivingLicenseApplications;
+
+            comboBox1.SelectedIndex = 0;
+
+            if (dataGridView1.Rows.Count > 0)
+            {
+
+                dataGridView1.Columns[0].HeaderText = "L.D.L.AppID";
+               
+
+                dataGridView1.Columns[1].HeaderText = "Driving Class";
+                
+
+                dataGridView1.Columns[2].HeaderText = "National No.";
+              
+
+                dataGridView1.Columns[3].HeaderText = "Full Name";
+              
+
+                dataGridView1.Columns[4].HeaderText = "Application Date";
+              
+
+                dataGridView1.Columns[5].HeaderText = "Passed Tests";
+               
+            }
 
             _StyleGrid();
 
 
-            UpdateRecordCount(_dtLicenseDrivingLocal.Rows.Count);
+            UpdateRecordCount(_dtAllLocalDrivingLicenseApplications.Rows.Count);
 
-            FillFilter();
             
 
         }
@@ -115,6 +122,61 @@ namespace DVLD.LocalLicenseDriver
         {
             AddEditLocalDrivingLicense AddEdit = new AddEditLocalDrivingLicense((int)dataGridView1.CurrentRow.Cells[0].Value);
             AddEdit.Show();
+        }
+
+        private void txtSerach_TextChanged(object sender, EventArgs e)
+        {
+            string FilterColumn = "";
+           
+            switch (comboBox1.Text)
+            {
+
+                case "L.D.L.AppID":
+                    FilterColumn = "LocalDrivingLicenseApplicationID";
+                    break;
+
+                case "National No.":
+                    FilterColumn = "NationalNo";
+                    break;
+
+
+                case "Full Name":
+                    FilterColumn = "FullName";
+                    break;
+
+                case "Status":
+                    FilterColumn = "Status";
+                    break;
+
+
+                default:
+                    FilterColumn = "None";
+                    break;
+
+            }
+
+           
+            if (txtSerach.Text.Trim() == "")
+            {
+                _dtAllLocalDrivingLicenseApplications.DefaultView.RowFilter = "";
+                UpdateRecordCount(_dtAllLocalDrivingLicenseApplications.Rows.Count);
+                return;
+            }
+
+
+            if (FilterColumn == "LocalDrivingLicenseApplicationID")
+
+                _dtAllLocalDrivingLicenseApplications.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtSerach.Text.Trim());
+            else
+                _dtAllLocalDrivingLicenseApplications.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtSerach.Text.Trim());
+
+            UpdateRecordCount(_dtAllLocalDrivingLicenseApplications.Rows.Count);
+        }
+
+        private void txtSerach_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (comboBox1.Text == "L.D.L.AppID")
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

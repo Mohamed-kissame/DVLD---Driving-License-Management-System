@@ -205,7 +205,10 @@ namespace BussniesDVLDLayer
             return clsApplicationData.GetActiveApplication(PersonID,(int) ApplicationType);
         }
 
-        
+        public static int GetActiveApplicationIDForLicenseClass(int PersonID, ClsApplication.enApplicationType ApplicationTypeID, int LicenseClassID)
+        {
+            return clsApplicationData.GetActiveApplicationIDForLicenseClass(PersonID, (int)ApplicationTypeID, LicenseClassID);
+        }
 
 
 

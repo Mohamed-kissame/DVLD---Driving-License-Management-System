@@ -97,6 +97,11 @@
             this.comboBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "L.D.L.AppID",
+            "National No.",
+            "Full Name",
+            "Status"});
             this.comboBox1.Location = new System.Drawing.Point(151, 101);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(217, 28);
@@ -119,6 +124,8 @@
             this.txtSerach.Name = "txtSerach";
             this.txtSerach.Size = new System.Drawing.Size(184, 26);
             this.txtSerach.TabIndex = 6;
+            this.txtSerach.TextChanged += new System.EventHandler(this.txtSerach_TextChanged);
+            this.txtSerach.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSerach_KeyPress);
             // 
             // imageList1
             // 
@@ -136,7 +143,7 @@
             this.deleteApplicationToolStripMenuItem,
             this.cancelToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(290, 165);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(290, 132);
             // 
             // showDetailsToolStripMenuItem
             // 
