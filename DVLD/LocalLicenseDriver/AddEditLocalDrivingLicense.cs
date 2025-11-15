@@ -54,7 +54,7 @@ namespace DVLD.LocalLicenseDriver
                 this.Text = "Add New Local Driving License Application";
                 _LocalDrivingLicenseApplication = new ClsLicenseDrivingLocal();
                 showPersonCardByFilter1.FilterFocus();
-                tabControl1.Enabled = false;
+               
 
                 comboBox1.SelectedIndex = 2;
                 lblFees.Text = clsApplicationType.Find((int)ClsApplication.enApplicationType.NewLocalDrivingLicense).ApplicationFees.ToString();
@@ -66,7 +66,6 @@ namespace DVLD.LocalLicenseDriver
             {
                 lblTitle.Text = "Edit Local Driving License Application";
                 this.Text = "Edit Local Driving License Application";
-                tabControl1.Enabled = true;
                 btnSave.Enabled = true;
 
             }

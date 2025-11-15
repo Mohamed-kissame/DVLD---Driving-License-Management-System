@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DVLD.ApplicationTypes;
 using DVLD.Classes;
 using DVLD.controlls;
+using DVLD.LocalLicenseDriver;
 using DVLD.Pepole;
 using DVLD.TestTypes;
 using DVLD.Users;
@@ -180,6 +181,14 @@ namespace DVLD
         {
             LocalLicenseDriver.LocalDrivingLicenseApp Local = new LocalLicenseDriver.LocalDrivingLicenseApp();
             Local.Show();
+        }
+
+        private void localToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            AddEditLocalDrivingLicense addEditLocalDrivingLicense = new AddEditLocalDrivingLicense();
+            addEditLocalDrivingLicense.ShowDialog();
+
         }
     }
 }

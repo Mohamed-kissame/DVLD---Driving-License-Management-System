@@ -113,7 +113,7 @@ namespace DVLD.LocalLicenseDriver
 
         private void editApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddEditLocalDrivingLicense AddEdit = new AddEditLocalDrivingLicense();
+            AddEditLocalDrivingLicense AddEdit = new AddEditLocalDrivingLicense((int)dataGridView1.CurrentRow.Cells[0].Value);
             AddEdit.Show();
         }
     }
