@@ -32,7 +32,7 @@ namespace DVLD.LocalLicenseDriver
 
         private void _StyleGrid()
         {
-            //dgv.Dock = DockStyle.Bottom;
+           
             dataGridView1.BorderStyle = BorderStyle.FixedSingle;
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -42,20 +42,20 @@ namespace DVLD.LocalLicenseDriver
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.RowHeadersVisible = false;
 
-            // Header
+           
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 122, 204);
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dataGridView1.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             dataGridView1.ColumnHeadersHeight = 36;
 
-            // Rows
+            
             dataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 10);
             dataGridView1.DefaultCellStyle.SelectionBackColor = Color.FromArgb(229, 241, 251);
             dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black;
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
 
-            // Reduce flicker (enable DoubleBuffered via reflection – DGV’s property is protected)
+            
             typeof(DataGridView).GetProperty("DoubleBuffered",
                 System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)
                 ?.SetValue(dataGridView1, true, null);
@@ -122,6 +122,7 @@ namespace DVLD.LocalLicenseDriver
         {
             AddEditLocalDrivingLicense AddEdit = new AddEditLocalDrivingLicense((int)dataGridView1.CurrentRow.Cells[0].Value);
             AddEdit.Show();
+            LocalDrivingLicenseApp_Load(null, null);
         }
 
         private void txtSerach_TextChanged(object sender, EventArgs e)
@@ -177,6 +178,14 @@ namespace DVLD.LocalLicenseDriver
         {
             if (comboBox1.Text == "L.D.L.AppID")
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+           
+            
+
         }
     }
 }

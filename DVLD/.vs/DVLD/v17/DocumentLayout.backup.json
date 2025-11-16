@@ -3,23 +3,39 @@
   "WorkspaceRootPath": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\locallicensedriver\\addeditlocaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:locallicensedriver\\addeditlocaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{886827C1-3FD0-439E-86EF-AA8C720EAE84}|..\\BussniesDVLDLayer\\BussniesDVLDLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\dvld\\bussniesdvldlayer\\clslicensedrivinglocal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D785F7B6-9810-43DB-8DBB-CB736624BF28}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\dvld\\dataaccesslayer\\clslicensedrivinglocaldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{886827C1-3FD0-439E-86EF-AA8C720EAE84}|..\\BussniesDVLDLayer\\BussniesDVLDLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\dvld\\bussniesdvldlayer\\clsapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D785F7B6-9810-43DB-8DBB-CB736624BF28}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\dvld\\dataaccesslayer\\clsapplicationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{886827C1-3FD0-439E-86EF-AA8C720EAE84}|..\\BussniesDVLDLayer\\BussniesDVLDLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\dvld\\bussniesdvldlayer\\clslicenseclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|c:\\users\\mkiss\\onedrive\\bureau\\dvld\\dvld\\locallicensedriver\\localdrivinglicenseapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:locallicensedriver\\localdrivinglicenseapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|c:\\users\\mkiss\\onedrive\\bureau\\dvld\\dvld\\classes\\clsformat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:classes\\clsformat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\locallicensedriver\\localdrivinglicenseapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:locallicensedriver\\localdrivinglicenseapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mkiss\\AppData\\Local\\Temp\\2c249c9e-c44a-4766-8c67-3a97b874ace9_DVLD Project Final.rar.ce9\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\locallicensedriver\\addeditlocaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:locallicensedriver\\addeditlocaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\locallicensedriver\\addeditlocaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:locallicensedriver\\addeditlocaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,58 +69,123 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmListLocalDrivingLicesnseApplications.cs",
-              "DocumentMoniker": "C:\\Users\\mkiss\\AppData\\Local\\Temp\\2c249c9e-c44a-4766-8c67-3a97b874ace9_DVLD Project Final.rar.ce9\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\2c249c9e-c44a-4766-8c67-3a97b874ace9_DVLD Project Final.rar.ce9\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs",
-              "ToolTip": "C:\\Users\\mkiss\\AppData\\Local\\Temp\\2c249c9e-c44a-4766-8c67-3a97b874ace9_DVLD Project Final.rar.ce9\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs [Read Only]",
-              "RelativeToolTip": "..\\..\\..\\..\\AppData\\Local\\Temp\\2c249c9e-c44a-4766-8c67-3a97b874ace9_DVLD Project Final.rar.ce9\\Project\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs [Read Only]",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAABZAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ClsLicenseDrivingLocal.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\BussniesDVLDLayer\\ClsLicenseDrivingLocal.cs",
+              "RelativeDocumentMoniker": "..\\BussniesDVLDLayer\\ClsLicenseDrivingLocal.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\BussniesDVLDLayer\\ClsLicenseDrivingLocal.cs",
+              "RelativeToolTip": "..\\BussniesDVLDLayer\\ClsLicenseDrivingLocal.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAnwKYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T18:59:57.377Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LocalDrivingLicenseApp.cs",
-              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\LocalLicenseDriver\\LocalDrivingLicenseApp.cs",
-              "RelativeDocumentMoniker": "LocalLicenseDriver\\LocalDrivingLicenseApp.cs",
-              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\LocalLicenseDriver\\LocalDrivingLicenseApp.cs*",
-              "RelativeToolTip": "LocalLicenseDriver\\LocalDrivingLicenseApp.cs*",
-              "ViewState": "AgIAAEYAAAAAAAAAAAA7wFcAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T18:59:30.627Z",
+              "WhenOpened": "2025-11-16T13:33:08.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LocalDrivingLicenseApp.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\LocalLicenseDriver\\LocalDrivingLicenseApp.cs",
-              "RelativeDocumentMoniker": "LocalLicenseDriver\\LocalDrivingLicenseApp.cs",
-              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\LocalLicenseDriver\\LocalDrivingLicenseApp.cs [Design]*",
-              "RelativeToolTip": "LocalLicenseDriver\\LocalDrivingLicenseApp.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-14T06:13:56.997Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "AddEditLocalDrivingLicense.cs",
               "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\LocalLicenseDriver\\AddEditLocalDrivingLicense.cs",
               "RelativeDocumentMoniker": "LocalLicenseDriver\\AddEditLocalDrivingLicense.cs",
               "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\LocalLicenseDriver\\AddEditLocalDrivingLicense.cs",
               "RelativeToolTip": "LocalLicenseDriver\\AddEditLocalDrivingLicense.cs",
-              "ViewState": "AgIAAOYAAAAAAAAAAAAYwCUAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAALYAAAAAAAAAAAAvwLQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-14T07:15:53.702Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClsLicenseDrivingLocalData.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DataAccessLayer\\ClsLicenseDrivingLocalData.cs",
+              "RelativeDocumentMoniker": "..\\DataAccessLayer\\ClsLicenseDrivingLocalData.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DataAccessLayer\\ClsLicenseDrivingLocalData.cs",
+              "RelativeToolTip": "..\\DataAccessLayer\\ClsLicenseDrivingLocalData.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAvwJIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T14:28:06.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "ClsApplication.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\BussniesDVLDLayer\\ClsApplication.cs",
+              "RelativeDocumentMoniker": "..\\BussniesDVLDLayer\\ClsApplication.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\BussniesDVLDLayer\\ClsApplication.cs",
+              "RelativeToolTip": "..\\BussniesDVLDLayer\\ClsApplication.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAjwLUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T13:18:40.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "clsApplicationData.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DataAccessLayer\\clsApplicationData.cs",
+              "RelativeDocumentMoniker": "..\\DataAccessLayer\\clsApplicationData.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DataAccessLayer\\clsApplicationData.cs",
+              "RelativeToolTip": "..\\DataAccessLayer\\clsApplicationData.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAvwIkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T14:33:02.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "clsLicenseClass.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\BussniesDVLDLayer\\clsLicenseClass.cs",
+              "RelativeDocumentMoniker": "..\\BussniesDVLDLayer\\clsLicenseClass.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\BussniesDVLDLayer\\clsLicenseClass.cs",
+              "RelativeToolTip": "..\\BussniesDVLDLayer\\clsLicenseClass.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAIA8wE0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T14:30:22.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "clsFormat.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\Classes\\clsFormat.cs",
+              "RelativeDocumentMoniker": "Classes\\clsFormat.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\Classes\\clsFormat.cs",
+              "RelativeToolTip": "Classes\\clsFormat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T14:27:19.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LocalDrivingLicenseApp.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\LocalLicenseDriver\\LocalDrivingLicenseApp.cs",
+              "RelativeDocumentMoniker": "LocalLicenseDriver\\LocalDrivingLicenseApp.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\LocalLicenseDriver\\LocalDrivingLicenseApp.cs",
+              "RelativeToolTip": "LocalLicenseDriver\\LocalDrivingLicenseApp.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAQwE4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T18:59:30.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LocalDrivingLicenseApp.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\LocalLicenseDriver\\LocalDrivingLicenseApp.cs",
+              "RelativeDocumentMoniker": "LocalLicenseDriver\\LocalDrivingLicenseApp.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\LocalLicenseDriver\\LocalDrivingLicenseApp.cs [Design]",
+              "RelativeToolTip": "LocalLicenseDriver\\LocalDrivingLicenseApp.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T06:13:56.997Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "AddEditLocalDrivingLicense.cs [Design]",
               "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\DVLD\\DVLD\\LocalLicenseDriver\\AddEditLocalDrivingLicense.cs",
               "RelativeDocumentMoniker": "LocalLicenseDriver\\AddEditLocalDrivingLicense.cs",

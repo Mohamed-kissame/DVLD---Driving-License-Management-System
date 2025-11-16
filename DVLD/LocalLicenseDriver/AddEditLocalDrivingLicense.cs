@@ -65,8 +65,8 @@ namespace DVLD.LocalLicenseDriver
             }
             else
             {
-                lblTitle.Text = "Edit Local Driving License Application";
-                this.Text = "Edit Local Driving License Application";
+                lblTitle.Text = "Update Local Driving License Application";
+                this.Text = "Update Local Driving License Application";
                 btnSave.Enabled = true;
 
             }
@@ -146,7 +146,7 @@ namespace DVLD.LocalLicenseDriver
                 return;
             }
 
-            showPersonCardByFilter1.LoadPersonByID(_LocalDrivingLicenseApplication._ApplicationID);
+            showPersonCardByFilter1.LoadPersonByID(_LocalDrivingLicenseApplication._PersonID);
             lblID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
             lblDate.Text = clsFormat.DateToShort(_LocalDrivingLicenseApplication.ApplicationDate);
             comboBox1.SelectedIndex = comboBox1.FindString(clsLicenseClass.Find(_LocalDrivingLicenseApplication.LicenseClassID).ClassName);
@@ -179,7 +179,7 @@ namespace DVLD.LocalLicenseDriver
 
         private void AddEditLocalDrivingLicense_Activated(object sender, EventArgs e)
         {
-            showPersonCardByFilter1.FilterFocus();
+           
 
         }
 
@@ -214,12 +214,12 @@ namespace DVLD.LocalLicenseDriver
                 return;
             }
 
-            _LocalDrivingLicenseApplication._ApplicationID = showPersonCardByFilter1._PersonID; ;
+            _LocalDrivingLicenseApplication._PersonID = showPersonCardByFilter1._PersonID; 
             _LocalDrivingLicenseApplication.ApplicationDate = DateTime.Now;
             _LocalDrivingLicenseApplication._ApplicationTypeId = 1;
             _LocalDrivingLicenseApplication._ApplicationStatus = ClsApplication.enApplicationStatus.New;
             _LocalDrivingLicenseApplication.LastStatusDate = DateTime.Now;
-            _LocalDrivingLicenseApplication.PaidFees = Convert.ToSingle(lblFees.Text);
+            _LocalDrivingLicenseApplication.PaidFees = Convert.ToDecimal(lblFees.Text);
             _LocalDrivingLicenseApplication.CreatedByUser = LoginInfo.SelectUserInfo._UserID;
             _LocalDrivingLicenseApplication.LicenseClassID = LicenseClassID;
 

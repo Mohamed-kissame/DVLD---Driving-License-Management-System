@@ -69,7 +69,7 @@ namespace BussniesDVLDLayer
 
         public DateTime LastStatusDate { get; set; }
 
-        public float PaidFees { get; set; }
+        public decimal PaidFees { get; set; }
 
         public int CreatedByUser { get; set; }
 
@@ -89,7 +89,7 @@ namespace BussniesDVLDLayer
 
         }
 
-        private ClsApplication(int ApplicationId , int ApplicatPersonID , DateTime ApplicationDate , int ApplicationTypeID , enApplicationStatus ApplicationStatus , DateTime LastStatusDate , float PaidFees , int CreatedByUser)
+        private ClsApplication(int ApplicationId , int ApplicatPersonID , DateTime ApplicationDate , int ApplicationTypeID , enApplicationStatus ApplicationStatus , DateTime LastStatusDate , decimal PaidFees , int CreatedByUser)
         {
 
             this._ApplicationID = ApplicationId;
@@ -129,7 +129,7 @@ namespace BussniesDVLDLayer
 
             DateTime ApplicationDate = DateTime.Now, LastStatusDate = DateTime.Now;
 
-            float PaidFees = 0;
+            decimal PaidFees = 0;
 
             byte ApplicationStatus = 0;
 

@@ -12,7 +12,7 @@ namespace DataAccessLayer
     {
 
 
-        public static bool GetAllApplicationByID(int ApplicationID, ref int ApplicantPersonID, ref DateTime ApplicationDate, ref int ApplicantTypeID, ref byte ApplicationStatus, ref DateTime LastStatusDate, ref float PaidFees, ref int CreatedByUserID)
+        public static bool GetAllApplicationByID(int ApplicationID, ref int ApplicantPersonID, ref DateTime ApplicationDate, ref int ApplicantTypeID, ref byte ApplicationStatus, ref DateTime LastStatusDate, ref decimal PaidFees, ref int CreatedByUserID)
         {
 
             bool isFound = false;
@@ -49,10 +49,10 @@ namespace DataAccessLayer
 
                                 ApplicantPersonID = (int)reader["ApplicantPersonID"];
                                 ApplicationDate = (DateTime)reader["ApplicationDate"];
-                                ApplicantTypeID = (int)reader["ApplictionTypeID"];
+                                ApplicantTypeID = (int)reader["ApplicationTypeID"];
                                 ApplicationStatus = (byte)reader["ApplicationStatus"];
                                 LastStatusDate = (DateTime)reader["LastStatusDate"];
-                                PaidFees = (float)reader["PaidFees"];
+                                PaidFees = (decimal)reader["PaidFees"];
                                 CreatedByUserID = (int)reader["CreatedByUserID"];
 
                             }
@@ -76,7 +76,7 @@ namespace DataAccessLayer
         }
 
 
-        public static int AddApplication(int ApplicationPesronsID, DateTime ApplicationDate, int ApplicationTypeID, byte ApplicationStatus, DateTime LastStatusDate, float PaidFees, int CreatedByUserID)
+        public static int AddApplication(int ApplicationPesronsID, DateTime ApplicationDate, int ApplicationTypeID, byte ApplicationStatus, DateTime LastStatusDate, decimal PaidFees, int CreatedByUserID)
         {
 
             int newApplicationID = -1;
@@ -184,7 +184,7 @@ namespace DataAccessLayer
         }
 
 
-        public static bool UpdateApplication(int ApplicationID, int ApplicantPeronID, DateTime ApplicationDate, int ApplicationTypeID, byte ApplicationStatus, DateTime LastStatusDate, float PaidFees, int CreateByUser)
+        public static bool UpdateApplication(int ApplicationID, int ApplicantPeronID, DateTime ApplicationDate, int ApplicationTypeID, byte ApplicationStatus, DateTime LastStatusDate, decimal PaidFees, int CreateByUser)
         {
 
             int RowAffection = 0;
@@ -200,7 +200,7 @@ namespace DataAccessLayer
                                     ApplicationStatus = @ApplicationStatus,
                                     LastStatusDate = @LastStatusDate,
                                     PaidFees = @PaidFees,
-                                    CreateByUser = @CreateByUser
+                                    CreatedByUserID = @CreatedByUserID
                                     Where ApplicationID = @ApplicationID";
 
                 using (SqlCommand command = new SqlCommand(Query, connection))
@@ -214,7 +214,7 @@ namespace DataAccessLayer
                     command.Parameters.AddWithValue("@ApplicationStatus", ApplicationStatus);
                     command.Parameters.AddWithValue("@LastStatusDate", LastStatusDate);
                     command.Parameters.AddWithValue("@PaidFees", PaidFees);
-                    command.Parameters.AddWithValue("@CreateByUser", CreateByUser);
+                    command.Parameters.AddWithValue("@CreatedByUserID", CreateByUser);
                     try
                     {
                         connection.Open();

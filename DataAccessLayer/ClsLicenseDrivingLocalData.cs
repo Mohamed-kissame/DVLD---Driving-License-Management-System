@@ -21,12 +21,12 @@ namespace DataAccessLayer
             using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = "Select * From LOcalDrivingLicenseApplications Where LicenseDrivingLocalId = @LicenseDrivingLocalId ";
+                string Query = "Select * From LocalDrivingLicenseApplications Where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID ";
 
                 using (SqlCommand command = new SqlCommand(Query, connection))
                 {
 
-                    command.Parameters.AddWithValue("@LicenseDrivingLocalOID", LicenseDrivingLocalId);
+                    command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LicenseDrivingLocalId);
 
                     try
                     {
@@ -67,7 +67,7 @@ namespace DataAccessLayer
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
-                string Query = "Select * From LOcalDrivingLicenseApplications Where ApplicationID = @ApplicationID ";
+                string Query = "Select * From LocalDrivingLicenseApplications Where ApplicationID = @ApplicationID ";
                 using (SqlCommand command = new SqlCommand(Query, connection))
                 {
                     command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
@@ -79,7 +79,7 @@ namespace DataAccessLayer
                             if (reader.Read())
                             {
                                 isFound = true;
-                                LicenseDrivingLocalId = (int)reader["LicenseDrivingLocalId"];
+                                LicenseDrivingLocalId = (int)reader["LicenseDrivingLocalID"];
                                 LicenseClassID = (int)reader["LicenseClassID"];
                             }
                         }
@@ -157,12 +157,12 @@ namespace DataAccessLayer
                 string Query = @"Update LocalDrivingLicenseApplications 
                                   Set ApplicationID = @ApplicationID,
                                       LicenseClassID = @LicenseClassID
-                                Where LicenseDrivingLocalID = @LicenseDrivingLocalID";
+                                Where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
 
                 using(SqlCommand command = new SqlCommand(Query , connection))
                 {
 
-                    command.Parameters.AddWithValue("@LicenseDrivingLocalID", LicenseDrivingLocalID);
+                    command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LicenseDrivingLocalID);
                     command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
                     command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
 
@@ -190,12 +190,12 @@ namespace DataAccessLayer
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
-                string Query = "Delete From LocalDrivingLicenseApplications Where LicenseDrivingLocalID = @LicenseDrivingLocalID";
+                string Query = "Delete From LocalDrivingLicenseApplications Where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
 
                 using (SqlCommand command = new SqlCommand(Query, connection))
                 {
 
-                    command.Parameters.AddWithValue("@LicenseDrivingLocalID", LicenseDrivingLocalID);
+                    command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LicenseDrivingLocalID);
 
                     try
                     {

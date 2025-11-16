@@ -45,7 +45,7 @@ namespace BussniesDVLDLayer
         }
 
         private ClsLicenseDrivingLocal(int LocalDrivingLicenseApplicationID , int ApplicationID , int ApplicantPersonID , DateTime ApplicationDate 
-                                       , int ApplicationTypeID , enApplicationStatus ApplicationStatus , DateTime LastStatusDate , float PaidFees , int CreatedByUserID , int LicenseClass)
+                                       , int ApplicationTypeID , enApplicationStatus ApplicationStatus , DateTime LastStatusDate , decimal PaidFees , int CreatedByUserID , int LicenseClass)
         {
 
 
@@ -85,7 +85,7 @@ namespace BussniesDVLDLayer
 
             int ApplicationID = -1, LicenseClassID = -1;
 
-            bool isFound = ClsLicenseDrivingLocalData.GetAllLicenseDrivingLocalByApplicationID(LocalDrivingLicenseApplicationID, ref ApplicationID, ref LicenseClassID);
+            bool isFound = ClsLicenseDrivingLocalData.GetAllLicenseDrivingLocalByID(LocalDrivingLicenseApplicationID, ref ApplicationID, ref LicenseClassID);
 
             if (isFound)
             {

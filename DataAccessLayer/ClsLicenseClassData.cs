@@ -41,7 +41,7 @@ namespace DataAccessLayer
                                 ClassName = reader["ClassName"].ToString();
                                 ClassDescription = reader["ClassDescription"].ToString();
                                 AllowedAge = Convert.ToInt32(reader["MinimumAllowedAge"]);
-                                LengtValidation = Convert.ToInt32(reader["DefaultLengethValidation"]);
+                                LengtValidation = Convert.ToInt32(reader["DefaultValidityLength"]);
                                 Fess = Convert.ToDecimal(reader["ClassFees"]);
                                 
                             }

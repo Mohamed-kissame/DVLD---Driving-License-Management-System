@@ -443,5 +443,32 @@
   <ItemGroup>
     <None Include="Resources\drivers-license.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control-system%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Detain 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Local 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\International 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\New Driving License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Renew Driving License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Lost Driving License 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Release Detained License 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Retake Test 32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

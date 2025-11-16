@@ -44,7 +44,7 @@ namespace BussniesDVLDLayer
             this.ClassDescription = ClassDescription;
             this.MinAllowedAge = MinAllowedAge;
             this.DefaultLengethValidation = DefaultLengthValidation;
-            this.classFess = classFess;
+            this.classFess = ClassFess;
         }
 
         public static clsLicenseClass Find(int ID)
