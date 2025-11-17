@@ -51,3 +51,4 @@ C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.TestTypes.EditTestTypes.
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.TestTypes.TestTypes.resources
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.LocalLicenseDriver.AddEditLocalDrivingLicense.resources
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.LocalLicenseDriver.LocalDrivingLicenseApp.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Driver.DriverView.resources

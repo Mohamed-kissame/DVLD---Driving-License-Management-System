@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DVLD.ApplicationTypes;
 using DVLD.Classes;
 using DVLD.controlls;
+using DVLD.Driver;
 using DVLD.LocalLicenseDriver;
 using DVLD.Pepole;
 using DVLD.TestTypes;
@@ -189,6 +190,12 @@ namespace DVLD
             AddEditLocalDrivingLicense addEditLocalDrivingLicense = new AddEditLocalDrivingLicense();
             addEditLocalDrivingLicense.ShowDialog();
 
+        }
+
+        private void driversToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DriverView Driver = new DriverView();
+            Driver.Show();
         }
     }
 }

@@ -45,6 +45,7 @@
     <Compile Include="ClsApplication.cs" />
     <Compile Include="clsApplicationType.cs" />
     <Compile Include="clsCountry.cs" />
+    <Compile Include="ClsDriver.cs" />
     <Compile Include="ClsLicense.cs" />
     <Compile Include="clsLicenseClass.cs" />
     <Compile Include="ClsLicenseDrivingLocal.cs" />

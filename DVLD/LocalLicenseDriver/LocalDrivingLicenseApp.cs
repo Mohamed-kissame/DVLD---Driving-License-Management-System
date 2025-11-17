@@ -160,7 +160,7 @@ namespace DVLD.LocalLicenseDriver
             if (txtSerach.Text.Trim() == "")
             {
                 _dtAllLocalDrivingLicenseApplications.DefaultView.RowFilter = "";
-                UpdateRecordCount(_dtAllLocalDrivingLicenseApplications.Rows.Count);
+                UpdateRecordCount(dataGridView1.Rows.Count);
                 return;
             }
 
@@ -171,7 +171,7 @@ namespace DVLD.LocalLicenseDriver
             else
                 _dtAllLocalDrivingLicenseApplications.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtSerach.Text.Trim());
 
-            UpdateRecordCount(_dtAllLocalDrivingLicenseApplications.Rows.Count);
+            UpdateRecordCount(dataGridView1.Rows.Count);
         }
 
         private void txtSerach_KeyPress(object sender, KeyPressEventArgs e)

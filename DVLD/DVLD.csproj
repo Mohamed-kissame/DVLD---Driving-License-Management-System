@@ -129,6 +129,12 @@
     <Compile Include="controlls\ShowUserCard.Designer.cs">
       <DependentUpon>ShowUserCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Driver\DriverView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driver\DriverView.Designer.cs">
+      <DependentUpon>DriverView.cs</DependentUpon>
+    </Compile>
     <Compile Include="LocalLicenseDriver\AddEditLocalDrivingLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controlls\ShowUserCard.resx">
       <DependentUpon>ShowUserCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driver\DriverView.resx">
+      <DependentUpon>DriverView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalLicenseDriver\AddEditLocalDrivingLicense.resx">
       <DependentUpon>AddEditLocalDrivingLicense.cs</DependentUpon>
