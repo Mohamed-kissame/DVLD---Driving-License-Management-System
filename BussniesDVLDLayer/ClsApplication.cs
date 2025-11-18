@@ -71,7 +71,7 @@ namespace BussniesDVLDLayer
 
         public decimal PaidFees { get; set; }
 
-        public int CreatedByUser { get; set; }
+        public int _CreatedByUser { get; set; }
 
         public clsUsers UserInfo;
 
@@ -85,24 +85,24 @@ namespace BussniesDVLDLayer
             this._ApplicationStatus = enApplicationStatus.New;
             this.LastStatusDate = DateTime.Now;
             this.PaidFees = 0;
-            this.CreatedByUser = -1;
+            this._CreatedByUser = -1;
 
         }
 
-        private ClsApplication(int ApplicationId , int ApplicatPersonID , DateTime ApplicationDate , int ApplicationTypeID , enApplicationStatus ApplicationStatus , DateTime LastStatusDate , decimal PaidFees , int CreatedByUser)
+        protected ClsApplication(int ApplicationId , int ApplicatPersonID , DateTime ApplicationDate , int ApplicationTypeID , enApplicationStatus ApplicationStatus , DateTime LastStatusDate , decimal PaidFees , int CreatedByUser)
         {
 
             this._ApplicationID = ApplicationId;
             this._PersonID = ApplicatPersonID;
-            this._GetPeronInfo = clsPeople.Find(ApplicatPersonID);
+            this._GetPeronInfo = clsPeople.Find(_PersonID);
             this.ApplicationDate = ApplicationDate;
             this._ApplicationTypeId = ApplicationTypeID;
-            this.ApplicationTypeInfo = clsApplicationType.Find(ApplicationTypeID);
+            this.ApplicationTypeInfo = clsApplicationType.Find(_ApplicationTypeId);
             this._ApplicationStatus = ApplicationStatus;
             this.LastStatusDate = LastStatusDate;
             this.PaidFees = PaidFees;
-            this.CreatedByUser = CreatedByUser;
-            this.UserInfo = clsUsers.Find(CreatedByUser);
+            this._CreatedByUser = CreatedByUser;
+            this.UserInfo = clsUsers.Find(_CreatedByUser);
             _Mode = enMode.Update;
 
         }
@@ -110,7 +110,7 @@ namespace BussniesDVLDLayer
         private bool _AddNewApplication()
         {
 
-            this._ApplicationID = clsApplicationData.AddApplication(this._PersonID, this.ApplicationDate, this._ApplicationTypeId, (byte)this._ApplicationStatus, this.LastStatusDate, this.PaidFees, this.CreatedByUser);
+            this._ApplicationID = clsApplicationData.AddApplication(this._PersonID, this.ApplicationDate, this._ApplicationTypeId, (byte)this._ApplicationStatus, this.LastStatusDate, this.PaidFees, this._CreatedByUser);
 
             return this._ApplicationID != -1;
 
@@ -119,7 +119,7 @@ namespace BussniesDVLDLayer
         private bool _UpdateApplication()
         {
 
-            return clsApplicationData.UpdateApplication(this._ApplicationID, this._PersonID, this.ApplicationDate, this._ApplicationTypeId, (byte)this._ApplicationStatus, this.LastStatusDate, this.PaidFees, this.CreatedByUser);
+            return clsApplicationData.UpdateApplication(this._ApplicationID, this._PersonID, this.ApplicationDate, this._ApplicationTypeId, (byte)this._ApplicationStatus, this.LastStatusDate, this.PaidFees, this._CreatedByUser);
         }
 
         public static ClsApplication FindBaseApplication(int ApplicationID)

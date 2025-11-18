@@ -66,6 +66,10 @@ namespace DVLD.LocalLicenseDriver
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+            ShowLicenseAppInfo licenseAppInfo = new ShowLicenseAppInfo((int)dataGridView1.CurrentRow.Cells[0].Value);
+            licenseAppInfo.Show();
+
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -77,6 +81,7 @@ namespace DVLD.LocalLicenseDriver
         {
             AddEditLocalDrivingLicense addEditLocalDrivingLicense = new AddEditLocalDrivingLicense();
             addEditLocalDrivingLicense.ShowDialog();
+            LocalDrivingLicenseApp_Load(null, null);
         }
 
         private void LocalDrivingLicenseApp_Load(object sender, EventArgs e)
@@ -183,7 +188,64 @@ namespace DVLD.LocalLicenseDriver
         private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-           
+            if (MessageBox.Show("Are you sure do you Want to Cancel this Application?", "Confirm Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+
+            int LocalLicenseApplicationID = (int)dataGridView1.CurrentRow.Cells[0].Value;
+
+            ClsLicenseDrivingLocal licenseDrivingLocal = ClsLicenseDrivingLocal.FindByLocalDrivingAppLicenseID(LocalLicenseApplicationID);
+
+            if (licenseDrivingLocal != null)
+            {
+
+                if (licenseDrivingLocal.Cancel())
+                {
+
+                    MessageBox.Show("Application Cancelled Successfully", "Cancelled Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LocalDrivingLicenseApp_Load(null, null);
+
+                }
+                else
+                {
+                    MessageBox.Show("Application could not Cancelled", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+
+
+
+        }
+
+        private void deleteApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (MessageBox.Show("Are you sure do you Want to delete this Application?", "Confirm Message", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+
+            int LocalLicenseApplicationID = (int)dataGridView1.CurrentRow.Cells[0].Value;
+
+            ClsLicenseDrivingLocal licenseDrivingLocal = ClsLicenseDrivingLocal.FindByLocalDrivingAppLicenseID(LocalLicenseApplicationID);
+
+            if(licenseDrivingLocal != null)
+            {
+
+                if (licenseDrivingLocal.Delete())
+                {
+
+                    MessageBox.Show("Application Deleted Successfully", "Deleted Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LocalDrivingLicenseApp_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Application could not Deleted", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+
             
 
         }

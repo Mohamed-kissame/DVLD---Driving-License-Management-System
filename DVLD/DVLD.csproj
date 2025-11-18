@@ -105,6 +105,12 @@
     <Compile Include="Classes\clsUtilty.cs" />
     <Compile Include="Classes\clsValidation.cs" />
     <Compile Include="Classes\LoginInfo.cs" />
+    <Compile Include="controlls\ctrlShowLicenseApplicationInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controlls\ctrlShowLicenseApplicationInfo.Designer.cs">
+      <DependentUpon>ctrlShowLicenseApplicationInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="controlls\FillDataGrade.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -146,6 +152,12 @@
     </Compile>
     <Compile Include="LocalLicenseDriver\LocalDrivingLicenseApp.Designer.cs">
       <DependentUpon>LocalDrivingLicenseApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalLicenseDriver\ShowLicenseAppInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalLicenseDriver\ShowLicenseAppInfo.Designer.cs">
+      <DependentUpon>ShowLicenseAppInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -221,6 +233,9 @@
     <EmbeddedResource Include="ApplicationTypes\Manage Application Types.resx">
       <DependentUpon>Manage Application Types.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="controlls\ctrlShowLicenseApplicationInfo.resx">
+      <DependentUpon>ctrlShowLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controlls\FillDataGrade.resx">
       <DependentUpon>FillDataGrade.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LocalLicenseDriver\LocalDrivingLicenseApp.resx">
       <DependentUpon>LocalDrivingLicenseApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalLicenseDriver\ShowLicenseAppInfo.resx">
+      <DependentUpon>ShowLicenseAppInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -478,6 +496,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\Retake Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Driver License 48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\License Type 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\LicenseView 400.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Passed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\money 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\application%281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

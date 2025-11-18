@@ -45,19 +45,11 @@ namespace BussniesDVLDLayer
         }
 
         private ClsLicenseDrivingLocal(int LocalDrivingLicenseApplicationID , int ApplicationID , int ApplicantPersonID , DateTime ApplicationDate 
-                                       , int ApplicationTypeID , enApplicationStatus ApplicationStatus , DateTime LastStatusDate , decimal PaidFees , int CreatedByUserID , int LicenseClass)
+                                       , int ApplicationTypeID , enApplicationStatus ApplicationStatus , DateTime LastStatusDate , decimal PaidFees , int CreatedByUserID , int LicenseClass) : base(ApplicationID ,ApplicantPersonID , ApplicationDate , ApplicationTypeID, ApplicationStatus ,LastStatusDate , PaidFees , CreatedByUserID)
         {
 
 
             this.LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
-            this._ApplicationID = ApplicationID;
-            this._PersonID = ApplicantPersonID;
-            this.ApplicationDate = ApplicationDate;
-            this._ApplicationTypeId = ApplicationTypeID;
-            this._ApplicationStatus = ApplicationStatus;
-            this.LastStatusDate = LastStatusDate;
-            this.PaidFees = PaidFees;
-            this.CreatedByUser = CreatedByUserID;
             this.LicenseClassID = LicenseClass;
             this.LicenseClassInfo = clsLicenseClass.Find(LicenseClassID);
 
@@ -93,7 +85,7 @@ namespace BussniesDVLDLayer
                 ClsApplication Application = ClsApplication.FindBaseApplication(ApplicationID);
 
 
-                return new ClsLicenseDrivingLocal(LocalDrivingLicenseApplicationID, Application._ApplicationID, Application._PersonID, Application.ApplicationDate, Application._ApplicationTypeId, (enApplicationStatus)Application._ApplicationStatus, Application.LastStatusDate, Application.PaidFees, Application.CreatedByUser, LicenseClassID);
+                return new ClsLicenseDrivingLocal(LocalDrivingLicenseApplicationID, Application._ApplicationID, Application._PersonID, Application.ApplicationDate, Application._ApplicationTypeId, (enApplicationStatus)Application._ApplicationStatus, Application.LastStatusDate, Application.PaidFees, Application._CreatedByUser, LicenseClassID);
 
             }
 
@@ -118,7 +110,7 @@ namespace BussniesDVLDLayer
 
                 ClsApplication Application = ClsApplication.FindBaseApplication(ApplicationID);
 
-                return new ClsLicenseDrivingLocal(LocalDrivingLicenseApplicationID, Application._ApplicationID, Application._PersonID, Application.ApplicationDate, Application._ApplicationTypeId, (enApplicationStatus)Application._ApplicationStatus, Application.LastStatusDate, Application.PaidFees, Application.CreatedByUser, LicenseClassID);
+                return new ClsLicenseDrivingLocal(LocalDrivingLicenseApplicationID, Application._ApplicationID, Application._PersonID, Application.ApplicationDate, Application._ApplicationTypeId, (enApplicationStatus)Application._ApplicationStatus, Application.LastStatusDate, Application.PaidFees, Application._CreatedByUser, LicenseClassID);
 
 
             }

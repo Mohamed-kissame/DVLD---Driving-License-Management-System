@@ -151,7 +151,7 @@ namespace DVLD.LocalLicenseDriver
             lblDate.Text = clsFormat.DateToShort(_LocalDrivingLicenseApplication.ApplicationDate);
             comboBox1.SelectedIndex = comboBox1.FindString(clsLicenseClass.Find(_LocalDrivingLicenseApplication.LicenseClassID).ClassName);
             lblFees.Text = _LocalDrivingLicenseApplication.PaidFees.ToString();
-            lblUser.Text = clsUsers.Find(_LocalDrivingLicenseApplication.CreatedByUser)._UserName;
+            lblUser.Text = clsUsers.Find(_LocalDrivingLicenseApplication._CreatedByUser)._UserName;
         }
 
         private void DataBackEvent(object sender, int PersonID)
@@ -220,7 +220,7 @@ namespace DVLD.LocalLicenseDriver
             _LocalDrivingLicenseApplication._ApplicationStatus = ClsApplication.enApplicationStatus.New;
             _LocalDrivingLicenseApplication.LastStatusDate = DateTime.Now;
             _LocalDrivingLicenseApplication.PaidFees = Convert.ToDecimal(lblFees.Text);
-            _LocalDrivingLicenseApplication.CreatedByUser = LoginInfo.SelectUserInfo._UserID;
+            _LocalDrivingLicenseApplication._CreatedByUser = LoginInfo.SelectUserInfo._UserID;
             _LocalDrivingLicenseApplication.LicenseClassID = LicenseClassID;
 
 

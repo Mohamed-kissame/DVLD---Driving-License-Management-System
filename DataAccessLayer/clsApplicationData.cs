@@ -379,7 +379,7 @@ namespace DataAccessLayer
                 {
 
                     command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
-                    command.Parameters.AddWithValue("@NewStatus", NewStatus);
+                    command.Parameters.AddWithValue("@ApplicationStatus", NewStatus);
                     command.Parameters.AddWithValue("@LastStatusDate", DateTime.Now);
 
                     try
