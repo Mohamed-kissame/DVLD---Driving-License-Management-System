@@ -62,7 +62,6 @@ namespace DVLD.LocalLicenseDriver
         }
 
 
-
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -247,6 +246,59 @@ namespace DVLD.LocalLicenseDriver
             }
 
             
+
+        }
+
+        private void sechduleTestsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void issueDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Is Still This Option dosent Implement", "Implement Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Is Still This Option dosent Implement", "Implement Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Is Still This Option dosent Implement", "Implement Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+            int LocalLicenseAppID = (int)dataGridView1.CurrentRow.Cells[0].Value;
+
+            ClsLicenseDrivingLocal LicenseDrivingLocal = ClsLicenseDrivingLocal.FindByLocalDrivingAppLicenseID(LocalLicenseAppID);
+
+
+            int TotalTestPassed = (int)dataGridView1.CurrentRow.Cells[5].Value;
+
+            bool lisenseExist = LicenseDrivingLocal.IsLicenseIssued();
+
+            issueDrivingLicenseToolStripMenuItem.Enabled = (TotalTestPassed == 3) && !lisenseExist;
+
+            showLicenseToolStripMenuItem.Enabled = lisenseExist;
+
+            editApplicationToolStripMenuItem.Enabled = !lisenseExist && (LicenseDrivingLocal._ApplicationStatus == ClsApplication.enApplicationStatus.New);
+
+            sechduleTestsToolStripMenuItem.Enabled = !lisenseExist;
+
+            cancelToolStripMenuItem.Enabled = (LicenseDrivingLocal._ApplicationStatus == ClsApplication.enApplicationStatus.New);
+
+            deleteApplicationToolStripMenuItem.Enabled = (LicenseDrivingLocal._ApplicationStatus == ClsApplication.enApplicationStatus.New);
+
+
+
+        }
+
+        private void sechduleVesionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }

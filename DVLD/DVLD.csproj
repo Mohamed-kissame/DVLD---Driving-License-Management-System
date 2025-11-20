@@ -518,5 +518,23 @@
   <ItemGroup>
     <None Include="icons\application%281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Schedule Test 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\IssueDrivingLicense 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\PersonLicenseHistory 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Vision 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Written Test 512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\Street Test 32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

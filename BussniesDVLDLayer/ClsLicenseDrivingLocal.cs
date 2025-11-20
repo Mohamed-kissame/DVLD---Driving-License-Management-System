@@ -160,7 +160,17 @@ namespace BussniesDVLDLayer
 
         public bool Delete()
         {
-            return ClsLicenseDrivingLocalData.DeleteLicenseDrivingLocal(this.LocalDrivingLicenseApplicationID);
+
+            bool isLicenseAppDelete = false;
+            bool IsBaseAppDelete = false;
+            isLicenseAppDelete = ClsLicenseDrivingLocalData.DeleteLicenseDrivingLocal(this.LocalDrivingLicenseApplicationID);
+
+            if (!isLicenseAppDelete)
+                return false;
+
+            IsBaseAppDelete = base.Delete();
+            return IsBaseAppDelete;
+
         }
 
         public static DataTable GetAllLicense()
@@ -169,7 +179,16 @@ namespace BussniesDVLDLayer
             return ClsLicenseDrivingLocalData.ListOfLicenseDriving();
         }
 
+        public bool IsLicenseIssued()
+        {
+            return (GetActiveLicenseID() != -1);
+        }
 
+        public int GetActiveLicenseID()
+        {
+
+            return ClsLicense.GetActiveLicenseIDByPersonID(this._PersonID, this.LicenseClassID);
+        }
 
     }
 }
