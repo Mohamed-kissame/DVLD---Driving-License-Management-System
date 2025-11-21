@@ -12,7 +12,7 @@ namespace DataAccessLayer
     {
 
 
-        public static bool GetAllTestByID(int Id , ref string TestTypeTitle , ref string TestTypeDescription , ref decimal TestTypeFees)
+        public static bool GetAllTestByID(int Id , ref string TestTypeTitle , ref string TestTypeDescription , ref float TestTypeFees)
         {
 
             bool IsFound = false;
@@ -42,7 +42,7 @@ namespace DataAccessLayer
 
                                 TestTypeTitle = Convert.ToString(reader["TestTypeTitle"]);
                                 TestTypeDescription = Convert.ToString(reader["TestTypeDescription"]);
-                                TestTypeFees = Convert.ToDecimal(reader["TestTypeFees"]);
+                                TestTypeFees = Convert.ToSingle(reader["TestTypeFees"]);
 
                             }
                         }
@@ -100,7 +100,7 @@ namespace DataAccessLayer
             return dt;
         }
 
-        public static bool Update(int Id , string TestTypeTitle , string TestTypeDescription , decimal TestTypeFees)
+        public static bool Update(int Id , string TestTypeTitle , string TestTypeDescription , float TestTypeFees)
         {
 
             int RowAffected = 0;

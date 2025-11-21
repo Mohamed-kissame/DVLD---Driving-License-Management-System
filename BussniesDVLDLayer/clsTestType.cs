@@ -12,17 +12,32 @@ namespace BussniesDVLDLayer
     public class clsTestType
     {
 
+        public enum enMode { AddNew = 0 , Update = 1}
 
-        public int Id { get; set; }
+        public enMode Mode = enMode.AddNew;
+
+        public enum enTestType { VisionTest = 1, WrittenTest = 2, StreetTest = 3 };
+
+        public clsTestType.enTestType Id { set; get; }
 
         public string TestName { get; set; }
 
         public string TestDescription { get; set; }
 
-        public decimal TestFees { get; set; }
+        public float TestFees { get; set; }
 
 
-        clsTestType(int Id , string TestName , string TestDescription , decimal TestFees)
+        clsTestType()
+        {
+            this.Id = clsTestType.enTestType.VisionTest;
+            this.TestName = "";
+            this.TestDescription = "";
+            this.TestFees = 0;
+            Mode = enMode.AddNew;
+        }
+
+
+        clsTestType(clsTestType.enTestType Id , string TestName , string TestDescription , float TestFees)
         {
 
             this.Id = Id;
@@ -31,16 +46,16 @@ namespace BussniesDVLDLayer
             this.TestFees = TestFees;
         }
 
-        public static clsTestType Find(int ID)
+        public static clsTestType Find(clsTestType.enTestType TestTypeID)
         {
 
             string TestName = "", TestDescription = "";
 
-            decimal TestFees = 0;
+            float TestFees = 0;
 
-            if (ClsTestTypeData.GetAllTestByID(ID, ref TestName, ref TestDescription, ref TestFees))
+            if (ClsTestTypeData.GetAllTestByID((int)TestTypeID, ref TestName, ref TestDescription, ref TestFees))
 
-                return new clsTestType(ID, TestName, TestDescription, TestFees);
+                return new clsTestType(TestTypeID, TestName, TestDescription, TestFees);
             else
 
                 return null;
@@ -57,7 +72,7 @@ namespace BussniesDVLDLayer
         public bool Update()
         {
 
-            return ClsTestTypeData.Update(this.Id, this.TestName, this.TestDescription, this.TestFees);
+            return ClsTestTypeData.Update((int)this.Id, this.TestName, this.TestDescription, this.TestFees);
         }
 
     }
