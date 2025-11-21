@@ -100,6 +100,50 @@ namespace DataAccessLayer
             return dt;
         }
 
+        public static int AddNewTestType(string TestTypeTitle , string TestTypeDescription , float TestTypeFees)
+        {
+
+            int AddNewTest = -1;
+
+            using(SqlConnection connection = new SqlConnection (clsDataAccessConnection.Connectionstring))
+            {
+
+                string Query = @"Insert Into TestTypes(TestTypeTitle , TestTypeDescription , TestTypeFees) values(@TestTypeTitle , @TestTypeDescription , TestTypeFees);
+                                 Select Scope_Identity();";
+
+                using(SqlCommand command = new SqlCommand(Query, connection))
+                {
+
+                    command.Parameters.AddWithValue("@TestTypeTitle", TestTypeTitle);
+                    command.Parameters.AddWithValue("@TestTypeDescription", TestTypeDescription);
+                    command.Parameters.AddWithValue("@TestTypeFees", TestTypeFees);
+
+                    try
+                    {
+
+                        connection.Open();
+
+                        object resulta = command.ExecuteScalar();
+
+                        if(resulta != null && int.TryParse(resulta.ToString() , out int NewType ))
+                        {
+                            AddNewTest = NewType;
+                        }
+
+                    }
+                    catch(Exception ex)
+                    {
+
+                        AddNewTest = -1;
+
+                    }
+                }
+                
+            }
+
+            return AddNewTest;
+        }
+
         public static bool Update(int Id , string TestTypeTitle , string TestTypeDescription , float TestTypeFees)
         {
 

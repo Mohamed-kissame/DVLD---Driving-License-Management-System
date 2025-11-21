@@ -27,7 +27,7 @@ namespace DVLD.TestTypes
         private void LoadData()
         {
 
-            Test = clsTestType.Find(_TestID);
+            Test = clsTestType.Find((clsTestType.enTestType)_TestID);
 
             if(Test != null)
             {
@@ -58,7 +58,7 @@ namespace DVLD.TestTypes
 
             Test.TestName = txtTitle.Text;
             Test.TestDescription = TxtDescription.Text;
-            Test.TestFees = Convert.ToDecimal(txtFees.Text);
+            Test.TestFees = Convert.ToSingle(txtFees.Text);
 
             if (Test.Update())
             {
