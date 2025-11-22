@@ -54,3 +54,4 @@ C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.LocalLicenseDriver.Local
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Driver.DriverView.resources
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.controlls.ctrlShowLicenseApplicationInfo.resources
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.LocalLicenseDriver.ShowLicenseAppInfo.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Tests.Controlls.ctrlScheduleTest.resources
