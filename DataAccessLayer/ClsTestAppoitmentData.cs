@@ -58,6 +58,52 @@ namespace DataAccessLayer
 
         }
 
+        public static bool GetLastTestAppointment(int LocalDrivingLicenseApplicationID , int TestTypeID , ref int TestAppointmentID , ref DateTime AppointmentDate , ref float PaidFees , ref int CreatedByUserID , ref bool IsLocked , ref int RetakeTestApplicationID)
+        {
+
+            bool isFound = false;
+
+            using(SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
+            {
+
+                string Query = "Select Top 1 * From TestAppointments where (TestTypeID = @TestTypeID) And (LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID)";
+
+                using(SqlCommand command = new SqlCommand(Query , connection))
+                {
+
+                    command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+                    command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+
+                    try
+                    {
+
+                        connection.Open();
+
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+
+                            isFound = true;
+                            TestAppointmentID = (int)reader["TestAppointmentID"];
+                            AppointmentDate = (DateTime)reader["AppointmentDate"];
+                            PaidFees = (float)reader["PaidFees"];
+                            CreatedByUserID = (int)reader["CreatedByUserID"];
+                            IsLocked = (bool)reader["IsLocked"];
+                            RetakeTestApplicationID = (int)reader["RetakeTestApplicationID"];
+
+
+                        }
+                    }catch(Exception ex)
+                    {
+                        isFound = false;
+                    }
+                }
+
+
+            }
+
+            return isFound;
+        }
+
         public static DataTable GetAllTestAppoitment()
         {
 
@@ -92,6 +138,44 @@ namespace DataAccessLayer
             }
 
             return dt;
+        }
+
+        public static DataTable GetApplicationTestAppointmentPerTestType(int LocalDrivingLicenseApplication , int TestTypeID)
+        {
+
+            DataTable dt = new DataTable();
+
+            using(SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
+            {
+
+                string Query = @"Select TestAppointmentID , AppointmentDate , PaidFees , IsLocked From TestAppointments where (TestTypeID = @TestTypeID) And (LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID) order by TestAppointmentID Desc";
+
+                using(SqlCommand command = new SqlCommand(Query , connection))
+                {
+
+                    command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplication);
+                    command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+
+                    try
+                    {
+                        connection.Open();
+
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+
+                            if (reader.HasRows)
+                                dt.Load(reader);
+                        }
+                    }catch(Exception ex)
+                    {
+                        dt = null;
+                    }
+                }
+
+            }
+
+            return dt;
+
         }
 
         public static int AddNewTestAppointment(int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate, float PaidFees, int CreatedByUserID , bool IsLcked  , int RetakeTestApplicationID)
@@ -185,6 +269,45 @@ namespace DataAccessLayer
             }
 
             return RowAffected > 0;
+        }
+
+        public static int GetTestID(int TestAppointmentID)
+        {
+            int TestID = -1;
+
+
+            using(SqlConnection connection = new SqlConnection (clsDataAccessConnection.Connectionstring))
+            {
+
+                string Query = "Select TestID From Tests Where TestAppointmentID = @TestAppointment";
+
+                using(SqlCommand command = new SqlCommand(Query , connection))
+                {
+
+                    command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
+
+                    try
+                    {
+
+                        connection.Open();
+
+                        object Resulta = command.ExecuteScalar();
+
+                        if (Resulta != null && int.TryParse(Resulta.ToString(), out int IDTest))
+                        {
+                            TestID = IDTest;
+                            
+                        }
+                    }catch(Exception ex)
+                    {
+                        TestID = -1;
+                    }
+                }
+
+            }
+
+            return TestID;
+
         }
 
     }

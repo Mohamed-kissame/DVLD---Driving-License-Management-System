@@ -19,7 +19,7 @@ namespace BussniesDVLDLayer
 
         public int _TestAppointmentID { get; set; }
 
-        //  public clsTestAppointment TestAppointmentInfo { set; get; } // need To add Composition when we Finsh the TestAppoitment Classes
+        public clsTestAppointment TestAppointmentInfo { set; get; } 
 
         public bool _TestResult { get; set; }
 
@@ -45,6 +45,7 @@ namespace BussniesDVLDLayer
 
             this._TestID = TestID;
             this._TestAppointmentID = TestAppointmentID;
+            this.TestAppointmentInfo = clsTestAppointment.FindById(TestAppointmentID);
             this._TestResult = TestResult;
             this._Notes = Notes;
             this._CreatedByUserID = CreatedByUserID;
