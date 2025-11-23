@@ -191,11 +191,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Controlls\CtrlScheduledTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tests\Controlls\CtrlScheduledTest.Designer.cs">
+      <DependentUpon>CtrlScheduledTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tests\Controlls\ctrlScheduleTest.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Tests\Controlls\ctrlScheduleTest.Designer.cs">
       <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\FrmListTestAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\FrmListTestAppointment.Designer.cs">
+      <DependentUpon>FrmListTestAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\FrmScheduleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\FrmScheduleTest.Designer.cs">
+      <DependentUpon>FrmScheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\TakeTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\TakeTest.Designer.cs">
+      <DependentUpon>TakeTest.cs</DependentUpon>
     </Compile>
     <Compile Include="TestTypes\EditTestTypes.cs">
       <SubType>Form</SubType>
@@ -291,8 +315,20 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Tests\Controlls\CtrlScheduledTest.resx">
+      <DependentUpon>CtrlScheduledTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tests\Controlls\ctrlScheduleTest.resx">
       <DependentUpon>ctrlScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\FrmListTestAppointment.resx">
+      <DependentUpon>FrmListTestAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\FrmScheduleTest.resx">
+      <DependentUpon>FrmScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\TakeTest.resx">
+      <DependentUpon>TakeTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestTypes\EditTestTypes.resx">
       <DependentUpon>EditTestTypes.cs</DependentUpon>
@@ -550,6 +586,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\AddAppointment 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\results.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\notepad.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

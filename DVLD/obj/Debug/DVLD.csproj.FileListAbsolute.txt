@@ -55,3 +55,7 @@ C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Driver.DriverView.resour
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.controlls.ctrlShowLicenseApplicationInfo.resources
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.LocalLicenseDriver.ShowLicenseAppInfo.resources
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Tests.Controlls.ctrlScheduleTest.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Tests.FrmListTestAppointment.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Tests.FrmScheduleTest.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Tests.Controlls.CtrlScheduledTest.resources
+C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\obj\Debug\DVLD.Tests.TakeTest.resources
