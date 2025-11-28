@@ -23,7 +23,7 @@ namespace BussniesDVLDLayer
 
         public int DefaultLengethValidation { get; set; }
 
-        public decimal classFess { get; set; }
+        public float classFess { get; set; }
 
 
         public clsLicenseClass()
@@ -36,7 +36,7 @@ namespace BussniesDVLDLayer
             DefaultLengethValidation = -1;
             classFess = -1;
         }
-        private clsLicenseClass(int Id, string ClassName, string ClassDescription, int MinAllowedAge, int DefaultLengthValidation, decimal ClassFess)
+        private clsLicenseClass(int Id, string ClassName, string ClassDescription, int MinAllowedAge, int DefaultLengthValidation, float ClassFess)
         {
 
             this.LicenseClassID = Id;
@@ -52,7 +52,7 @@ namespace BussniesDVLDLayer
 
             string ClassName = "", ClassDescription = "";
             int MinAllowedAge = -1, DefaultLengthValidation = -1;
-            decimal ClassFess = -1;
+            float ClassFess = -1;
 
             if (ClsLicenseClassData.GetAllLicenseClassByID(ID, ref ClassName, ref ClassDescription, ref MinAllowedAge, ref DefaultLengthValidation, ref ClassFess))
 
@@ -67,7 +67,7 @@ namespace BussniesDVLDLayer
             int ClassID = -1;
             string ClassDescription = "";
             int MinAllowedAge = -1, DefaultLengthValidation = -1;
-            decimal ClassFess = -1;
+            float ClassFess = -1;
 
             if (ClsLicenseClassData.GetAllLicenseClassByName(ClassName , ref ClassID, ref ClassDescription, ref MinAllowedAge, ref DefaultLengthValidation, ref ClassFess))
 

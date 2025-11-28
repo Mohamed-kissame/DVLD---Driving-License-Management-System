@@ -11,7 +11,7 @@ namespace DataAccessLayer
     public class ClsLicenseClassData
     {
 
-        public static bool GetAllLicenseClassByID(int Id , ref string ClassName , ref string ClassDescription , ref int AllowedAge , ref int LengtValidation , ref decimal Fess)
+        public static bool GetAllLicenseClassByID(int Id , ref string ClassName , ref string ClassDescription , ref int AllowedAge , ref int LengtValidation , ref float Fess)
         {
 
             bool isFound = false;
@@ -42,7 +42,7 @@ namespace DataAccessLayer
                                 ClassDescription = reader["ClassDescription"].ToString();
                                 AllowedAge = Convert.ToInt32(reader["MinimumAllowedAge"]);
                                 LengtValidation = Convert.ToInt32(reader["DefaultValidityLength"]);
-                                Fess = Convert.ToDecimal(reader["ClassFees"]);
+                                Fess = Convert.ToSingle(reader["ClassFees"]);
                                 
                             }
                         }
@@ -59,7 +59,7 @@ namespace DataAccessLayer
 
         }
 
-        public static bool GetAllLicenseClassByName(string ClassName, ref int Id, ref string ClassDescription, ref int AllowedAge, ref int LengtValidation, ref decimal Fess)
+        public static bool GetAllLicenseClassByName(string ClassName, ref int Id, ref string ClassDescription, ref int AllowedAge, ref int LengtValidation, ref float Fess)
         {
 
             bool isFound = false;
@@ -90,7 +90,7 @@ namespace DataAccessLayer
                                 ClassDescription = reader["ClassDescription"].ToString();
                                 AllowedAge = Convert.ToInt32(reader["MinimumAllowedAge"]);
                                 LengtValidation = Convert.ToInt32(reader["DefaultValidityLength"]);
-                                Fess = Convert.ToDecimal(reader["ClassFees"]);
+                                Fess = Convert.ToSingle(reader["ClassFees"]);
 
                             }
                         }

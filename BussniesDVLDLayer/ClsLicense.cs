@@ -53,7 +53,7 @@ namespace BussniesDVLDLayer
 
         public int _CreatedByUserID { get; set; }
 
-        ClsLicense()
+        public ClsLicense()
         {
 
             _LicenseID = -1;
@@ -70,7 +70,7 @@ namespace BussniesDVLDLayer
             _Mode = enMode.AddNew;
         }
 
-        ClsLicense(int LicenseID , int ApplicationID , int DriverID , int LicenseClass , DateTime issueDate , DateTime expirationDate , string Notes , float PaidFees , bool isActive , enIssueReason issueReason , int CreatedByUserID)
+        private ClsLicense(int LicenseID , int ApplicationID , int DriverID , int LicenseClass , DateTime issueDate , DateTime expirationDate , string Notes , float PaidFees , bool isActive , enIssueReason issueReason , int CreatedByUserID)
         {
 
             this._LicenseID = LicenseID;

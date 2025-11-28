@@ -196,11 +196,18 @@ namespace DVLD
             }
 
         }
+           
 
-        private void btnShowPassword_MouseEnter(object sender, EventArgs e)
+        private void btnShowPassword_MouseEnter_1(object sender, EventArgs e)
         {
-            textBox2.UseSystemPasswordChar = false; 
+            textBox2.UseSystemPasswordChar = false;
             textBox2.PasswordChar = '\0';
+        }
+
+        private void btnShowPassword_MouseMove(object sender, MouseEventArgs e)
+        {
+            textBox2.PasswordChar = '*';
+            textBox2.UseSystemPasswordChar = true;
         }
 
         private void btnShowPassword_MouseLeave(object sender, EventArgs e)

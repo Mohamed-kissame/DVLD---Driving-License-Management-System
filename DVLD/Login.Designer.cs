@@ -176,7 +176,7 @@
             this.btnShowPassword.Size = new System.Drawing.Size(28, 26);
             this.btnShowPassword.TabIndex = 11;
             this.btnShowPassword.UseVisualStyleBackColor = false;
-            this.btnShowPassword.MouseEnter += new System.EventHandler(this.btnShowPassword_MouseEnter);
+            this.btnShowPassword.MouseEnter += new System.EventHandler(this.btnShowPassword_MouseEnter_1);
             this.btnShowPassword.MouseLeave += new System.EventHandler(this.btnShowPassword_MouseLeave);
             // 
             // pictureBox2

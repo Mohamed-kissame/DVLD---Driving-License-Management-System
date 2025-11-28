@@ -179,6 +179,148 @@ namespace BussniesDVLDLayer
             return ClsLicenseDrivingLocalData.ListOfLicenseDriving();
         }
 
+        public bool DoesPassTestType(clsTestType.enTestType TestTypeID)
+        {
+            return ClsLicenseDrivingLocalData.DoesPassTestType(this.LocalDrivingLicenseApplicationID, (int)TestTypeID);
+        }
+
+        public bool DoesPassPreviousTest(clsTestType.enTestType CurrentTestType)
+        {
+
+            switch (CurrentTestType)
+            {
+
+                case clsTestType.enTestType.VisionTest: return true;
+
+                case clsTestType.enTestType.WrittenTest: return this.DoesPassTestType(clsTestType.enTestType.VisionTest);
+
+                case clsTestType.enTestType.StreetTest: return this.DoesPassTestType(clsTestType.enTestType.WrittenTest);
+
+                default: return false;
+                  
+
+            }
+        }
+
+        public static bool DoesPassTestType(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID)
+        {
+            return ClsLicenseDrivingLocalData.DoesPassTestType(LocalDrivingLicenseApplicationID, (int)TestTypeID);
+        }
+
+        public bool DoesAttendTestType(clsTestType.enTestType TestTypeID)
+        {
+            return ClsLicenseDrivingLocalData.DoesAttendTestType(this.LocalDrivingLicenseApplicationID, (int)TestTypeID);
+        }
+
+        public byte TotalTrailsPerTest(clsTestType.enTestType TestTypeID)
+        {
+            return ClsLicenseDrivingLocalData.TotalTrailsPerTest(this.LocalDrivingLicenseApplicationID, (int)TestTypeID);
+        }
+
+        public static byte TotalTrailsPerTest(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID)
+        {
+            return ClsLicenseDrivingLocalData.TotalTrailsPerTest(LocalDrivingLicenseApplicationID, (int)TestTypeID);
+        }
+
+        public static bool AttendedTest(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID) { 
+
+            return ClsLicenseDrivingLocalData.TotalTrailsPerTest(LocalDrivingLicenseApplicationID, (int)TestTypeID) >0; 
+
+        }
+
+        public bool AttendedTest(clsTestType.enTestType TestTypeID) {
+
+            return ClsLicenseDrivingLocalData.TotalTrailsPerTest(this.LocalDrivingLicenseApplicationID, (int)TestTypeID) > 0;
+        }
+
+        public static bool IsThereAnActiveScheduledTest(int LocalDrivingLicenseApplicationID, clsTestType.enTestType TestTypeID) {
+
+            return ClsLicenseDrivingLocalData.IsThereAnActiveScheduledTest(LocalDrivingLicenseApplicationID,(int) TestTypeID);
+        }
+
+        public  bool IsThereAnActiveScheduledTest(clsTestType.enTestType TestTypeID)
+        {
+            return ClsLicenseDrivingLocalData.IsThereAnActiveScheduledTest(this.LocalDrivingLicenseApplicationID, (int)TestTypeID);
+
+        }
+
+        public ClsTests GetLastTestPerTestType(clsTestType.enTestType TestTypeID)
+        {
+            return ClsTests.FindLastTestPerPersonAndLicenseClass(this._PersonID, this.LicenseClassID, TestTypeID);
+        }
+
+        public byte GetPassedTestCount()
+        {
+            return ClsTests.GetPassedTestCount(this.LocalDrivingLicenseApplicationID);
+        }
+
+        public bool PassedAllTest()
+        {
+
+            return ClsTests.PassedAllTests(this.LocalDrivingLicenseApplicationID);
+
+        }
+
+        public static bool PassedAllTest(int LocalDrivingLicenseApplicationID)
+        {
+
+            return ClsTests.PassedAllTests(LocalDrivingLicenseApplicationID);
+
+        }
+
+        public int IssueLicenseForFirstTime(string Notes , int CreatedBy)
+        {
+
+            int DriverID = -1;
+
+            ClsDriver driver = ClsDriver.FindByPersonID(this._PersonID);
+
+            if(driver == null)
+            {
+
+                driver = new ClsDriver();
+
+                driver._PersonID = this._PersonID;
+                driver._CreatedByUserID = CreatedBy;
+
+                if (driver.Save())
+                {
+                    DriverID = driver._DriverID;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            else
+            {
+                DriverID = driver._DriverID;
+            }
+
+            ClsLicense license = new ClsLicense();
+            license._ApplicationID = this._ApplicationID;
+            license._DriverID = DriverID;
+            license._LicnseClass = this.LicenseClassID;
+            license._IssueDate = DateTime.Now;
+            license._ExperienceDate = DateTime.Now.AddYears(this.LicenseClassInfo.DefaultLengethValidation);
+            license._Notes = Notes;
+            license._PaidFees = this.LicenseClassInfo.classFess;
+            license._isActive = true;
+            license._issueReason = ClsLicense.enIssueReason.FirstTime;
+            license._CreatedByUserID = CreatedBy;
+
+            if (license.Save())
+            {
+
+                this.SetComplete();
+
+                return license._LicenseID;
+            }
+            else
+                return -1;
+            
+        }
+
         public bool IsLicenseIssued()
         {
             return (GetActiveLicenseID() != -1);
