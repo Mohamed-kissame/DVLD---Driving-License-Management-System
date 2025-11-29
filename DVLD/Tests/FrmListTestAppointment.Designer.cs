@@ -28,16 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblTitle = new System.Windows.Forms.Label();
             this.ctrlShowLicenseApplicationInfo1 = new DVLD.controlls.ctrlShowLicenseApplicationInfo();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCount = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.takeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -68,16 +73,17 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 675);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(878, 186);
-            this.dataGridView1.TabIndex = 3;
+            this.dgv.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgv.Location = new System.Drawing.Point(37, 675);
+            this.dgv.Name = "dgv";
+            this.dgv.RowHeadersWidth = 62;
+            this.dgv.RowTemplate.Height = 28;
+            this.dgv.Size = new System.Drawing.Size(878, 186);
+            this.dgv.TabIndex = 3;
             // 
             // label1
             // 
@@ -108,6 +114,7 @@
             this.btnAdd.Size = new System.Drawing.Size(69, 41);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClose
             // 
@@ -119,6 +126,30 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.takeTestToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(249, 101);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Image = global::DVLD.Properties.Resources.edit;
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(248, 32);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // takeTestToolStripMenuItem
+            // 
+            this.takeTestToolStripMenuItem.Image = global::DVLD.Properties.Resources.test;
+            this.takeTestToolStripMenuItem.Name = "takeTestToolStripMenuItem";
+            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(161, 32);
+            this.takeTestToolStripMenuItem.Text = "Take Test";
+            // 
             // FrmListTestAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -128,15 +159,17 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv);
             this.Controls.Add(this.ctrlShowLicenseApplicationInfo1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmListTestAppointment";
             this.Text = "FrmListTestAppointment";
+            this.Load += new System.EventHandler(this.FrmListTestAppointment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,10 +180,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTitle;
         private controlls.ctrlShowLicenseApplicationInfo ctrlShowLicenseApplicationInfo1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem takeTestToolStripMenuItem;
     }
 }

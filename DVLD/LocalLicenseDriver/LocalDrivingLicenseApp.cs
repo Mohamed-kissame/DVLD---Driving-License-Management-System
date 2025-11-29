@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BussniesDVLDLayer;
+using DVLD.Tests;
 
 namespace DVLD.LocalLicenseDriver
 {
@@ -249,6 +250,17 @@ namespace DVLD.LocalLicenseDriver
 
         }
 
+        private void _ScheduleTest(clsTestType.enTestType TestType)
+        {
+
+            int LocalDrivingLicenseApplicationID = (int)dataGridView1.CurrentRow.Cells[0].Value;
+            FrmScheduleTest frm = new FrmScheduleTest(LocalDrivingLicenseApplicationID, TestType);
+            frm.ShowDialog();
+          
+            LocalDrivingLicenseApp_Load(null, null);
+
+        }
+
         private void sechduleTestsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
@@ -293,13 +305,42 @@ namespace DVLD.LocalLicenseDriver
 
             deleteApplicationToolStripMenuItem.Enabled = (LicenseDrivingLocal._ApplicationStatus == ClsApplication.enApplicationStatus.New);
 
+            bool PassedVisionTest = LicenseDrivingLocal.DoesPassTestType(clsTestType.enTestType.VisionTest); ;
+            bool PassedWrittenTest = LicenseDrivingLocal.DoesPassTestType(clsTestType.enTestType.WrittenTest);
+            bool PassedStreetTest = LicenseDrivingLocal.DoesPassTestType(clsTestType.enTestType.StreetTest);
+
+            sechduleTestsToolStripMenuItem.Enabled = (!PassedVisionTest || !PassedWrittenTest || !PassedStreetTest) && (LicenseDrivingLocal._ApplicationStatus == ClsApplication.enApplicationStatus.New);
+
+            if (sechduleTestsToolStripMenuItem.Enabled)
+            {
+                
+                sechduleVesionTestToolStripMenuItem.Enabled = !PassedVisionTest;
+
+                
+                sechduleWritteTestToolStripMenuItem.Enabled = PassedVisionTest && !PassedWrittenTest;
+
+               
+                sechduleStrToolStripMenuItem.Enabled = PassedVisionTest && PassedWrittenTest && !PassedStreetTest;
+
+            }
+
 
 
         }
 
         private void sechduleVesionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            _ScheduleTest(clsTestType.enTestType.VisionTest);
+        }
 
+        private void sechduleWritteTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _ScheduleTest(clsTestType.enTestType.WrittenTest);
+        }
+
+        private void sechduleStrToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _ScheduleTest(clsTestType.enTestType.StreetTest);
         }
     }
 }

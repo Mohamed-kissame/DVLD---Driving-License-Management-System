@@ -24,7 +24,7 @@ namespace DVLD
             get { return _Users; }
         }
 
-        private string _FileName = @"C:\Users\mkiss\OneDrive\Bureau\DVLD\DVLD\RememberMe.txt";
+        private string _FileName = "RememberMe.txt";
 
         public Login()
         {
@@ -123,14 +123,14 @@ namespace DVLD
 
                     if (rememberMe)
                     {
-                        
+
                         textBox1.Text = username;
                         textBox2.Text = Decrypt(encryptedPassword);
 
-                        
+
                         checkBox1.Checked = true;
 
-                        break; 
+                        break;
                     }
                 }
             }

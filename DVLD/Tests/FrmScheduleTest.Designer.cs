@@ -30,19 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmScheduleTest));
-            this.ctrlScheduleTest1 = new DVLD.Tests.Controlls.ctrlScheduleTest();
             this.btnClose = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.ctrlScheduleTest1 = new DVLD.Tests.Controlls.ctrlScheduleTest();
             this.SuspendLayout();
-            // 
-            // ctrlScheduleTest1
-            // 
-            this.ctrlScheduleTest1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ctrlScheduleTest1.Location = new System.Drawing.Point(12, 1);
-            this.ctrlScheduleTest1.Name = "ctrlScheduleTest1";
-            this.ctrlScheduleTest1.Size = new System.Drawing.Size(585, 711);
-            this.ctrlScheduleTest1.TabIndex = 0;
-            this.ctrlScheduleTest1.TestType = BussniesDVLDLayer.clsTestType.enTestType.VisionTest;
             // 
             // btnClose
             // 
@@ -50,7 +41,7 @@
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.ImageIndex = 0;
             this.btnClose.ImageList = this.imageList1;
-            this.btnClose.Location = new System.Drawing.Point(251, 718);
+            this.btnClose.Location = new System.Drawing.Point(250, 718);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(81, 40);
             this.btnClose.TabIndex = 1;
@@ -66,11 +57,20 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "Close.png");
             // 
+            // ctrlScheduleTest1
+            // 
+            this.ctrlScheduleTest1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ctrlScheduleTest1.Location = new System.Drawing.Point(12, 1);
+            this.ctrlScheduleTest1.Name = "ctrlScheduleTest1";
+            this.ctrlScheduleTest1.Size = new System.Drawing.Size(585, 711);
+            this.ctrlScheduleTest1.TabIndex = 0;
+            this.ctrlScheduleTest1.TestType = BussniesDVLDLayer.clsTestType.enTestType.VisionTest;
+            // 
             // FrmScheduleTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 786);
+            this.ClientSize = new System.Drawing.Size(593, 766);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlScheduleTest1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
