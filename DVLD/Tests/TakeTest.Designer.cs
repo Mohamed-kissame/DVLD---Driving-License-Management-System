@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TakeTest));
-            this.ctrlScheduledTest1 = new DVLD.Tests.Controlls.CtrlScheduledTest();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rdbPass = new System.Windows.Forms.RadioButton();
@@ -38,20 +37,14 @@
             this.lblError = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.ctrlScheduledTest1 = new DVLD.Tests.Controlls.CtrlScheduledTest();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ctrlScheduledTest1
-            // 
-            this.ctrlScheduledTest1.Location = new System.Drawing.Point(46, 12);
-            this.ctrlScheduledTest1.Name = "ctrlScheduledTest1";
-            this.ctrlScheduledTest1.Size = new System.Drawing.Size(494, 523);
-            this.ctrlScheduledTest1.TabIndex = 0;
             // 
             // label1
             // 
@@ -130,6 +123,14 @@
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Close.png");
+            this.imageList1.Images.SetKeyName(1, "save.png");
             // 
             // btnClose
             // 
@@ -164,17 +165,18 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // imageList1
+            // ctrlScheduledTest1
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "Close.png");
-            this.imageList1.Images.SetKeyName(1, "save.png");
+            this.ctrlScheduledTest1.Location = new System.Drawing.Point(46, 12);
+            this.ctrlScheduledTest1.Name = "ctrlScheduledTest1";
+            this.ctrlScheduledTest1.Size = new System.Drawing.Size(494, 523);
+            this.ctrlScheduledTest1.TabIndex = 0;
             // 
             // TakeTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(595, 778);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -190,6 +192,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "TakeTest";
             this.Text = "Take Test";
+            this.Load += new System.EventHandler(this.TakeTest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

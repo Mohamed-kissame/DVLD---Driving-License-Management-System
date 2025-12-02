@@ -188,7 +188,7 @@ namespace DataAccessLayer
 
                 string Query = @"Insert Into TestAppointments(TestTypeID , LocalDrivingLicenseApplicationID , AppointmentDate , PaidFees , CreatedByUserID , IsLocked , RetakeTestApplicationID)
                                  Values(@TestTypeID , @LocalDrivingLicenseApplicationID , @AppointmentDate , @PaidFees , @CreatedByUserID, @IsLocked , @RetakeTestApplicationID);
-                                 Select Scope_Identity():";
+                                 Select Scope_Identity();";
 
                 using (SqlCommand command = new SqlCommand(Query, connection))
                 {
@@ -199,7 +199,10 @@ namespace DataAccessLayer
                     command.Parameters.AddWithValue("@PaidFees", PaidFees);
                     command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
                     command.Parameters.AddWithValue("@IsLocked", IsLcked);
-                    command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
+                    if(RetakeTestApplicationID == -1)
+                        command.Parameters.AddWithValue("@RetakeTestApplicationID", DBNull.Value);
+                    else
+                        command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
 
                     try
                     {

@@ -30,30 +30,30 @@ namespace DVLD.Tests
 
         private void _StyleGrid()
         {
-            //dgv.Dock = DockStyle.Bottom;
+           
             dgv.BorderStyle = BorderStyle.FixedSingle;
 
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.MultiSelect = false;
-            dgv.ReadOnly = true; // You edit via dialog/context menu
+            dgv.ReadOnly = true; 
             dgv.AllowUserToAddRows = false;
             dgv.RowHeadersVisible = false;
 
-            // Header
+           
             dgv.EnableHeadersVisualStyles = false;
             dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 122, 204);
             dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgv.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             dgv.ColumnHeadersHeight = 36;
 
-            // Rows
+         
             dgv.DefaultCellStyle.Font = new Font("Segoe UI", 10);
             dgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(229, 241, 251);
             dgv.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 245, 245);
 
-            // Reduce flicker (enable DoubleBuffered via reflection – DGV’s property is protected)
+           
             typeof(DataGridView).GetProperty("DoubleBuffered",
                 System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic)
                 ?.SetValue(dgv, true, null);
@@ -98,6 +98,8 @@ namespace DVLD.Tests
 
         private void FrmListTestAppointment_Load(object sender, EventArgs e)
         {
+
+            _LoadTestTypeImageAndTitle();
 
             _StyleGrid();
 
@@ -170,6 +172,22 @@ namespace DVLD.Tests
             FrmScheduleTest frm = new FrmScheduleTest(_LocalLicense, _TestTypeID, TestAppointmentID);
             frm.ShowDialog();
             FrmListTestAppointment_Load(null, null);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int TestAppointmentID = (int)dgv.CurrentRow.Cells[0].Value;
+
+            TakeTest frm = new TakeTest(TestAppointmentID, _TestTypeID);
+            frm.ShowDialog();
+            FrmListTestAppointment_Load(null, null);
+
         }
     }
 }

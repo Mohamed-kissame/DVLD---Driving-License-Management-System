@@ -254,8 +254,9 @@ namespace DVLD.LocalLicenseDriver
         {
 
             int LocalDrivingLicenseApplicationID = (int)dataGridView1.CurrentRow.Cells[0].Value;
-            FrmScheduleTest frm = new FrmScheduleTest(LocalDrivingLicenseApplicationID, TestType);
-            frm.ShowDialog();
+            FrmListTestAppointment frm = new FrmListTestAppointment(LocalDrivingLicenseApplicationID, TestType);
+            frm.Show();
+           
           
             LocalDrivingLicenseApp_Load(null, null);
 

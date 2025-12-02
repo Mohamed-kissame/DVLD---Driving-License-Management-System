@@ -29,20 +29,13 @@
         private void InitializeComponent()
         {
             this.gpTitle = new System.Windows.Forms.GroupBox();
-            this.lbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblApplIcenseID = new System.Windows.Forms.Label();
-            this.lblClass = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblTrial = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTestID = new System.Windows.Forms.Label();
             this.lblFees = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblTrial = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblClass = new System.Windows.Forms.Label();
+            this.lblApplIcenseID = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -50,8 +43,15 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl = new System.Windows.Forms.Label();
             this.PicLogoChange = new System.Windows.Forms.PictureBox();
-            this.lblTestID = new System.Windows.Forms.Label();
             this.gpTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -95,126 +95,25 @@
             this.gpTitle.TabStop = false;
             this.gpTitle.Text = "groupBox1";
             // 
-            // lbl
+            // lblTestID
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.ForeColor = System.Drawing.Color.Brown;
-            this.lbl.Location = new System.Drawing.Point(174, 138);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(150, 22);
-            this.lbl.TabIndex = 1;
-            this.lbl.Text = "Scheduled Test";
+            this.lblTestID.AutoSize = true;
+            this.lblTestID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTestID.Location = new System.Drawing.Point(205, 469);
+            this.lblTestID.Name = "lblTestID";
+            this.lblTestID.Size = new System.Drawing.Size(124, 20);
+            this.lblTestID.TabIndex = 22;
+            this.lblTestID.Text = "Not Taken Yet";
             // 
-            // label1
+            // lblFees
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 201);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "D.L.App.ID :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 246);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "D.Class :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(72, 291);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Name :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(84, 332);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Trial :";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(79, 383);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 20);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Date :";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(78, 426);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 20);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Fees :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(56, 469);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 20);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Test ID :";
-            // 
-            // lblApplIcenseID
-            // 
-            this.lblApplIcenseID.AutoSize = true;
-            this.lblApplIcenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApplIcenseID.Location = new System.Drawing.Point(205, 201);
-            this.lblApplIcenseID.Name = "lblApplIcenseID";
-            this.lblApplIcenseID.Size = new System.Drawing.Size(49, 20);
-            this.lblApplIcenseID.TabIndex = 16;
-            this.lblApplIcenseID.Text = "[???]";
-            // 
-            // lblClass
-            // 
-            this.lblClass.AutoSize = true;
-            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClass.Location = new System.Drawing.Point(205, 246);
-            this.lblClass.Name = "lblClass";
-            this.lblClass.Size = new System.Drawing.Size(49, 20);
-            this.lblClass.TabIndex = 17;
-            this.lblClass.Text = "[???]";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(205, 291);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(49, 20);
-            this.lblName.TabIndex = 18;
-            this.lblName.Text = "[???]";
-            // 
-            // lblTrial
-            // 
-            this.lblTrial.AutoSize = true;
-            this.lblTrial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrial.Location = new System.Drawing.Point(205, 332);
-            this.lblTrial.Name = "lblTrial";
-            this.lblTrial.Size = new System.Drawing.Size(49, 20);
-            this.lblTrial.TabIndex = 19;
-            this.lblTrial.Text = "[???]";
+            this.lblFees.AutoSize = true;
+            this.lblFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFees.Location = new System.Drawing.Point(205, 426);
+            this.lblFees.Name = "lblFees";
+            this.lblFees.Size = new System.Drawing.Size(49, 20);
+            this.lblFees.TabIndex = 21;
+            this.lblFees.Text = "[???]";
             // 
             // lblDate
             // 
@@ -226,15 +125,45 @@
             this.lblDate.TabIndex = 20;
             this.lblDate.Text = "[dd/mm/yyyy]";
             // 
-            // lblFees
+            // lblTrial
             // 
-            this.lblFees.AutoSize = true;
-            this.lblFees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFees.Location = new System.Drawing.Point(205, 426);
-            this.lblFees.Name = "lblFees";
-            this.lblFees.Size = new System.Drawing.Size(49, 20);
-            this.lblFees.TabIndex = 21;
-            this.lblFees.Text = "[???]";
+            this.lblTrial.AutoSize = true;
+            this.lblTrial.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrial.Location = new System.Drawing.Point(205, 332);
+            this.lblTrial.Name = "lblTrial";
+            this.lblTrial.Size = new System.Drawing.Size(49, 20);
+            this.lblTrial.TabIndex = 19;
+            this.lblTrial.Text = "[???]";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(205, 291);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(49, 20);
+            this.lblName.TabIndex = 18;
+            this.lblName.Text = "[???]";
+            // 
+            // lblClass
+            // 
+            this.lblClass.AutoSize = true;
+            this.lblClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClass.Location = new System.Drawing.Point(205, 246);
+            this.lblClass.Name = "lblClass";
+            this.lblClass.Size = new System.Drawing.Size(49, 20);
+            this.lblClass.TabIndex = 17;
+            this.lblClass.Text = "[???]";
+            // 
+            // lblApplIcenseID
+            // 
+            this.lblApplIcenseID.AutoSize = true;
+            this.lblApplIcenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApplIcenseID.Location = new System.Drawing.Point(205, 201);
+            this.lblApplIcenseID.Name = "lblApplIcenseID";
+            this.lblApplIcenseID.Size = new System.Drawing.Size(49, 20);
+            this.lblApplIcenseID.TabIndex = 16;
+            this.lblApplIcenseID.Text = "[???]";
             // 
             // pictureBox7
             // 
@@ -306,6 +235,87 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(56, 469);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 20);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Test ID :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(78, 426);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 20);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Fees :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(79, 383);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 20);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Date :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(84, 332);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 20);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Trial :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(72, 291);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Name :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(56, 246);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "D.Class :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(29, 201);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "D.L.App.ID :";
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl.ForeColor = System.Drawing.Color.Brown;
+            this.lbl.Location = new System.Drawing.Point(174, 138);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(150, 22);
+            this.lbl.TabIndex = 1;
+            this.lbl.Text = "Scheduled Test";
+            // 
             // PicLogoChange
             // 
             this.PicLogoChange.Location = new System.Drawing.Point(144, 25);
@@ -315,16 +325,6 @@
             this.PicLogoChange.TabIndex = 0;
             this.PicLogoChange.TabStop = false;
             // 
-            // lblTestID
-            // 
-            this.lblTestID.AutoSize = true;
-            this.lblTestID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTestID.Location = new System.Drawing.Point(205, 469);
-            this.lblTestID.Name = "lblTestID";
-            this.lblTestID.Size = new System.Drawing.Size(124, 20);
-            this.lblTestID.TabIndex = 22;
-            this.lblTestID.Text = "Not Taken Yet";
-            // 
             // CtrlScheduledTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -332,6 +332,7 @@
             this.Controls.Add(this.gpTitle);
             this.Name = "CtrlScheduledTest";
             this.Size = new System.Drawing.Size(495, 539);
+            this.Load += new System.EventHandler(this.CtrlScheduledTest_Load);
             this.gpTitle.ResumeLayout(false);
             this.gpTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();

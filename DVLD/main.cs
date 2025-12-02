@@ -197,5 +197,13 @@ namespace DVLD
             DriverView Driver = new DriverView();
             Driver.Show();
         }
+
+        private void retakeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            LocalLicenseDriver.LocalDrivingLicenseApp Local = new LocalLicenseDriver.LocalDrivingLicenseApp();
+            Local.Show();
+
+        }
     }
 }

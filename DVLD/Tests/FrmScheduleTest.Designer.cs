@@ -65,6 +65,7 @@
             this.ctrlScheduleTest1.Size = new System.Drawing.Size(585, 711);
             this.ctrlScheduleTest1.TabIndex = 0;
             this.ctrlScheduleTest1.TestType = BussniesDVLDLayer.clsTestType.enTestType.VisionTest;
+            this.ctrlScheduleTest1.Load += new System.EventHandler(this.ctrlScheduleTest1_Load);
             // 
             // FrmScheduleTest
             // 
