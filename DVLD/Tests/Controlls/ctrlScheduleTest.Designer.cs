@@ -454,7 +454,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.gpTestName);
             this.Name = "ctrlScheduleTest";
-            this.Size = new System.Drawing.Size(583, 711);
+            this.Size = new System.Drawing.Size(585, 711);
             this.Load += new System.EventHandler(this.ctrlScheduleTest_Load);
             this.gpTestName.ResumeLayout(false);
             this.gpTestName.PerformLayout();

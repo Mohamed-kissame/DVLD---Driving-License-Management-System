@@ -20,7 +20,7 @@ namespace DVLD.Tests.Controlls
         public enum enMode { AddNew = 0 , Update = 1}
         private enMode Mode = enMode.AddNew;
 
-        public enum enCreationMode { FirstTime = 0 , RetakeTest = 1}
+        public enum enCreationMode { FirstTime = 0 , RetakeTest = 1};
         private enCreationMode CreationMode = enCreationMode.FirstTime;
 
         private clsTestType.enTestType _TestTypeID = clsTestType.enTestType.VisionTest;
@@ -216,13 +216,13 @@ namespace DVLD.Tests.Controlls
 
                 lblErrorMessage.Visible = true;
                 lblErrorMessage.Text = "Person already sat for the test, appointment loacked";
-                btnSave.Enabled = false;
                 dateTimePicker1.Enabled = false;
+                btnSave.Enabled = false;
                 return false;
             }
             else
 
-                lblErrorMessage.Enabled = false;
+                lblErrorMessage.Visible = false;
 
             return true;
         }

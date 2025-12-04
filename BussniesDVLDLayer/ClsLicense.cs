@@ -24,6 +24,8 @@ namespace BussniesDVLDLayer
 
         public int _DriverID { get; set; }
 
+        public ClsDriver DriverInfo;
+
         public int _LicnseClass { get; set; }
 
         public clsLicenseClass LicenseClassInfo;
@@ -76,6 +78,7 @@ namespace BussniesDVLDLayer
             this._LicenseID = LicenseID;
             this._ApplicationID = ApplicationID;
             this._DriverID = DriverID;
+            this.DriverInfo = ClsDriver.FindByDriverID(this._DriverID);
             this._LicnseClass = LicenseClass;
             this._IssueDate = issueDate;
             this._ExperienceDate = expirationDate;

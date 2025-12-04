@@ -59,7 +59,7 @@ namespace DataAccessLayer
 
                                     Notes = (string)reader["Notes"];
                                 }
-                                PaidFees = (float)reader["PaidFess"];
+                                PaidFees = Convert.ToSingle(reader["PaidFees"]);
                                 IsActive = (bool)reader["IsActive"];
                                 issueReason = (byte)reader["IssueReason"];
                                 CreatedByUser = (int)reader["CreatedByUserID"];

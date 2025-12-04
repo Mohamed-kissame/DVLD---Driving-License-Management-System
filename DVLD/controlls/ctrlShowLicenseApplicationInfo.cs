@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BussniesDVLDLayer;
 using DVLD.Classes;
+using DVLD.Licenses;
 using DVLD.Pepole;
 
 namespace DVLD.controlls
@@ -18,6 +19,7 @@ namespace DVLD.controlls
 
         private int _LAppID = -1;
         private int _PersonID = -1;
+        private int LicenseID;
         private ClsLicenseDrivingLocal _LicenseDrivingLocal;
 
         public ctrlShowLicenseApplicationInfo()
@@ -50,7 +52,7 @@ namespace DVLD.controlls
 
             lblLAppID.Text = _LicenseDrivingLocal.LocalDrivingLicenseApplicationID.ToString();
             lblAppliedLicense.Text = _LicenseDrivingLocal.LicenseClassInfo.ClassName.ToString();
-            lblPassedTest.Text = "3/3";
+            lblPassedTest.Text = CountPassedTest();
             lblID.Text = _LicenseDrivingLocal._ApplicationID.ToString();
             lblStatus.Text = _LicenseDrivingLocal.StatusText.ToString();
             lblFees.Text = _LicenseDrivingLocal.PaidFees.ToString();
@@ -76,6 +78,8 @@ namespace DVLD.controlls
             {
                 this._PersonID = _LicenseDrivingLocal._PersonID;
 
+                LicenseID = _LicenseDrivingLocal.GetActiveLicenseID();
+
                 FillData();
 
 
@@ -94,7 +98,35 @@ namespace DVLD.controlls
 
         }
 
-        private void ctrlShowLicenseApplicationInfo_Load(object sender, EventArgs e)  {  }
+        private string CountPassedTest()
+        {
+
+            if (_LicenseDrivingLocal.DoesPassTestType(clsTestType.enTestType.VisionTest))
+               return "1/3";
+
+            if (_LicenseDrivingLocal.DoesPassTestType(clsTestType.enTestType.WrittenTest))
+                return "2/3";
+
+            if (_LicenseDrivingLocal.DoesPassTestType(clsTestType.enTestType.StreetTest))
+                return "3/3";
+
+           return "0/3";
+
+        }
+
+        private void ctrlShowLicenseApplicationInfo_Load(object sender, EventArgs e)  {
+
+
+            if(LicenseID == -1)
+            {
+                linkLabel1.Enabled = false;
+            }
+            else
+            {
+                linkLabel1.Enabled = true;
+            }
+
+        }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -102,6 +134,22 @@ namespace DVLD.controlls
             ShowDetailPerson detailPerson = new ShowDetailPerson(_PersonID);
             detailPerson.Show();
 
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            int LicenseID = _LicenseDrivingLocal.GetActiveLicenseID();
+
+            if(LicenseID != -1)
+            {
+                ShowLicenseInfo License = new ShowLicenseInfo(LicenseID);
+                License.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("No Active License for this Person", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
     }

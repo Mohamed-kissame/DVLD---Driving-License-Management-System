@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BussniesDVLDLayer;
+using DVLD.Licenses;
 using DVLD.Tests;
 
 namespace DVLD.LocalLicenseDriver
@@ -269,12 +270,35 @@ namespace DVLD.LocalLicenseDriver
 
         private void issueDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Is Still This Option dosent Implement", "Implement Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
+            int LocalLicenseApplicationID = (int)dataGridView1.CurrentRow.Cells[0].Value;
+
+            IssueLicenseForFirstTime frm = new IssueLicenseForFirstTime(LocalLicenseApplicationID);
+            frm.ShowDialog();
+            LocalDrivingLicenseApp_Load(null, null);
+
         }
 
         private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Is Still This Option dosent Implement", "Implement Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            int LocalLicenseApplicationID = (int)dataGridView1.CurrentRow.Cells[0].Value;
+
+             int LicenseID = ClsLicenseDrivingLocal.FindByLocalDrivingAppLicenseID(LocalLicenseApplicationID).GetActiveLicenseID();
+
+            if(LicenseID != -1)
+            {
+
+                ShowLicenseInfo LicenseInfo = new ShowLicenseInfo(LicenseID);
+                LicenseInfo.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("No License Found!", "No License", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
         }
 
         private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -329,19 +353,86 @@ namespace DVLD.LocalLicenseDriver
 
         }
 
+        private void vistionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int LocalDrivingLicenseApplicationID = (int)dataGridView1.CurrentRow.Cells[0].Value;
+
+            clsTestAppointment Appointment =
+                clsTestAppointment.FindLastTestAppointment(LocalDrivingLicenseApplicationID, clsTestType.enTestType.VisionTest);
+
+            if (Appointment == null)
+            {
+                MessageBox.Show("No Vision Test Appointment Found!", "Set Appointment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            TakeTest frm = new TakeTest(Appointment._TestAppointmentID, clsTestType.enTestType.VisionTest);
+            frm.ShowDialog();
+
+
+        }
+
+        private void writtenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dataGridView1.CurrentRow.Cells[0].Value;
+
+            clsTestAppointment Appointment =
+                clsTestAppointment.FindLastTestAppointment(LocalDrivingLicenseApplicationID, clsTestType.enTestType.WrittenTest);
+
+            if (Appointment == null)
+            {
+                MessageBox.Show("No Written Test Appointment Found!", "Set Appointment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            TakeTest frm = new TakeTest(Appointment._TestAppointmentID, clsTestType.enTestType.WrittenTest);
+            frm.ShowDialog();
+
+        }
+
+        private void streetTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dataGridView1.CurrentRow.Cells[0].Value;
+
+            clsTestAppointment Appointment =
+                clsTestAppointment.FindLastTestAppointment(LocalDrivingLicenseApplicationID, clsTestType.enTestType.StreetTest);
+
+            if (Appointment == null)
+            {
+                MessageBox.Show("No Stret Test Appointment Found!", "Set Appointment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            TakeTest frm = new TakeTest(Appointment._TestAppointmentID, clsTestType.enTestType.StreetTest);
+            frm.ShowDialog();
+
+
+        }
+
         private void sechduleVesionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             _ScheduleTest(clsTestType.enTestType.VisionTest);
         }
 
         private void sechduleWritteTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             _ScheduleTest(clsTestType.enTestType.WrittenTest);
+
         }
 
         private void sechduleStrToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             _ScheduleTest(clsTestType.enTestType.StreetTest);
+
         }
+
+        
     }
 }

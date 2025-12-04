@@ -20,7 +20,7 @@ namespace DataAccessLayer
             using(SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = "Select * From Drivers Where DiverID = @DriverID";
+                string Query = "Select * From Drivers Where DriverID = @DriverID";
 
                 using(SqlCommand command = new SqlCommand(Query , connection))
                 {
@@ -40,7 +40,7 @@ namespace DataAccessLayer
                             if (reader.Read())
                             {
 
-                                PersonID = (int)reader["PesronID"];
+                                PersonID = (int)reader["PersonID"];
                                 CreatedByUserID = (int)reader["CreatedByUserID"];
                                 CreatedDate = (DateTime)reader["CreatedDate"];
 

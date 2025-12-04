@@ -135,5 +135,10 @@ namespace DVLD.Tests.Controlls
         {
 
         }
+
+        private void gpTitle_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

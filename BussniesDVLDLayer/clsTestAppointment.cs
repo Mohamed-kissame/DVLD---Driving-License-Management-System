@@ -74,21 +74,22 @@ namespace BussniesDVLDLayer
         }
 
 
-        public static clsTestAppointment FindById(int  TestAppointmentID)
+        public static clsTestAppointment FindById(int TestAppointmentID)
         {
-            int TestTypeID = -1, LocalDrivingLicenseApplicationID = -1, CreatedByUserID = -1, RetakeTestAppointmentID = -1;
+            int LocalDrivingLicenseApplicationID = -1, CreatedByUserID = -1, RetakeTestAppointmentID = -1;
+             int TestTypeID = -1;
             DateTime AppintmentDate = DateTime.Now;
             float PaidFees = 0;
             bool IsLocked = false;
 
-            if (ClsTestAppoitmentData.GetAllTestAppoitmentByID(TestAppointmentID, ref TestTypeID, ref LocalDrivingLicenseApplicationID, ref AppintmentDate, ref PaidFees, ref CreatedByUserID, ref IsLocked, ref RetakeTestAppointmentID))
+            if (ClsTestAppoitmentData.GetAllTestAppoitmentByID(TestAppointmentID,  ref TestTypeID, ref LocalDrivingLicenseApplicationID, ref AppintmentDate, ref PaidFees, ref CreatedByUserID, ref IsLocked, ref RetakeTestAppointmentID))
 
                 return new clsTestAppointment(TestAppointmentID, TestTypeID, LocalDrivingLicenseApplicationID, AppintmentDate, PaidFees, CreatedByUserID, IsLocked, RetakeTestAppointmentID);
             else
                 return null;
         }
 
-        public static clsTestAppointment FindLastTestAppointment(int LocalDrivingLicenseApplicationID , int TestTypeID)
+        public static clsTestAppointment FindLastTestAppointment(int LocalDrivingLicenseApplicationID , clsTestType.enTestType TestTypeID)
         {
 
             int TestAppointment = -1, CreatedyUserID = -1, RetakeTestAppointmentID = -1;
@@ -96,9 +97,9 @@ namespace BussniesDVLDLayer
             float PaidFees = 0;
             bool IsLocked = false;
 
-            if (ClsTestAppoitmentData.GetLastTestAppointment(LocalDrivingLicenseApplicationID, TestTypeID, ref TestAppointment, ref AppintmentDate, ref PaidFees, ref CreatedyUserID, ref IsLocked, ref RetakeTestAppointmentID))
+            if (ClsTestAppoitmentData.GetLastTestAppointment(LocalDrivingLicenseApplicationID, (int)TestTypeID, ref TestAppointment, ref AppintmentDate, ref PaidFees, ref CreatedyUserID, ref IsLocked, ref RetakeTestAppointmentID))
 
-                return new clsTestAppointment(TestAppointment, TestTypeID, LocalDrivingLicenseApplicationID, AppintmentDate, PaidFees, CreatedyUserID, IsLocked, RetakeTestAppointmentID);
+                return new clsTestAppointment(TestAppointment, (int)TestTypeID, LocalDrivingLicenseApplicationID, AppintmentDate, PaidFees, CreatedyUserID, IsLocked, RetakeTestAppointmentID);
             else
                 return null;
 

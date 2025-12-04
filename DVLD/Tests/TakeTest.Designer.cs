@@ -101,6 +101,7 @@
             this.lblError.Size = new System.Drawing.Size(286, 22);
             this.lblError.TabIndex = 5;
             this.lblError.Text = "You Cannot change the results";
+            this.lblError.Visible = false;
             // 
             // txtNotes
             // 
@@ -118,7 +119,7 @@
             this.btnSave.ImageList = this.imageList1;
             this.btnSave.Location = new System.Drawing.Point(483, 710);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(90, 44);
+            this.btnSave.Size = new System.Drawing.Size(100, 44);
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -137,18 +138,19 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ImageIndex = 0;
             this.btnClose.ImageList = this.imageList1;
-            this.btnClose.Location = new System.Drawing.Point(362, 710);
+            this.btnClose.Location = new System.Drawing.Point(349, 710);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(90, 44);
+            this.btnClose.Size = new System.Drawing.Size(103, 44);
             this.btnClose.TabIndex = 8;
             this.btnClose.Text = "Close";
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DVLD.Properties.Resources.notepad;
-            this.pictureBox2.Location = new System.Drawing.Point(103, 614);
+            this.pictureBox2.Location = new System.Drawing.Point(113, 614);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,7 +160,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD.Properties.Resources.results;
-            this.pictureBox1.Location = new System.Drawing.Point(103, 564);
+            this.pictureBox1.Location = new System.Drawing.Point(113, 564);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(29, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -167,9 +169,9 @@
             // 
             // ctrlScheduledTest1
             // 
-            this.ctrlScheduledTest1.Location = new System.Drawing.Point(46, 12);
+            this.ctrlScheduledTest1.Location = new System.Drawing.Point(52, 12);
             this.ctrlScheduledTest1.Name = "ctrlScheduledTest1";
-            this.ctrlScheduledTest1.Size = new System.Drawing.Size(494, 523);
+            this.ctrlScheduledTest1.Size = new System.Drawing.Size(544, 523);
             this.ctrlScheduledTest1.TabIndex = 0;
             // 
             // TakeTest
@@ -177,7 +179,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(595, 778);
+            this.ClientSize = new System.Drawing.Size(632, 778);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnClose);

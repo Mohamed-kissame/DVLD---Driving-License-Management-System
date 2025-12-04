@@ -141,6 +141,30 @@
     <Compile Include="Driver\DriverView.Designer.cs">
       <DependentUpon>DriverView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\Controlls\CtrlDriverInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\Controlls\CtrlDriverInfo.Designer.cs">
+      <DependentUpon>CtrlDriverInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\Controlls\CtrlDriverInfoWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\Controlls\CtrlDriverInfoWithFilter.Designer.cs">
+      <DependentUpon>CtrlDriverInfoWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\IssueLicenseForFirstTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\IssueLicenseForFirstTime.Designer.cs">
+      <DependentUpon>IssueLicenseForFirstTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\ShowLicenseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\ShowLicenseInfo.Designer.cs">
+      <DependentUpon>ShowLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="LocalLicenseDriver\AddEditLocalDrivingLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +304,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Driver\DriverView.resx">
       <DependentUpon>DriverView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Controlls\CtrlDriverInfo.resx">
+      <DependentUpon>CtrlDriverInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Controlls\CtrlDriverInfoWithFilter.resx">
+      <DependentUpon>CtrlDriverInfoWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\IssueLicenseForFirstTime.resx">
+      <DependentUpon>IssueLicenseForFirstTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\ShowLicenseInfo.resx">
+      <DependentUpon>ShowLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalLicenseDriver\AddEditLocalDrivingLicense.resx">
       <DependentUpon>AddEditLocalDrivingLicense.cs</DependentUpon>
@@ -598,6 +634,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="icons\notepad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\mangender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\citizenship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\question-mark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

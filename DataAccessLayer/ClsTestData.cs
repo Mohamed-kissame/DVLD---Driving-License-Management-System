@@ -176,8 +176,7 @@ namespace DataAccessLayer
             return dt;
         }
 
-        public static int AddNewTest(int TestAppointmentID, bool TestResult,
-           string Notes, int CreatedByUserID)
+        public static int AddNewTest(int TestAppointmentID, bool TestResult, string Notes, int CreatedByUserID)
         {
 
 
@@ -186,9 +185,8 @@ namespace DataAccessLayer
             using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = @"Insert Into Tests (TestAppoitmentID , TestResult , Notes , CreatedByUserID) Values(@TestAppointmentID , @TestResult , @Notes , @CreatedByUserID);
-                                                   Update TestAppointments set IsLocked = 1 Where TestAppoitmentID = @TestAppoitmentID ;
-
+                string Query = @"Insert Into Tests(TestAppointmentID , TestResult , Notes , CreatedByUserID) Values(@TestAppointmentID , @TestResult , @Notes , @CreatedByUserID);
+                                                   Update TestAppointments set IsLocked = 1 Where TestAppointmentID = @TestAppointmentID;
                                                    select SCOPE_IDENTITY();";
 
                 using (SqlCommand command = new SqlCommand(Query, connection))
@@ -196,6 +194,7 @@ namespace DataAccessLayer
 
                     command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
                     command.Parameters.AddWithValue("@TestResult", TestResult);
+
                     if (Notes != "" && Notes != null)
                         command.Parameters.AddWithValue("@Notes", Notes);
                     else

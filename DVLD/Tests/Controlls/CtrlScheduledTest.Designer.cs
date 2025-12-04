@@ -88,12 +88,14 @@
             this.gpTitle.Controls.Add(this.label1);
             this.gpTitle.Controls.Add(this.lbl);
             this.gpTitle.Controls.Add(this.PicLogoChange);
-            this.gpTitle.Location = new System.Drawing.Point(12, 12);
+            this.gpTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gpTitle.Location = new System.Drawing.Point(0, 0);
             this.gpTitle.Name = "gpTitle";
-            this.gpTitle.Size = new System.Drawing.Size(471, 514);
+            this.gpTitle.Size = new System.Drawing.Size(537, 539);
             this.gpTitle.TabIndex = 0;
             this.gpTitle.TabStop = false;
             this.gpTitle.Text = "groupBox1";
+            this.gpTitle.Enter += new System.EventHandler(this.gpTitle_Enter);
             // 
             // lblTestID
             // 
@@ -331,7 +333,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gpTitle);
             this.Name = "CtrlScheduledTest";
-            this.Size = new System.Drawing.Size(495, 539);
+            this.Size = new System.Drawing.Size(537, 539);
             this.Load += new System.EventHandler(this.CtrlScheduledTest_Load);
             this.gpTitle.ResumeLayout(false);
             this.gpTitle.PerformLayout();

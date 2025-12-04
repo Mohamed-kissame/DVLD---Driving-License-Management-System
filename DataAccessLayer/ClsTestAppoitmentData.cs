@@ -21,9 +21,9 @@ namespace DataAccessLayer
             using(SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = "Select * TestAppointments where TestAppointmentID = @TestAppointmentID";
+                string Query = "Select * From TestAppointments where TestAppointmentID = @TestAppointmentID";
 
-                using(SqlCommand command= new SqlCommand(Query , connection))
+                using(SqlCommand command = new SqlCommand(Query , connection))
                 {
 
                     command.Parameters.AddWithValue("@TestAppointmentID", TestAppoitmentID);
@@ -36,16 +36,28 @@ namespace DataAccessLayer
                         using(SqlDataReader reader = command.ExecuteReader())
                         {
 
-                            isFound = true;
+                            if (reader.Read())
+                            {
 
-                            TestTypeID = (int)reader["TestTypeID"];
-                            LocalDriningLicenseApplicationID = (int)reader["LocalDrivingLicenseApplicationID"];
-                            AppoitmentDate = (DateTime)reader["AppointmentDate"];
-                            PaidFees = (float)reader["PaidFees"];
-                            CreatedByUserId = (int)reader["CreatedByUserID"];
-                            IsLocked = (bool)reader["IsLocked"];
-                            RetakeTestApplicationID = (int)reader["RetakeTestApplicationID"];
+                                isFound = true;
+
+                                TestTypeID = Convert.ToInt32(reader["TestTypeID"]);
+                                LocalDriningLicenseApplicationID = (int)reader["LocalDrivingLicenseApplicationID"];
+                                AppoitmentDate = (DateTime)reader["AppointmentDate"];
+                                PaidFees = Convert.ToSingle(reader["PaidFees"]);
+                                CreatedByUserId = (int)reader["CreatedByUserID"];
+                                IsLocked = (bool)reader["IsLocked"];
+                                if (reader["RetakeTestApplicationID"] != DBNull.Value)
+
+                                    RetakeTestApplicationID = (int)reader["RetakeTestApplicationID"];
+
+                                else
+
+                                    RetakeTestApplicationID = -1;
+
+                            }
                         }
+
                     }catch(Exception ex)
                     {
                         isFound = false;
@@ -82,15 +94,18 @@ namespace DataAccessLayer
                         using(SqlDataReader reader = command.ExecuteReader())
                         {
 
-                            isFound = true;
-                            TestAppointmentID = (int)reader["TestAppointmentID"];
-                            AppointmentDate = (DateTime)reader["AppointmentDate"];
-                            PaidFees = (float)reader["PaidFees"];
-                            CreatedByUserID = (int)reader["CreatedByUserID"];
-                            IsLocked = (bool)reader["IsLocked"];
-                            RetakeTestApplicationID = (int)reader["RetakeTestApplicationID"];
+                            if (reader.Read())
+                            {
 
+                                isFound = true;
+                                TestAppointmentID = (int)reader["TestAppointmentID"];
+                                AppointmentDate = (DateTime)reader["AppointmentDate"];
+                                PaidFees = (float)reader["PaidFees"];
+                                CreatedByUserID = (int)reader["CreatedByUserID"];
+                                IsLocked = (bool)reader["IsLocked"];
+                                RetakeTestApplicationID = (int)reader["RetakeTestApplicationID"];
 
+                            }
                         }
                     }catch(Exception ex)
                     {
@@ -216,7 +231,7 @@ namespace DataAccessLayer
                             NewTestAppointmentID = NewTestAppo;
                     }catch(Exception ex)
                     {
-                        NewTestAppointmentID = -1;
+                        NewTestAppointmentID = 1;
                     }
 
                 }
@@ -239,7 +254,7 @@ namespace DataAccessLayer
                                                              PaidFees = @PaidFees,
                                                              CreatedByUserID = @CreatedByUserID,
                                                              IsLocked = @IsLocked,
-                                                             RetakeTestApplicationID = @RetakeApplicationID
+                                                             RetakeTestApplicationID = @RetakeTestApplicationID
                                                              Where TestAppointmentID = @TestAppointmentID";
 
                 using(SqlCommand command = new SqlCommand(Query , connection))

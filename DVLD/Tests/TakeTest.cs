@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BussniesDVLDLayer;
 using DVLD.Classes;
+using DVLD.Tests.Controlls;
 
 namespace DVLD.Tests
 {
@@ -50,25 +51,19 @@ namespace DVLD.Tests
             {
                 _Test = ClsTests.FindByTestID(_TestID);
 
-                if (_Test != null)
-                {
-                    if (_Test._TestResult)
-                    
-                        rdbPass.Checked = true;
-                    
-                    else
-                    
-                        rdbFail.Checked = true;
-                     
-                        txtNotes.Text = _Test._Notes;
-
-                    lblError.Visible = true;
-                    rdbFail.Enabled = false;
-                    rdbFail.Enabled = false;
-                }
+                if (_Test._TestResult)
+                    rdbPass.Checked = true;
                 else
-                    _Test = new ClsTests();
+                    rdbFail.Checked = true;
+                txtNotes.Text = _Test._Notes;
+
+                lblError.Visible = true;
+                rdbFail.Enabled = false;
+                rdbPass.Enabled = false;
             }
+
+            else
+                _Test = new ClsTests();
 
         }
 
@@ -98,6 +93,11 @@ namespace DVLD.Tests
                 MessageBox.Show("Failed to save test result", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
