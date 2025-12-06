@@ -27,9 +27,6 @@ namespace DVLD.Licenses.Controlls
 
         }
 
-        private int _LicenseID;
-
-        private ClsLicense _License;
 
 
         public CtrlDriverInfoWithFilter()
@@ -41,7 +38,10 @@ namespace DVLD.Licenses.Controlls
 
         public bool FilterEnabled
         {
-            get { return _FilterEnabled; }
+            get
+            {
+                return _FilterEnabled;
+            }
             set
             {
                 _FilterEnabled = value;
@@ -49,14 +49,23 @@ namespace DVLD.Licenses.Controlls
             }
         }
 
+        private int _LicenseID = -1;
+
         public int LicenseID
         {
             get { return ctrlDriverInfo1.LicenseID; }
         }
 
-        public ClsLicense selectedLicenseInfo
-        {
-            get { return ctrlDriverInfo1.selectedLicenseInfo; }
+        public ClsLicense SelectedLicenseInfo
+        { 
+            get 
+            
+            { 
+                
+                return ctrlDriverInfo1._SelectedLicenseInfo ;
+            
+            } 
+        
         }
 
         private void CtrlDriverInfoWithFilter_Load(object sender, EventArgs e)

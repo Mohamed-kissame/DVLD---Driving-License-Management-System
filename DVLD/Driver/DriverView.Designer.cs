@@ -32,14 +32,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DriverView));
             this.label1 = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showPersonInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showLicensesHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
+            this.showLicensesHistoryToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.lblCountRecord = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -57,6 +62,7 @@
             // 
             this.dgv.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.ContextMenuStrip = this.contextMenuStrip1;
             this.dgv.GridColor = System.Drawing.SystemColors.Control;
             this.dgv.Location = new System.Drawing.Point(26, 173);
             this.dgv.Name = "dgv";
@@ -64,6 +70,37 @@
             this.dgv.RowTemplate.Height = 28;
             this.dgv.Size = new System.Drawing.Size(1092, 403);
             this.dgv.TabIndex = 1;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showPersonInfoToolStripMenuItem,
+            this.showLicensesHistoryToolStripMenuItem,
+            this.showLicensesHistoryToolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(268, 74);
+            // 
+            // showPersonInfoToolStripMenuItem
+            // 
+            this.showPersonInfoToolStripMenuItem.Image = global::DVLD.Properties.Resources.time;
+            this.showPersonInfoToolStripMenuItem.Name = "showPersonInfoToolStripMenuItem";
+            this.showPersonInfoToolStripMenuItem.Size = new System.Drawing.Size(267, 32);
+            this.showPersonInfoToolStripMenuItem.Text = "Show Person Info";
+            this.showPersonInfoToolStripMenuItem.Click += new System.EventHandler(this.showPersonInfoToolStripMenuItem_Click);
+            // 
+            // showLicensesHistoryToolStripMenuItem
+            // 
+            this.showLicensesHistoryToolStripMenuItem.Name = "showLicensesHistoryToolStripMenuItem";
+            this.showLicensesHistoryToolStripMenuItem.Size = new System.Drawing.Size(264, 6);
+            // 
+            // showLicensesHistoryToolStripMenuItem1
+            // 
+            this.showLicensesHistoryToolStripMenuItem1.Image = global::DVLD.Properties.Resources.PersonLicenseHistory_512;
+            this.showLicensesHistoryToolStripMenuItem1.Name = "showLicensesHistoryToolStripMenuItem1";
+            this.showLicensesHistoryToolStripMenuItem1.Size = new System.Drawing.Size(267, 32);
+            this.showLicensesHistoryToolStripMenuItem1.Text = "Show Licenses History";
+            this.showLicensesHistoryToolStripMenuItem1.Click += new System.EventHandler(this.showLicensesHistoryToolStripMenuItem1_Click);
             // 
             // button1
             // 
@@ -79,6 +116,12 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Close.png");
             // 
             // comboBox1
             // 
@@ -125,12 +168,6 @@
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "Close.png");
-            // 
             // lblCountRecord
             // 
             this.lblCountRecord.AutoSize = true;
@@ -157,6 +194,7 @@
             this.Name = "DriverView";
             this.Load += new System.EventHandler(this.DriverView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,5 +211,9 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Label lblCountRecord;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem showPersonInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator showLicensesHistoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showLicensesHistoryToolStripMenuItem1;
     }
 }

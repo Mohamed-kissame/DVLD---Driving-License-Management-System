@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
 using BussniesDVLDLayer;
+using DVLD.Licenses;
+using DVLD.Pepole;
 
 namespace DVLD.Driver
 {
@@ -148,6 +150,24 @@ namespace DVLD.Driver
         {
             if (comboBox1.Text == "DriverID" || comboBox1.Text == "PersonID")
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void showPersonInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int PersonID = (int)dgv.CurrentRow.Cells[1].Value;
+
+            ShowDetailPerson show = new ShowDetailPerson(PersonID);
+            show.ShowDialog();
+        }
+
+        private void showLicensesHistoryToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            int PersonID = (int)dgv.CurrentRow.Cells[1].Value;
+
+            ShowPersonLicensesHistory licensesHistory = new ShowPersonLicensesHistory(PersonID);
+            licensesHistory.ShowDialog();
+
         }
     }
 }

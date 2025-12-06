@@ -43,6 +43,19 @@ namespace DVLD.controlls
 
         }
 
+        private bool _isEnabled = true;
+
+        public bool FilterEnable
+        {
+            get { return _isEnabled; }
+
+            set
+            {
+
+                _isEnabled = value;
+                txtSearch.Enabled = _isEnabled;
+            }
+        }
 
         private void FindBy()
         {

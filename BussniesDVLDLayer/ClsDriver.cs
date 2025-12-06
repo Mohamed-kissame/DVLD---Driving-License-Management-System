@@ -89,6 +89,16 @@ namespace BussniesDVLDLayer
 
         }
 
+        public static DataTable GetLicenses(int DriverID)
+        {
+            return ClsLicenseData.GetDriverLicense(DriverID);
+        }
+
+        public static DataTable GetInternational(int DriverID)
+        {
+            return ClsInternationalLicenseData.GetDriverInternationalLicenses(DriverID);
+        }
+
         private bool _AddNewDriver()
         {
 

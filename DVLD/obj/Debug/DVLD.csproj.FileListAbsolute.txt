@@ -124,3 +124,7 @@ C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Licenses.IssueL
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Licenses.Controlls.CtrlDriverInfo.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Licenses.ShowLicenseInfo.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Licenses.Controlls.CtrlDriverInfoWithFilter.resources
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Application.RenewLicense.RenewLicense.resources
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Application.ReplaceForDamagedOrLost.ReplaceForDamagedLicense.resources
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Licenses.Controlls.CtrlDriverLicenses.resources
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Licenses.ShowPersonLicensesHistory.resources

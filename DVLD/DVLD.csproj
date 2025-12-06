@@ -101,6 +101,18 @@
     <Compile Include="ApplicationTypes\Manage Application Types.Designer.cs">
       <DependentUpon>Manage Application Types.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\RenewLicense\RenewLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\RenewLicense\RenewLicense.Designer.cs">
+      <DependentUpon>RenewLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\ReplaceForDamagedOrLost\ReplaceForDamagedLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\ReplaceForDamagedOrLost\ReplaceForDamagedLicense.Designer.cs">
+      <DependentUpon>ReplaceForDamagedLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\clsFormat.cs" />
     <Compile Include="Classes\clsUtilty.cs" />
     <Compile Include="Classes\clsValidation.cs" />
@@ -153,6 +165,12 @@
     <Compile Include="Licenses\Controlls\CtrlDriverInfoWithFilter.Designer.cs">
       <DependentUpon>CtrlDriverInfoWithFilter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\Controlls\CtrlDriverLicenses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\Controlls\CtrlDriverLicenses.Designer.cs">
+      <DependentUpon>CtrlDriverLicenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\IssueLicenseForFirstTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +182,12 @@
     </Compile>
     <Compile Include="Licenses\ShowLicenseInfo.Designer.cs">
       <DependentUpon>ShowLicenseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\ShowPersonLicensesHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\ShowPersonLicensesHistory.Designer.cs">
+      <DependentUpon>ShowPersonLicensesHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="LocalLicenseDriver\AddEditLocalDrivingLicense.cs">
       <SubType>Form</SubType>
@@ -287,6 +311,12 @@
     <EmbeddedResource Include="ApplicationTypes\Manage Application Types.resx">
       <DependentUpon>Manage Application Types.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Applications\RenewLicense\RenewLicense.resx">
+      <DependentUpon>RenewLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\ReplaceForDamagedOrLost\ReplaceForDamagedLicense.resx">
+      <DependentUpon>ReplaceForDamagedLicense.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controlls\ctrlShowLicenseApplicationInfo.resx">
       <DependentUpon>ctrlShowLicenseApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,11 +341,17 @@
     <EmbeddedResource Include="Licenses\Controlls\CtrlDriverInfoWithFilter.resx">
       <DependentUpon>CtrlDriverInfoWithFilter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Controlls\CtrlDriverLicenses.resx">
+      <DependentUpon>CtrlDriverLicenses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Licenses\IssueLicenseForFirstTime.resx">
       <DependentUpon>IssueLicenseForFirstTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\ShowLicenseInfo.resx">
       <DependentUpon>ShowLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\ShowPersonLicensesHistory.resx">
+      <DependentUpon>ShowPersonLicensesHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LocalLicenseDriver\AddEditLocalDrivingLicense.resx">
       <DependentUpon>AddEditLocalDrivingLicense.cs</DependentUpon>

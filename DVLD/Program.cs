@@ -15,15 +15,10 @@ namespace DVLD
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Users.Users());
-            //Application.Run(new Users.())
-            Application.Run(new Login());
-            //Application.Run(new TestForm());
-            //Application.Run(new LocalLicenseDriver.LocalDrivingLicenseApp());
-            //Application.Run(new main("Mohamed"));
-            //Application.Run(new Pepole.Pepole());
+            System.Windows.Forms.Application.EnableVisualStyles();
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+            System.Windows.Forms.Application.Run(new Login());
+
         }
     }
 }

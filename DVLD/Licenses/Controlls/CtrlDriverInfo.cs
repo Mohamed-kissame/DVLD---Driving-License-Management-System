@@ -59,7 +59,7 @@ namespace DVLD.Licenses.Controlls
 
         }
 
-        public ClsLicense selectedLicenseInfo { get {return _License; } }
+        public ClsLicense _SelectedLicenseInfo { get {return _License; } }
 
         public CtrlDriverInfo()
         {

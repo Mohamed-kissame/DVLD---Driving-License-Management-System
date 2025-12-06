@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DVLD.Application.RenewLicense;
+using DVLD.Application.ReplaceForDamagedOrLost;
 using DVLD.ApplicationTypes;
 using DVLD.Classes;
 using DVLD.controlls;
@@ -175,7 +177,8 @@ namespace DVLD
 
         private void replaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ReplaceForDamagedLicense replaceFor = new ReplaceForDamagedLicense();
+            replaceFor.ShowDialog();
         }
 
         private void localDriToolStripMenuItem_Click(object sender, EventArgs e)
@@ -204,6 +207,12 @@ namespace DVLD
             LocalLicenseDriver.LocalDrivingLicenseApp Local = new LocalLicenseDriver.LocalDrivingLicenseApp();
             Local.Show();
 
+        }
+
+        private void renewDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RenewLicense renew = new RenewLicense();
+            renew.ShowDialog();
         }
     }
 }
