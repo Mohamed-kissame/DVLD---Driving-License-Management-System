@@ -151,8 +151,7 @@ namespace DataAccessLayer
                            ApplicationID,
 		                   LicenseClasses.ClassName, Licenses.IssueDate, 
 		                   Licenses.ExpirationDate, Licenses.IsActive
-                           FROM Licenses INNER JOIN
-                                LicenseClasses ON Licenses.LicenseClass = LicenseClasses.LicenseClassID
+                           FROM Licenses 
                             where DriverID=@DriverID
                             Order By IsActive Desc, ExpirationDate Desc ";
 

@@ -161,8 +161,8 @@ namespace BussniesDVLDLayer
         public bool Delete()
         {
 
-            bool isLicenseAppDelete = false;
-            bool IsBaseAppDelete = false;
+            bool isLicenseAppDelete;
+            bool IsBaseAppDelete;
             isLicenseAppDelete = ClsLicenseDrivingLocalData.DeleteLicenseDrivingLocal(this.LocalDrivingLicenseApplicationID);
 
             if (!isLicenseAppDelete)
@@ -271,7 +271,7 @@ namespace BussniesDVLDLayer
         public int IssueLicenseForFirstTime(string Notes , int CreatedBy)
         {
 
-            int DriverID = -1;
+            int DriverID;
 
             ClsDriver driver = ClsDriver.FindByPersonID(this._PersonID);
 
