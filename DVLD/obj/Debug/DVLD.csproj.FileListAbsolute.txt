@@ -128,3 +128,8 @@ C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Application.Ren
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Application.ReplaceForDamagedOrLost.ReplaceForDamagedLicense.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Licenses.Controlls.CtrlDriverLicenses.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Licenses.ShowPersonLicensesHistory.resources
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\bin\Debug\Guna.UI2.dll
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.InternationalLicense.NewInternationalLicenseAPP.resources
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.InternationalLicense.Controlls.ShowInternationalLicenseInfo.resources
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.InternationalLicense.InternationalLicenseApp.resources
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.InternationalLicense.ShowIntLicenseInfo.resources

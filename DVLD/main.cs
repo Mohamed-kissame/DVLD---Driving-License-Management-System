@@ -13,6 +13,7 @@ using DVLD.ApplicationTypes;
 using DVLD.Classes;
 using DVLD.controlls;
 using DVLD.Driver;
+using DVLD.InternationalLicense;
 using DVLD.LocalLicenseDriver;
 using DVLD.Pepole;
 using DVLD.TestTypes;
@@ -213,6 +214,13 @@ namespace DVLD
         {
             RenewLicense renew = new RenewLicense();
             renew.ShowDialog();
+        }
+
+        private void internationalDrivingLicenseApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InternationalLicenseApp internationalLicense = new InternationalLicenseApp();
+            internationalLicense.ShowDialog();
+
         }
     }
 }

@@ -20,7 +20,7 @@ namespace DataAccessLayer
             using (SqlConnection connection = new SqlConnection(clsDataAccessConnection.Connectionstring))
             {
 
-                string Query = "Select * From InternationalLicenses Where InterationaleLicenseID = @InterationaleLicenseID";
+                string Query = "Select * From InternationalLicenses Where InternationalLicenseID = @InternationalLicenseID";
 
                 using (SqlCommand command = new SqlCommand(Query, connection))
                 {
@@ -41,7 +41,7 @@ namespace DataAccessLayer
                                 isFound = true;
 
 
-                                InternationalLicenseID = (int)reader["InternationalLicenseID"];
+                               
                                 ApplicationID = (int)reader["ApplicationID"];
                                 IssuedUsingLocaleLicenseID = (int)reader["IssuedUsingLocalLicenseID"];
                                 IssueDate = (DateTime)reader["IssueDate"];
@@ -208,7 +208,7 @@ namespace DataAccessLayer
 
                 using (SqlCommand command = new SqlCommand(Query, connection))
                 {
-                    command.Parameters.AddWithValue("@DriverD", DriverID);
+                    command.Parameters.AddWithValue("@DriverID", DriverID);
 
                     try
                     {
