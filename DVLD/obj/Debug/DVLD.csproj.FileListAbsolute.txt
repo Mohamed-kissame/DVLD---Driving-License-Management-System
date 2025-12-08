@@ -133,3 +133,4 @@ C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.InternationalLi
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.InternationalLicense.Controlls.ShowInternationalLicenseInfo.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.InternationalLicense.InternationalLicenseApp.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.InternationalLicense.ShowIntLicenseInfo.resources
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Applications.Release_Detained_Licenses.ListDetainedLicense.resources

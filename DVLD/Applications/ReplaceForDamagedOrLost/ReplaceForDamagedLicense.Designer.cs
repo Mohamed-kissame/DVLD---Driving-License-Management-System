@@ -329,6 +329,7 @@
             this.linkShowLicensesHistory.TabIndex = 3;
             this.linkShowLicensesHistory.TabStop = true;
             this.linkShowLicensesHistory.Text = "Show Licenses History";
+            this.linkShowLicensesHistory.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkShowLicensesHistory_LinkClicked);
             // 
             // btnIssueReplace
             // 

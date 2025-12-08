@@ -79,6 +79,7 @@ namespace DVLD.Licenses.Controlls
             txtSearch.Text = LicenseID.ToString();
             ctrlDriverInfo1.LoadInfo(LicenseID);
             _LicenseID = ctrlDriverInfo1.LicenseID;
+
             if (OnLicenseSelected != null && FilterEnabled)
             {
                 OnLicenseSelected(_LicenseID);

@@ -40,6 +40,8 @@ namespace DVLD.Licenses.Controlls
 
             }
 
+            _License = license;
+
 
             lblClass.Text = license.LicenseClassInfo.ClassName.ToString();
             lblName.Text = license.DriverInfo._PersonInfo.FullName.ToString();
@@ -48,7 +50,7 @@ namespace DVLD.Licenses.Controlls
             lblGendor.Text = license.DriverInfo._PersonInfo._Gender.ToString();
             lblIssueDate.Text = clsFormat.DateToShort(license._IssueDate);
             lblIssueReason.Text = license.issueReasonText.ToString();
-            lblNotes.Text = license._Notes.ToString();
+            lblNotes.Text = license._Notes != "" ? license._Notes.ToString() : "Nothing";
             lblIsActive.Text = license._isActive ? "Yes" : "No";
             lblDateOfBirth.Text = clsFormat.DateToShort(license.DriverInfo._PersonInfo._BirthOfDate);
             lblDriverID.Text = license.DriverInfo._DriverID.ToString();

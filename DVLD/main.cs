@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD.Application.RenewLicense;
 using DVLD.Application.ReplaceForDamagedOrLost;
+using DVLD.Applications.Release_Detained_Licenses;
 using DVLD.ApplicationTypes;
 using DVLD.Classes;
 using DVLD.controlls;
@@ -221,6 +222,18 @@ namespace DVLD
             InternationalLicenseApp internationalLicense = new InternationalLicenseApp();
             internationalLicense.ShowDialog();
 
+        }
+
+        private void internationaleLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewInternationalLicenseAPP newInternational = new NewInternationalLicenseAPP();
+            newInternational.ShowDialog();
+        }
+
+        private void manageDetainLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListDetainedLicense detainedLicense = new ListDetainedLicense();
+            detainedLicense.ShowDialog();
         }
     }
 }

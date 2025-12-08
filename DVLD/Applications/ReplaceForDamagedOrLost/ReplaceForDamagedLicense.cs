@@ -129,5 +129,11 @@ namespace DVLD.Application.ReplaceForDamagedOrLost
 
             rdbForDamaged.Checked = true;
         }
+
+        private void linkShowLicensesHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ShowPersonLicensesHistory licensesHistory = new ShowPersonLicensesHistory(ctrlDriverInfoWithFilter1.SelectedLicenseInfo.DriverInfo._PersonID);
+            licensesHistory.ShowDialog();
+        }
     }
 }

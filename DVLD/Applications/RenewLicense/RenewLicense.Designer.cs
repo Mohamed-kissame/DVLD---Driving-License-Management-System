@@ -494,10 +494,12 @@
             this.linkShowLicenseHistory.TabIndex = 4;
             this.linkShowLicenseHistory.TabStop = true;
             this.linkShowLicenseHistory.Text = "Show Licenses History";
+            this.linkShowLicenseHistory.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkShowLicenseHistory_LinkClicked);
             // 
             // linkNewLicenseInfo
             // 
             this.linkNewLicenseInfo.AutoSize = true;
+            this.linkNewLicenseInfo.Enabled = false;
             this.linkNewLicenseInfo.Location = new System.Drawing.Point(299, 978);
             this.linkNewLicenseInfo.Name = "linkNewLicenseInfo";
             this.linkNewLicenseInfo.Size = new System.Drawing.Size(183, 20);

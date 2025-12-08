@@ -12,9 +12,25 @@ namespace DVLD.InternationalLicense
 {
     public partial class ShowIntLicenseInfo : Form
     {
-        public ShowIntLicenseInfo()
+
+        private int _InterNational;
+
+        public ShowIntLicenseInfo(int InterNational)
         {
             InitializeComponent();
+
+            _InterNational = InterNational;
+        }
+
+        private void ShowIntLicenseInfo_Load(object sender, EventArgs e)
+        {
+            showInternationalLicenseInfo1.LoadInfo(_InterNational);
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

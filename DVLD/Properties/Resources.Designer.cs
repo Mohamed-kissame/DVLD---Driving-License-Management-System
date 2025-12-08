@@ -83,6 +83,16 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_document {
+            get {
+                object obj = ResourceManager.GetObject("add-document", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap AddAppointment_32 {
             get {
                 object obj = ResourceManager.GetObject("AddAppointment 32", resourceCulture);
@@ -426,6 +436,16 @@ namespace DVLD.Properties {
         internal static System.Drawing.Bitmap editIcon {
             get {
                 object obj = ResourceManager.GetObject("editIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gender_equality {
+            get {
+                object obj = ResourceManager.GetObject("gender-equality", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

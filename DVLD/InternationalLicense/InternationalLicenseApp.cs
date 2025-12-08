@@ -143,19 +143,16 @@ namespace DVLD.InternationalLicense
 
             }
 
-            if (FilterColumn == "InternationalLicenseID" || FilterColumn == "DriverID" || FilterColumn == "IssuedUsingLocalLicenseID")
-            {
+            _dtInternationalLicenses.DefaultView.RowFilter = string.Format("{0} = {1}", FilterColumn, txtSearch.Text.Trim());
+             UpdateRecordCount(_dtInternationalLicenses.DefaultView.Count);
 
-                _dtInternationalLicenses.DefaultView.RowFilter = string.Format("{0} = {1}", FilterColumn, txtSearch.Text.Trim());
-                UpdateRecordCount(_dtInternationalLicenses.DefaultView.Count);
-
-            }
+            
 
         }
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtSearch.Text.Trim() == "InternationalLicenseID" || txtSearch.Text.Trim() == "DriverID" || txtSearch.Text.Trim() == "IssuedUsingLocalLicenseID")
+            if (comboBox1.Text.Trim() == "Int.License ID" || comboBox1.Text.Trim() == "Driver ID" || comboBox1.Text.Trim() == "L.License ID")
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
@@ -166,7 +163,9 @@ namespace DVLD.InternationalLicense
 
         private void showToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ShowIntLicenseInfo intLicenseInfo = new ShowIntLicenseInfo();
+            int InternationalLicenseID = (int)dgv.CurrentRow.Cells[0].Value;
+
+            ShowIntLicenseInfo intLicenseInfo = new ShowIntLicenseInfo(InternationalLicenseID);
             intLicenseInfo.ShowDialog();
         }
 
@@ -186,6 +185,12 @@ namespace DVLD.InternationalLicense
 
             ShowPersonLicensesHistory licensesHistory = new ShowPersonLicensesHistory(PersonID);
             licensesHistory.ShowDialog();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            NewInternationalLicenseAPP AddNew = new NewInternationalLicenseAPP();
+            AddNew.ShowDialog();
         }
     }
 }
