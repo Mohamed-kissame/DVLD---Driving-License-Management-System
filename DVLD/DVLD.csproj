@@ -124,6 +124,7 @@
     <Compile Include="Applications\ReplaceForDamagedOrLost\ReplaceForDamagedLicense.Designer.cs">
       <DependentUpon>ReplaceForDamagedLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="BussniesDVLDLayer\ClsLicense.cs" />
     <Compile Include="Classes\clsFormat.cs" />
     <Compile Include="Classes\clsUtilty.cs" />
     <Compile Include="Classes\clsValidation.cs" />
@@ -133,12 +134,6 @@
     </Compile>
     <Compile Include="controlls\ctrlShowLicenseApplicationInfo.Designer.cs">
       <DependentUpon>ctrlShowLicenseApplicationInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="controlls\FillDataGrade.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="controlls\FillDataGrade.Designer.cs">
-      <DependentUpon>FillDataGrade.cs</DependentUpon>
     </Compile>
     <Compile Include="controlls\ShowPersonCard.cs">
       <SubType>UserControl</SubType>
@@ -206,11 +201,23 @@
     <Compile Include="Licenses\Controlls\CtrlDriverLicenses.Designer.cs">
       <DependentUpon>CtrlDriverLicenses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\DetainLicense\Detained.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\DetainLicense\Detained.Designer.cs">
+      <DependentUpon>Detained.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\IssueLicenseForFirstTime.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Licenses\IssueLicenseForFirstTime.Designer.cs">
       <DependentUpon>IssueLicenseForFirstTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\ReleaseLicense\ReleaseLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\ReleaseLicense\ReleaseLicense.Designer.cs">
+      <DependentUpon>ReleaseLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="Licenses\ShowLicenseInfo.cs">
       <SubType>Form</SubType>
@@ -358,9 +365,6 @@
     <EmbeddedResource Include="controlls\ctrlShowLicenseApplicationInfo.resx">
       <DependentUpon>ctrlShowLicenseApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controlls\FillDataGrade.resx">
-      <DependentUpon>FillDataGrade.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="controlls\ShowPersonCard.resx">
       <DependentUpon>ShowPersonCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,8 +398,14 @@
     <EmbeddedResource Include="Licenses\Controlls\CtrlDriverLicenses.resx">
       <DependentUpon>CtrlDriverLicenses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\DetainLicense\Detained.resx">
+      <DependentUpon>Detained.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Licenses\IssueLicenseForFirstTime.resx">
       <DependentUpon>IssueLicenseForFirstTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\ReleaseLicense\ReleaseLicense.resx">
+      <DependentUpon>ReleaseLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\ShowLicenseInfo.resx">
       <DependentUpon>ShowLicenseInfo.cs</DependentUpon>

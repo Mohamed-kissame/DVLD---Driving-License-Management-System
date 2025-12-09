@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BussniesDVLDLayer;
+using DVLD.Licenses;
+using DVLD.Licenses.DetainLicense;
+using DVLD.Licenses.ReleaseLicense;
+using DVLD.Pepole;
 
 namespace DVLD.Applications.Release_Detained_Licenses
 {
@@ -81,6 +85,8 @@ namespace DVLD.Applications.Release_Detained_Licenses
         {
 
             _dtDetained = ClsDetained.GetAllDetainedLicense();
+
+            comboBox1.SelectedIndex = 0;
 
             dgv.DataSource = _dtDetained;
 
@@ -170,33 +176,61 @@ namespace DVLD.Applications.Release_Detained_Licenses
 
         private void btnDetained_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Is Not Implemented Yet ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            Detained dtnLicense = new Detained();
+            dtnLicense.ShowDialog();
 
         }
 
         private void btnRelease_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Is Not Implemented Yet ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ReleaseLicense release = new ReleaseLicense();
+            release.ShowDialog();
         }
 
         private void showPersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Is Not Implemented Yet ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            int LicenseID = (int)dgv.CurrentRow.Cells[1].Value;
+            int PersonID = ClsLicense.Find(LicenseID).DriverInfo._PersonID;
+
+            ShowDetailPerson showDetail = new ShowDetailPerson(PersonID);
+            showDetail.ShowDialog();
+            
+
         }
 
         private void showToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Is Not Implemented Yet ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            int LicenseID = (int)dgv.CurrentRow.Cells[1].Value;
+
+
+            ShowLicenseInfo licenseInfo = new ShowLicenseInfo(LicenseID);
+            licenseInfo.ShowDialog();
+
         }
 
         private void showPersonLicensesHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Is Not Implemented Yet ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            int LicenseID = (int)dgv.CurrentRow.Cells[1].Value;
+            int PersonID = ClsLicense.Find(LicenseID).DriverInfo._PersonID;
+
+            ShowPersonLicensesHistory licensesHistory = new ShowPersonLicensesHistory(PersonID);
+            licensesHistory.ShowDialog();
+
         }
 
         private void releaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Is Not Implemented Yet ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            int LicenseID = (int)dgv.CurrentRow.Cells[1].Value;
+
+            ReleaseLicense release = new ReleaseLicense(LicenseID);
+            release.ShowDialog();
+
+            ListDetainedLicense_Load(null, null);
         }
 
         private void dgv_Paint(object sender, PaintEventArgs e)
@@ -215,6 +249,13 @@ namespace DVLD.Applications.Release_Detained_Licenses
                         TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
                 }
             }
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+
+            releaseToolStripMenuItem.Enabled = (!(bool)dgv.CurrentRow.Cells[3].Value);
         }
     }
 }

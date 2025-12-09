@@ -83,11 +83,10 @@
             // 
             // ctrlDriverInfoWithFilter1
             // 
-            this.ctrlDriverInfoWithFilter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ctrlDriverInfoWithFilter1.FilterEnabled = true;
-            this.ctrlDriverInfoWithFilter1.Location = new System.Drawing.Point(0, 0);
+            this.ctrlDriverInfoWithFilter1.Location = new System.Drawing.Point(31, 12);
             this.ctrlDriverInfoWithFilter1.Name = "ctrlDriverInfoWithFilter1";
-            this.ctrlDriverInfoWithFilter1.Size = new System.Drawing.Size(1010, 588);
+            this.ctrlDriverInfoWithFilter1.Size = new System.Drawing.Size(946, 588);
             this.ctrlDriverInfoWithFilter1.TabIndex = 0;
             this.ctrlDriverInfoWithFilter1.OnLicenseSelected += new System.Action<int>(this.ctrlDriverInfoWithFilter1_OnLicenseSelected);
             // 

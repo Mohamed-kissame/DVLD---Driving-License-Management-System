@@ -35,11 +35,9 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnDetained = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.btnRelease = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblCount = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showPersonDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -48,7 +46,9 @@
             this.showPersonLicensesHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.releaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.btnRelease = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -111,6 +111,13 @@
             this.btnDetained.UseVisualStyleBackColor = true;
             this.btnDetained.Click += new System.EventHandler(this.btnDetained_Click);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "Release Detained License 512.png");
+            this.imageList1.Images.SetKeyName(1, "Detain 32.png");
+            // 
             // btnClose
             // 
             this.btnClose.Animated = true;
@@ -141,38 +148,6 @@
             this.dgv.TabIndex = 6;
             this.dgv.Paint += new System.Windows.Forms.PaintEventHandler(this.dgv_Paint);
             // 
-            // btnRelease
-            // 
-            this.btnRelease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRelease.ImageIndex = 0;
-            this.btnRelease.ImageList = this.imageList1;
-            this.btnRelease.Location = new System.Drawing.Point(1055, 105);
-            this.btnRelease.Name = "btnRelease";
-            this.btnRelease.Size = new System.Drawing.Size(73, 55);
-            this.btnRelease.TabIndex = 7;
-            this.btnRelease.UseVisualStyleBackColor = true;
-            this.btnRelease.Click += new System.EventHandler(this.btnRelease_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(483, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 20);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Search :";
-            // 
-            // lblCount
-            // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCount.Location = new System.Drawing.Point(32, 649);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(79, 20);
-            this.lblCount.TabIndex = 9;
-            this.lblCount.Text = "Find By :";
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -186,6 +161,7 @@
             this.releaseToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(318, 150);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showPersonDetailsToolStripMenuItem
             // 
@@ -234,12 +210,37 @@
             this.releaseToolStripMenuItem.Text = "Release Detained License";
             this.releaseToolStripMenuItem.Click += new System.EventHandler(this.releaseToolStripMenuItem_Click);
             // 
-            // imageList1
+            // btnRelease
             // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "Release Detained License 512.png");
-            this.imageList1.Images.SetKeyName(1, "Detain 32.png");
+            this.btnRelease.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelease.ImageIndex = 0;
+            this.btnRelease.ImageList = this.imageList1;
+            this.btnRelease.Location = new System.Drawing.Point(1055, 105);
+            this.btnRelease.Name = "btnRelease";
+            this.btnRelease.Size = new System.Drawing.Size(73, 55);
+            this.btnRelease.TabIndex = 7;
+            this.btnRelease.UseVisualStyleBackColor = true;
+            this.btnRelease.Click += new System.EventHandler(this.btnRelease_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(483, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Search :";
+            // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.Location = new System.Drawing.Point(32, 649);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(79, 20);
+            this.lblCount.TabIndex = 9;
+            this.lblCount.Text = "Find By :";
             // 
             // ListDetainedLicense
             // 

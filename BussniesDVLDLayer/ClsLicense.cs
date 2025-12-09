@@ -6,18 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer;
 
-
 namespace BussniesDVLDLayer
 {
     public class ClsLicense
     {
 
-
-        public enum enMode { AddNew = 0 , Update = 1 };
+        public enum enMode { AddNew = 0, Update = 1 };
 
         public enMode _Mode = enMode.AddNew;
 
-        public enum enIssueReason { FirstTime = 1 , Renew = 2 , ReplacementForDamaged = 3 , ReplacementForLost = 4 };
+        public enum enIssueReason { FirstTime = 1, Renew = 2, ReplacementForDamaged = 3, ReplacementForLost = 4 };
 
 
         public int _LicenseID { get; set; }
@@ -49,12 +47,19 @@ namespace BussniesDVLDLayer
             get
             {
 
-              return  GetIssueReasonText(_issueReason);
-                
+                return GetIssueReasonText(_issueReason);
+
             }
         }
 
         public int _CreatedByUserID { get; set; }
+
+        public bool IsDetained
+        {
+            get { return ClsDetained.IsLicenseDetained(this._LicenseID); }
+        }
+
+        public ClsDetained DetainInfo;
 
         public ClsLicense()
         {
@@ -73,10 +78,11 @@ namespace BussniesDVLDLayer
             _Mode = enMode.AddNew;
         }
 
-        private ClsLicense(int LicenseID , int ApplicationID , int DriverID , int LicenseClass , DateTime issueDate , DateTime expirationDate , string Notes , float PaidFees , bool isActive , enIssueReason issueReason , int CreatedByUserID)
+        private ClsLicense(int LicenseID, int ApplicationID, int DriverID, int LicenseClass, DateTime issueDate, DateTime expirationDate, string Notes, float PaidFees, bool isActive, enIssueReason issueReason, int CreatedByUserID)
         {
 
             this._LicenseID = LicenseID;
+            this.DetainInfo = ClsDetained.FindByLicenseID(this._LicenseID);
             this._ApplicationID = ApplicationID;
             this._DriverID = DriverID;
             this.DriverInfo = ClsDriver.FindByDriverID(this._DriverID);
@@ -90,6 +96,7 @@ namespace BussniesDVLDLayer
             this._CreatedByUserID = CreatedByUserID;
 
             this.LicenseClassInfo = clsLicenseClass.Find(this._LicnseClass);
+           
 
             _Mode = enMode.Update;
         }
@@ -98,7 +105,7 @@ namespace BussniesDVLDLayer
         public static ClsLicense Find(int LicenseID)
         {
             int ApplicationID = -1, DriverID = -1, LicenseClass = -1, CreatedByUser = -1;
-            DateTime issueDate  = DateTime.Now , expirationDate = DateTime.Now ;
+            DateTime issueDate = DateTime.Now, expirationDate = DateTime.Now;
             string Notes = "";
             float PaidFees = 0;
             bool IsActive = false;
@@ -111,7 +118,7 @@ namespace BussniesDVLDLayer
             else
                 return null;
 
-            
+
 
         }
 
@@ -141,7 +148,7 @@ namespace BussniesDVLDLayer
         public static bool IsLicenseExistByPersonID(int PersonID, int LicenseClassID)
         {
 
-            return (GetActiveLicenseIDByPersonID(PersonID , LicenseClassID) != -1);
+            return (GetActiveLicenseIDByPersonID(PersonID, LicenseClassID) != -1);
         }
 
         public static int GetActiveLicenseIDByPersonID(int PersonID, int LicenseClassID)
@@ -179,7 +186,7 @@ namespace BussniesDVLDLayer
                     }
 
                 case enMode.Update:
-                   return  _UpdateLicense();
+                    return _UpdateLicense();
             }
 
             return false;
@@ -216,7 +223,7 @@ namespace BussniesDVLDLayer
         public ClsLicense RenewLicense(string Notes, int CreatedByUserID)
         {
 
-            
+
             ClsApplication Application = new ClsApplication();
 
             Application._PersonID = this.DriverInfo._PersonID;
@@ -254,7 +261,7 @@ namespace BussniesDVLDLayer
                 return null;
             }
 
-            
+
             DesactiveLicense();
 
             return NewLicense;
@@ -264,7 +271,7 @@ namespace BussniesDVLDLayer
         {
 
 
-            
+
             ClsApplication Application = new ClsApplication();
 
             Application._PersonID = this.DriverInfo._PersonID;
@@ -304,11 +311,57 @@ namespace BussniesDVLDLayer
                 return null;
             }
 
-            
+
             DesactiveLicense();
 
             return NewLicense;
         }
+
+        public int Detain(float FineFees, int CreatedByUserID)
+        {
+            ClsDetained detainedLicense = new ClsDetained();
+            detainedLicense.LicenseID = this._LicenseID;
+            detainedLicense.DetainDate = DateTime.Now;
+            detainedLicense.FineFees = Convert.ToSingle(FineFees);
+            detainedLicense.CreatedByUserID = CreatedByUserID;
+
+            if (!detainedLicense.Save())
+            {
+
+                return -1;
+            }
+
+            return detainedLicense.DetainID;
+
+        }
+
+        public bool ReleaseDetainedLicense(int ReleasedByUserID, ref int ApplicationID)
+        {
+
+           
+            ClsApplication Application = new ClsApplication();
+
+            Application._PersonID = this.DriverInfo._PersonID;
+            Application.ApplicationDate = DateTime.Now;
+            Application._ApplicationTypeId = (int)ClsApplication.enApplicationType.ReleaseDetainedDrivingLicense;
+            Application._ApplicationStatus = ClsApplication.enApplicationStatus.Completed;
+            Application.LastStatusDate = DateTime.Now;
+            Application.PaidFees = clsApplicationType.Find((int)ClsApplication.enApplicationType.ReleaseDetainedDrivingLicense).ApplicationFees;
+            Application._CreatedByUser = ReleasedByUserID;
+
+            if (!Application.Save())
+            {
+                ApplicationID = -1;
+                return false;
+            }
+
+            ApplicationID = Application._ApplicationID;
+
+
+            return this.DetainInfo.ReleaseDetainLicense(ReleasedByUserID, Application._ApplicationID);
+
+        }
+
 
     }
 }

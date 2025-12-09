@@ -90,7 +90,6 @@ C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.exe.config
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.ApplicationTypes.EditApplication.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.ApplicationTypes.Manage_Application_Types.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.controlls.ctrlShowLicenseApplicationInfo.resources
-C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.controlls.FillDataGrade.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.controlls.ShowPersonCard.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.controlls.showPersonCardByFilter.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.controlls.ShowUserCard.resources
@@ -134,3 +133,5 @@ C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.InternationalLi
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.InternationalLicense.InternationalLicenseApp.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.InternationalLicense.ShowIntLicenseInfo.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Applications.Release_Detained_Licenses.ListDetainedLicense.resources
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Licenses.DetainLicense.Detained.resources
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Licenses.ReleaseLicense.ReleaseLicense.resources

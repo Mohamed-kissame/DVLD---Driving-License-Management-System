@@ -15,6 +15,8 @@ using DVLD.Classes;
 using DVLD.controlls;
 using DVLD.Driver;
 using DVLD.InternationalLicense;
+using DVLD.Licenses.DetainLicense;
+using DVLD.Licenses.ReleaseLicense;
 using DVLD.LocalLicenseDriver;
 using DVLD.Pepole;
 using DVLD.TestTypes;
@@ -234,6 +236,18 @@ namespace DVLD
         {
             ListDetainedLicense detainedLicense = new ListDetainedLicense();
             detainedLicense.ShowDialog();
+        }
+
+        private void detainLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Detained detainedLicense = new Detained();
+            detainedLicense.ShowDialog();
+        }
+
+        private void releaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReleaseLicense release = new ReleaseLicense();
+            release.ShowDialog();
         }
     }
 }

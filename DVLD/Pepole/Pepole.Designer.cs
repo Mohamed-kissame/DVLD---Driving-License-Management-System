@@ -107,6 +107,7 @@
             this.dgv.Size = new System.Drawing.Size(1249, 360);
             this.dgv.TabIndex = 5;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
+            this.dgv.Paint += new System.Windows.Forms.PaintEventHandler(this.dgv_Paint);
             // 
             // contextMenuStrip1
             // 

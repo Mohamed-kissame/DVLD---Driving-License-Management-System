@@ -314,5 +314,23 @@ namespace DVLD.Pepole
         {
 
         }
+
+        private void dgv_Paint(object sender, PaintEventArgs e)
+        {
+            if (dgv.Rows.Count == 0)
+            {
+                string message = "No People found.";
+                using (Font font = new Font("Segoe UI", 12, FontStyle.Bold))
+                {
+                    TextRenderer.DrawText(
+                        e.Graphics,
+                        message,
+                        font,
+                        dgv.ClientRectangle,
+                        Color.Gray,
+                        TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+                }
+            }
+        }
     }
 }

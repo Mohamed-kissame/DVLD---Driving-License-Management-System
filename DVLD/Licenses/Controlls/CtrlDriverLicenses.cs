@@ -151,5 +151,41 @@ namespace DVLD.Licenses.Controlls
             ShowLicenseInfo show = new ShowLicenseInfo(LicenseID);
             show.ShowDialog();
         }
+
+        private void dgvLocal_Paint(object sender, PaintEventArgs e)
+        {
+            if (dgvLocal.Rows.Count == 0)
+            {
+                string message = "No Local licenses found.";
+                using (Font font = new Font("Segoe UI", 12, FontStyle.Bold))
+                {
+                    TextRenderer.DrawText(
+                        e.Graphics,
+                        message,
+                        font,
+                        dgvLocal.ClientRectangle,
+                        Color.Gray,
+                        TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+                }
+            }
+        }
+
+        private void dgvInternational_Paint(object sender, PaintEventArgs e)
+        {
+            if (dgvInternational.Rows.Count == 0)
+            {
+                string message = "No International licenses found.";
+                using (Font font = new Font("Segoe UI", 12, FontStyle.Bold))
+                {
+                    TextRenderer.DrawText(
+                        e.Graphics,
+                        message,
+                        font,
+                        dgvInternational.ClientRectangle,
+                        Color.Gray,
+                        TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+                }
+            }
+        }
     }
 }

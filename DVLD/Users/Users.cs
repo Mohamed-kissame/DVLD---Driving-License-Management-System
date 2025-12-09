@@ -283,5 +283,23 @@ namespace DVLD.Users
             change.ShowDialog();
             RefrechUsers();
         }
+
+        private void dataGridView1_Paint(object sender, PaintEventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 0)
+            {
+                string message = "No Users found.";
+                using (Font font = new Font("Segoe UI", 12, FontStyle.Bold))
+                {
+                    TextRenderer.DrawText(
+                        e.Graphics,
+                        message,
+                        font,
+                        dataGridView1.ClientRectangle,
+                        Color.Gray,
+                        TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+                }
+            }
+        }
     }
 }

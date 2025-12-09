@@ -67,11 +67,10 @@
             // 
             // ctrlDriverInfoWithFilter1
             // 
-            this.ctrlDriverInfoWithFilter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ctrlDriverInfoWithFilter1.FilterEnabled = true;
-            this.ctrlDriverInfoWithFilter1.Location = new System.Drawing.Point(0, 0);
+            this.ctrlDriverInfoWithFilter1.Location = new System.Drawing.Point(23, -1);
             this.ctrlDriverInfoWithFilter1.Name = "ctrlDriverInfoWithFilter1";
-            this.ctrlDriverInfoWithFilter1.Size = new System.Drawing.Size(1078, 604);
+            this.ctrlDriverInfoWithFilter1.Size = new System.Drawing.Size(1031, 604);
             this.ctrlDriverInfoWithFilter1.TabIndex = 0;
             this.ctrlDriverInfoWithFilter1.OnLicenseSelected += new System.Action<int>(this.ctrlDriverInfoWithFilter1_OnLicenseSelected);
             // 
@@ -79,7 +78,7 @@
             // 
             this.gpReplaceFor.Controls.Add(this.radioButton1);
             this.gpReplaceFor.Controls.Add(this.rdbForDamaged);
-            this.gpReplaceFor.Location = new System.Drawing.Point(741, 12);
+            this.gpReplaceFor.Location = new System.Drawing.Point(704, 12);
             this.gpReplaceFor.Name = "gpReplaceFor";
             this.gpReplaceFor.Size = new System.Drawing.Size(313, 102);
             this.gpReplaceFor.TabIndex = 1;

@@ -5,14 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|c:\\users\\mkiss\\onedrive\\bureau\\projects\\dvld\\dvld\\applications\\release detained licenses\\listdetainedlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:applications\\release detained licenses\\listdetainedlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|c:\\users\\mkiss\\onedrive\\bureau\\projects\\dvld\\dvld\\applications\\release detained licenses\\listdetainedlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:applications\\release detained licenses\\listdetainedlicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|c:\\users\\mkiss\\onedrive\\bureau\\projects\\dvld\\dvld\\internationallicense\\internationallicenseapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:internationallicense\\internationallicenseapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -43,32 +35,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InternationalLicenseApp.cs",
-              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\DVLD\\InternationalLicense\\InternationalLicenseApp.cs",
-              "RelativeDocumentMoniker": "InternationalLicense\\InternationalLicenseApp.cs",
-              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\DVLD\\InternationalLicense\\InternationalLicenseApp.cs",
-              "RelativeToolTip": "InternationalLicense\\InternationalLicenseApp.cs",
-              "ViewState": "AgIAAIkAAAAAAAAAAAAIwJsAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T16:45:56.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ListDetainedLicense.cs",
-              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\DVLD\\Applications\\Release Detained Licenses\\ListDetainedLicense.cs",
-              "RelativeDocumentMoniker": "Applications\\Release Detained Licenses\\ListDetainedLicense.cs",
-              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\DVLD\\Applications\\Release Detained Licenses\\ListDetainedLicense.cs",
-              "RelativeToolTip": "Applications\\Release Detained Licenses\\ListDetainedLicense.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAQwGYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T16:45:13.046Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",

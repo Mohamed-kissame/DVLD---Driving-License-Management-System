@@ -76,7 +76,7 @@
             this.accountSettingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1720, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1720, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -93,7 +93,7 @@
             this.applicationsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.applicationsToolStripMenuItem.Image = global::DVLD.Properties.Resources.application;
             this.applicationsToolStripMenuItem.Name = "applicationsToolStripMenuItem";
-            this.applicationsToolStripMenuItem.Size = new System.Drawing.Size(158, 32);
+            this.applicationsToolStripMenuItem.Size = new System.Drawing.Size(158, 29);
             this.applicationsToolStripMenuItem.Text = "Applications";
             // 
             // drivingToolStripMenuItem
@@ -158,6 +158,7 @@
             this.releaseToolStripMenuItem.Name = "releaseToolStripMenuItem";
             this.releaseToolStripMenuItem.Size = new System.Drawing.Size(476, 34);
             this.releaseToolStripMenuItem.Text = "Release Detained Driving License";
+            this.releaseToolStripMenuItem.Click += new System.EventHandler(this.releaseToolStripMenuItem_Click);
             // 
             // retakeTestToolStripMenuItem
             // 
@@ -226,6 +227,7 @@
             this.detainLicenseToolStripMenuItem.Name = "detainLicenseToolStripMenuItem";
             this.detainLicenseToolStripMenuItem.Size = new System.Drawing.Size(328, 34);
             this.detainLicenseToolStripMenuItem.Text = "Detain License";
+            this.detainLicenseToolStripMenuItem.Click += new System.EventHandler(this.detainLicenseToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -261,7 +263,7 @@
             this.pepoleToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.pepoleToolStripMenuItem.Image = global::DVLD.Properties.Resources.ManagePepole;
             this.pepoleToolStripMenuItem.Name = "pepoleToolStripMenuItem";
-            this.pepoleToolStripMenuItem.Size = new System.Drawing.Size(109, 32);
+            this.pepoleToolStripMenuItem.Size = new System.Drawing.Size(109, 29);
             this.pepoleToolStripMenuItem.Text = "Pepole";
             this.pepoleToolStripMenuItem.Click += new System.EventHandler(this.pepoleToolStripMenuItem_Click);
             // 
@@ -271,7 +273,7 @@
             this.driversToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.driversToolStripMenuItem.Image = global::DVLD.Properties.Resources.driving;
             this.driversToolStripMenuItem.Name = "driversToolStripMenuItem";
-            this.driversToolStripMenuItem.Size = new System.Drawing.Size(112, 32);
+            this.driversToolStripMenuItem.Size = new System.Drawing.Size(112, 29);
             this.driversToolStripMenuItem.Text = "Drivers";
             this.driversToolStripMenuItem.Click += new System.EventHandler(this.driversToolStripMenuItem_Click);
             // 
@@ -281,7 +283,7 @@
             this.usersToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.usersToolStripMenuItem.Image = global::DVLD.Properties.Resources.Users;
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(98, 32);
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.usersToolStripMenuItem.Text = "Users";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
@@ -295,7 +297,7 @@
             this.accountSettingsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.accountSettingsToolStripMenuItem.Image = global::DVLD.Properties.Resources.AccountSettings;
             this.accountSettingsToolStripMenuItem.Name = "accountSettingsToolStripMenuItem";
-            this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(197, 32);
+            this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(197, 29);
             this.accountSettingsToolStripMenuItem.Text = "Account Settings";
             // 
             // currentUserInfoToolStripMenuItem
@@ -327,9 +329,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::DVLD.Properties.Resources.driving__vehicle_license_department_system_high_resolution_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1720, 818);
+            this.pictureBox1.Size = new System.Drawing.Size(1720, 821);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
