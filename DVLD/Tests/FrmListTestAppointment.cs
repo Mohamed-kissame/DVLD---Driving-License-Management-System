@@ -174,10 +174,7 @@ namespace DVLD.Tests
             FrmListTestAppointment_Load(null, null);
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
 
         private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -188,6 +185,11 @@ namespace DVLD.Tests
             frm.ShowDialog();
             FrmListTestAppointment_Load(null, null);
 
+        }
+
+        private void guna2TileButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

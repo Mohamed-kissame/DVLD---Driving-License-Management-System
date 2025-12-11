@@ -16,6 +16,7 @@ namespace DVLD.Users
         public ChangePassword(int UserID)
         {
             InitializeComponent();
+            
 
             showUserCard1.LoadUserData(UserID);
         }
@@ -69,15 +70,15 @@ namespace DVLD.Users
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void guna2TileButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnChange_Click(object sender, EventArgs e)
         {
-
-            if(clsUsers.ChangePassword(showUserCard1.SelectUserInfo._UserID , txtConfirmPassword.Text))
+            if (clsUsers.ChangePassword(showUserCard1.SelectUserInfo._UserID, txtConfirmPassword.Text))
             {
 
                 MessageBox.Show("Password Change Successfuly", "Change Password", MessageBoxButtons.OK, MessageBoxIcon.Information);

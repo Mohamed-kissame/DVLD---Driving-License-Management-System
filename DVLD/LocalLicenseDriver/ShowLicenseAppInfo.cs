@@ -21,11 +21,7 @@ namespace DVLD.LocalLicenseDriver
             _LApplicationID = LAppID;
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+     
         private void ctrlShowLicenseApplicationInfo1_Load(object sender, EventArgs e)
         {
 
@@ -34,6 +30,11 @@ namespace DVLD.LocalLicenseDriver
         private void ShowLicenseAppInfo_Load(object sender, EventArgs e)
         {
             ctrlShowLicenseApplicationInfo1.LoadLicenseApplicationInfo(_LApplicationID);
+        }
+
+        private void guna2TileButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

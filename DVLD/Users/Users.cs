@@ -19,6 +19,8 @@ namespace DVLD.Users
         public Users()
         {
             InitializeComponent();
+           
+
 
             cmbIsActive.Visible = false;
         }
@@ -300,6 +302,11 @@ namespace DVLD.Users
                         TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
                 }
             }
+        }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

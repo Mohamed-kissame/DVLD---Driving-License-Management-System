@@ -183,11 +183,19 @@ namespace DVLD.LocalLicenseDriver
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+   
+
+        private void btnClose_Click_1(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+
             if (!this.ValidateChildren())
             {
-                
+
                 MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
@@ -206,7 +214,7 @@ namespace DVLD.LocalLicenseDriver
             }
 
 
-           
+
             if (ClsLicense.IsLicenseExistByPersonID(showPersonCardByFilter1._PersonID, LicenseClassID))
             {
 
@@ -214,7 +222,7 @@ namespace DVLD.LocalLicenseDriver
                 return;
             }
 
-            _LocalDrivingLicenseApplication._PersonID = showPersonCardByFilter1._PersonID; 
+            _LocalDrivingLicenseApplication._PersonID = showPersonCardByFilter1._PersonID;
             _LocalDrivingLicenseApplication.ApplicationDate = DateTime.Now;
             _LocalDrivingLicenseApplication._ApplicationTypeId = 1;
             _LocalDrivingLicenseApplication._ApplicationStatus = ClsApplication.enApplicationStatus.New;
@@ -227,7 +235,7 @@ namespace DVLD.LocalLicenseDriver
             if (_LocalDrivingLicenseApplication.Save())
             {
                 lblID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
-              
+
                 _Mode = enMode.Update;
                 lblTitle.Text = "Update Local Driving License Application";
 

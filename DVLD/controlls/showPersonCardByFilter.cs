@@ -32,7 +32,7 @@ namespace DVLD.controlls
             _PersonID = personID;
             txtSearch.Text = personID.ToString();
             gbFilter.Enabled = false;
-            showPersonCard1.LoadPersonData(personID);
+            showPersonCard2.LoadPersonData(personID);
            
         }
 
@@ -73,14 +73,14 @@ namespace DVLD.controlls
             {
                 case "PersonID":
                     int Id = Convert.ToInt32(txtSearch.Text);
-                    showPersonCard1.LoadPersonData(Convert.ToInt32(txtSearch.Text));
+                    showPersonCard2.LoadPersonData(Convert.ToInt32(txtSearch.Text));
                     _PersonID = Id;
                     break;
 
                 case "NationalNo":
-                    showPersonCard1.LoadPersonData(txtSearch.Text);
+                    showPersonCard2.LoadPersonData(txtSearch.Text);
 
-                    _PersonID = showPersonCard1.PersonID;
+                    _PersonID = showPersonCard2.PersonID;
                     break;
 
                 default:
@@ -133,7 +133,7 @@ namespace DVLD.controlls
 
             comboBox2.SelectedIndex = 2;
             txtSearch.Text = PersonID.ToString();
-            showPersonCard1.LoadPersonData(PersonID);
+            showPersonCard2.LoadPersonData(PersonID);
             _PersonID = PersonID;
         }
 
@@ -145,6 +145,11 @@ namespace DVLD.controlls
 
             Add.ShowDialog();
 
+
+        }
+
+        private void gbFilter_Enter(object sender, EventArgs e)
+        {
 
         }
     }

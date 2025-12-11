@@ -187,5 +187,10 @@ namespace DVLD.Licenses.Controlls
                 }
             }
         }
+
+        private void CtrlDriverLicenses_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

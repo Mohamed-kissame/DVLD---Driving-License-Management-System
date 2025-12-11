@@ -136,10 +136,7 @@ namespace DVLD.Pepole
 
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+    
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -331,6 +328,11 @@ namespace DVLD.Pepole
                         TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
                 }
             }
+        }
+
+        private void guna2TileButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -62,12 +62,6 @@ namespace DVLD.Driver
         }
 
 
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void DriverView_Load(object sender, EventArgs e)
         {
 
@@ -168,6 +162,11 @@ namespace DVLD.Driver
             ShowPersonLicensesHistory licensesHistory = new ShowPersonLicensesHistory(PersonID);
             licensesHistory.ShowDialog();
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

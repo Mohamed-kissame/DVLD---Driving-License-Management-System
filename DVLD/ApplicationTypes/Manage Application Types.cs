@@ -96,5 +96,10 @@ namespace DVLD.ApplicationTypes
             editApplication.ShowDialog();
             RefrechApplication();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

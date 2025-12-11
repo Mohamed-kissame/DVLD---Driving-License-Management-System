@@ -104,6 +104,56 @@ namespace DataAccessLayer
             return isFound;
         }
 
+        public static bool GetUserInfoBuUsernameAndPassword(string UserNAme , string PassWord , ref int UserID , ref int PersonID , ref bool IsActive)
+        {
+
+            bool isFound = false;
+
+            using(SqlConnection coneection = new SqlConnection(clsDataAccessConnection.Connectionstring))
+            {
+
+                string Query = "Select * From Users Where UserName = @UserName And Password = @Password";
+
+                using(SqlCommand command = new SqlCommand(Query , coneection))
+                {
+
+                    command.Parameters.AddWithValue("@UserName", UserNAme);
+                    command.Parameters.AddWithValue("@Password", PassWord);
+
+                    try
+                    {
+
+                        coneection.Open();
+
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+
+                            if (reader.Read())
+                            {
+
+                                isFound = true;
+
+                                UserID = (int)reader["UserID"];
+                                PersonID = (int)reader["PersonID"];
+                                IsActive = (bool)reader["IsActive"];
+
+
+                            }
+
+                        }
+
+                    }catch(Exception ex)
+                    {
+                        isFound = false;
+                    }
+
+                }
+
+            }
+
+            return isFound;
+        }
+
         public static int AddNewUser(int PersonID , string UserName , string PassWord , bool isActive)
         {
 

@@ -43,9 +43,9 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.cmbIsActive = new System.Windows.Forms.ComboBox();
+            this.Close = new Guna.UI2.WinForms.Guna2TileButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +60,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(929, 377);
+            this.dataGridView1.Size = new System.Drawing.Size(999, 377);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.Paint += new System.Windows.Forms.PaintEventHandler(this.dataGridView1_Paint);
@@ -75,13 +75,13 @@
             this.deleteUserToolStripMenuItem,
             this.changePasswordToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(233, 164);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(177, 154);
             // 
             // addNewUserToolStripMenuItem
             // 
             this.addNewUserToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addNewUserToolStripMenuItem.Image")));
             this.addNewUserToolStripMenuItem.Name = "addNewUserToolStripMenuItem";
-            this.addNewUserToolStripMenuItem.Size = new System.Drawing.Size(232, 32);
+            this.addNewUserToolStripMenuItem.Size = new System.Drawing.Size(176, 30);
             this.addNewUserToolStripMenuItem.Text = "Add New User";
             this.addNewUserToolStripMenuItem.Click += new System.EventHandler(this.addNewUserToolStripMenuItem_Click);
             // 
@@ -89,7 +89,7 @@
             // 
             this.updateUserToolStripMenuItem.Image = global::DVLD.Properties.Resources.profile;
             this.updateUserToolStripMenuItem.Name = "updateUserToolStripMenuItem";
-            this.updateUserToolStripMenuItem.Size = new System.Drawing.Size(232, 32);
+            this.updateUserToolStripMenuItem.Size = new System.Drawing.Size(176, 30);
             this.updateUserToolStripMenuItem.Text = "Update User";
             this.updateUserToolStripMenuItem.Click += new System.EventHandler(this.updateUserToolStripMenuItem_Click);
             // 
@@ -97,7 +97,7 @@
             // 
             this.showInfoToolStripMenuItem.Image = global::DVLD.Properties.Resources.personal_info;
             this.showInfoToolStripMenuItem.Name = "showInfoToolStripMenuItem";
-            this.showInfoToolStripMenuItem.Size = new System.Drawing.Size(232, 32);
+            this.showInfoToolStripMenuItem.Size = new System.Drawing.Size(176, 30);
             this.showInfoToolStripMenuItem.Text = "Show Info";
             this.showInfoToolStripMenuItem.Click += new System.EventHandler(this.showInfoToolStripMenuItem_Click);
             // 
@@ -105,7 +105,7 @@
             // 
             this.deleteUserToolStripMenuItem.Image = global::DVLD.Properties.Resources.user_8_;
             this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(232, 32);
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(176, 30);
             this.deleteUserToolStripMenuItem.Text = "Delete User";
             this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
             // 
@@ -113,7 +113,7 @@
             // 
             this.changePasswordToolStripMenuItem.Image = global::DVLD.Properties.Resources.password;
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(232, 32);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(176, 30);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
@@ -122,7 +122,7 @@
             this.lblCount.AutoSize = true;
             this.lblCount.Location = new System.Drawing.Point(43, 605);
             this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(51, 20);
+            this.lblCount.Size = new System.Drawing.Size(35, 13);
             this.lblCount.TabIndex = 1;
             this.lblCount.Text = "label1";
             // 
@@ -132,7 +132,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(43, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 22);
+            this.label2.Size = new System.Drawing.Size(67, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Filter By :";
             // 
@@ -145,7 +145,7 @@
             "None"});
             this.comboBox1.Location = new System.Drawing.Point(146, 106);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(229, 28);
+            this.comboBox1.Size = new System.Drawing.Size(229, 21);
             this.comboBox1.TabIndex = 3;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -161,7 +161,7 @@
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Location = new System.Drawing.Point(514, 107);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(187, 26);
+            this.txtSearch.Size = new System.Drawing.Size(187, 20);
             this.txtSearch.TabIndex = 6;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
@@ -172,24 +172,9 @@
             this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearch.Location = new System.Drawing.Point(408, 107);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(85, 22);
+            this.lblSearch.Size = new System.Drawing.Size(60, 15);
             this.lblSearch.TabIndex = 7;
             this.lblSearch.Text = "Search :";
-            // 
-            // btnClose
-            // 
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ImageIndex = 0;
-            this.btnClose.ImageList = this.imageList1;
-            this.btnClose.Location = new System.Drawing.Point(810, 591);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(118, 53);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "Close";
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnAdd
             // 
@@ -214,18 +199,34 @@
             "No"});
             this.cmbIsActive.Location = new System.Drawing.Point(514, 106);
             this.cmbIsActive.Name = "cmbIsActive";
-            this.cmbIsActive.Size = new System.Drawing.Size(187, 28);
+            this.cmbIsActive.Size = new System.Drawing.Size(187, 21);
             this.cmbIsActive.TabIndex = 8;
+            // 
+            // Close
+            // 
+            this.Close.Animated = true;
+            this.Close.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Close.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Close.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Close.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Close.FillColor = System.Drawing.Color.Red;
+            this.Close.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Close.ForeColor = System.Drawing.Color.White;
+            this.Close.Location = new System.Drawing.Point(904, 583);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(107, 46);
+            this.Close.TabIndex = 9;
+            this.Close.Text = "Close";
+            this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // Users
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(965, 668);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1023, 674);
+            this.Controls.Add(this.Close);
             this.Controls.Add(this.cmbIsActive);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
@@ -249,7 +250,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.ImageList imageList1;
@@ -260,5 +260,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ComboBox cmbIsActive;
+        private Guna.UI2.WinForms.Guna2TileButton Close;
     }
 }

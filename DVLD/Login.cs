@@ -17,129 +17,35 @@ namespace DVLD
     public partial class Login : Form
     {
 
-        private clsUsers _Users;
-
-        public clsUsers SelectUserInfo
-        {
-            get { return _Users; }
-        }
-
-        private string _FileName = "RememberMe.txt";
-
         public Login()
         {
             InitializeComponent();
 
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.AutoScaleMode = AutoScaleMode.None;
+            this.AutoSize = false;
 
-        }
-
-        private string Encrypt(string Txt , int EncryptionShift = 2)
-        {
-
-            string Result = "";
-
-            for (short i = 0; i < Txt.Length; i++)
-            {
-
-              Result += (char)((int)Txt[i] + EncryptionShift);
-
-            }
-            return Result;
-        }
-
-        private string Decrypt(string Txt , int DecryptionShift = 2)
-        {
-
-            string Result = "";
-
-            for (int i = 0; i < Txt.Length; i++)
-            {
-
-                Result += (char)((int)Txt[i] - DecryptionShift);
-
-            }
-            return Result;
-
-        }
-
-        private void RememberMe(char Sepeartor = '/')
-        {
-
-            if (!checkBox1.Checked)
-                return; 
-
-            string username = textBox1.Text;
-            string encryptedPassword = Encrypt(textBox2.Text);
-            string DateTimeLogin = DateTime.Now.ToString();
-            string rememberFlag = checkBox1.Checked.ToString();
-
-            string newUserLine = username + Sepeartor + encryptedPassword + Sepeartor + rememberFlag + "\t\tLogin AT" + Sepeartor + DateTimeLogin;
-
-           
-            if (!File.Exists(_FileName))
-                File.Create(_FileName).Close();
-
-            
-            string[] lines = File.ReadAllLines(_FileName);
-            bool userFound = false;
-
-            for (int i = 0; i < lines.Length; i++)
-            {
-                string[] parts = lines[i].Split(Sepeartor);
-                if (parts.Length >= 2 && parts[0] == username)
-                {
-                    
-                    lines[i] = newUserLine;
-                    userFound = true;
-                    break;
-                }
-            }
-
-            
-            if (!userFound)
-            {
-                lines = lines.Concat(new string[] { newUserLine }).ToArray();
-            }
-
-            
-            File.WriteAllLines(_FileName, lines);
-
-        }
-
-        private void LoadRememberme()
-        {
-
-            string[] lines = File.ReadAllLines(_FileName);
-
-            foreach (string line in lines)
-            {
-                string[] parts = line.Split('/');
-                if (parts.Length == 3)
-                {
-                    string username = parts[0];
-                    string encryptedPassword = parts[1];
-                    bool rememberMe = bool.Parse(parts[2]);
-
-                    if (rememberMe)
-                    {
-
-                        textBox1.Text = username;
-                        textBox2.Text = Decrypt(encryptedPassword);
-
-
-                        checkBox1.Checked = true;
-
-                        break;
-                    }
-                }
-            }
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
+           
 
-            LoadRememberme();
+
+            string UserName = "" ,  Password = "";
+
+            if(LoginInfo.GetStoredInfo(ref UserName , ref Password))
+            {
+
+                textBox1.Text = UserName;
+                textBox2.Text = Password;
+                checkBox1.Checked = true;
+
+            }
+            else
+            {
+                checkBox1.Checked = false;
+            }
 
         }
 
@@ -157,43 +63,43 @@ namespace DVLD
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            _Users = new clsUsers();
+            clsUsers _Users = clsUsers.FindByUsernameAndPassword(textBox1.Text.Trim() , textBox2.Text.Trim());
 
-            _Users = clsUsers.Find(textBox1.Text);
+         
 
             if(_Users != null)
             {
 
-                if (textBox1.Text == _Users._UserName && textBox2.Text == _Users._Password)
+                if (checkBox1.Checked)
                 {
-
-                    if(_Users._IsActive == true)
-                    {
-                        LoginInfo.SetUser(_Users);
-                        RememberMe();
-                        this.Hide();
-                        main Form = new main(this,_Users._UserName);
-                        Form.Show();
-
-                    }
-                    else
-                    {
-
-                        MessageBox.Show("Your Account is Deactivated Please Contact Your Admin", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    }
+                    LoginInfo.RememberUserNameAndPassword(textBox1.Text.Trim(), textBox2.Text.Trim());
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Password", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    LoginInfo.RememberUserNameAndPassword("", "");
+
                 }
-               
+
+                if (!_Users._IsActive)
+                {
+                    MessageBox.Show("Your Account is Deactivated Please Contact Your Admin", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                LoginInfo.SetUser(_Users);
+
+                this.Hide();
+                main Form = new main(this, _Users._UserName);
+                Form.Show();
+
             }
             else
             {
-
+                textBox1.Focus();
                 MessageBox.Show("Invalid UserName/Password", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            
 
         }
            

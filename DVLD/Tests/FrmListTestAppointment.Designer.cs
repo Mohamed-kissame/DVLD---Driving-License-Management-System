@@ -39,9 +39,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblCount = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.ctrlShowLicenseApplicationInfo1 = new DVLD.controlls.ctrlShowLicenseApplicationInfo();
+            this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -52,17 +52,19 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.Red;
-            this.lblTitle.Location = new System.Drawing.Point(385, 138);
+            this.lblTitle.Location = new System.Drawing.Point(387, 90);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(64, 22);
+            this.lblTitle.Size = new System.Drawing.Size(47, 15);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "label1";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(370, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(340, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(205, 103);
+            this.pictureBox1.Size = new System.Drawing.Size(137, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -72,11 +74,12 @@
             this.dgv.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgv.Location = new System.Drawing.Point(37, 675);
+            this.dgv.Location = new System.Drawing.Point(28, 576);
+            this.dgv.Margin = new System.Windows.Forms.Padding(2);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersWidth = 62;
             this.dgv.RowTemplate.Height = 28;
-            this.dgv.Size = new System.Drawing.Size(878, 186);
+            this.dgv.Size = new System.Drawing.Size(815, 121);
             this.dgv.TabIndex = 3;
             // 
             // contextMenuStrip1
@@ -86,13 +89,13 @@
             this.editToolStripMenuItem,
             this.takeTestToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(249, 101);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(131, 64);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Image = global::DVLD.Properties.Resources.edit;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(248, 32);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(130, 30);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -100,7 +103,7 @@
             // 
             this.takeTestToolStripMenuItem.Image = global::DVLD.Properties.Resources.test;
             this.takeTestToolStripMenuItem.Name = "takeTestToolStripMenuItem";
-            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(248, 32);
+            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(130, 30);
             this.takeTestToolStripMenuItem.Text = "Take Test";
             this.takeTestToolStripMenuItem.Click += new System.EventHandler(this.takeTestToolStripMenuItem_Click);
             // 
@@ -108,9 +111,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 630);
+            this.label1.Location = new System.Drawing.Point(25, 543);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 22);
+            this.label1.Size = new System.Drawing.Size(95, 15);
             this.label1.TabIndex = 4;
             this.label1.Text = "Appointment :";
             // 
@@ -118,9 +122,10 @@
             // 
             this.lblCount.AutoSize = true;
             this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCount.Location = new System.Drawing.Point(37, 882);
+            this.lblCount.Location = new System.Drawing.Point(25, 714);
+            this.lblCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(55, 22);
+            this.lblCount.Size = new System.Drawing.Size(39, 15);
             this.lblCount.TabIndex = 5;
             this.lblCount.Text = "[???]";
             // 
@@ -128,26 +133,13 @@
             // 
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Image = global::DVLD.Properties.Resources.AddAppointment_32;
-            this.btnAdd.Location = new System.Drawing.Point(835, 618);
+            this.btnAdd.Location = new System.Drawing.Point(789, 538);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(69, 41);
+            this.btnAdd.Size = new System.Drawing.Size(46, 27);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ImageIndex = 0;
-            this.btnClose.ImageList = this.imageList1;
-            this.btnClose.Location = new System.Drawing.Point(814, 877);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(101, 41);
-            this.btnClose.TabIndex = 7;
-            this.btnClose.Text = " Close";
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // imageList1
             // 
@@ -158,18 +150,36 @@
             // ctrlShowLicenseApplicationInfo1
             // 
             this.ctrlShowLicenseApplicationInfo1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ctrlShowLicenseApplicationInfo1.Location = new System.Drawing.Point(6, 169);
+            this.ctrlShowLicenseApplicationInfo1.Location = new System.Drawing.Point(4, 107);
+            this.ctrlShowLicenseApplicationInfo1.Margin = new System.Windows.Forms.Padding(2);
             this.ctrlShowLicenseApplicationInfo1.Name = "ctrlShowLicenseApplicationInfo1";
-            this.ctrlShowLicenseApplicationInfo1.Size = new System.Drawing.Size(940, 440);
+            this.ctrlShowLicenseApplicationInfo1.Size = new System.Drawing.Size(858, 427);
             this.ctrlShowLicenseApplicationInfo1.TabIndex = 2;
+            // 
+            // guna2TileButton1
+            // 
+            this.guna2TileButton1.Animated = true;
+            this.guna2TileButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2TileButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2TileButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2TileButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2TileButton1.FillColor = System.Drawing.Color.Red;
+            this.guna2TileButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2TileButton1.Location = new System.Drawing.Point(754, 702);
+            this.guna2TileButton1.Name = "guna2TileButton1";
+            this.guna2TileButton1.Size = new System.Drawing.Size(81, 40);
+            this.guna2TileButton1.TabIndex = 7;
+            this.guna2TileButton1.Text = "Close";
+            this.guna2TileButton1.Click += new System.EventHandler(this.guna2TileButton1_Click);
             // 
             // FrmListTestAppointment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(958, 984);
-            this.Controls.Add(this.btnClose);
+            this.ClientSize = new System.Drawing.Size(867, 758);
+            this.Controls.Add(this.guna2TileButton1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.label1);
@@ -178,10 +188,11 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmListTestAppointment";
-            this.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Padding = new System.Windows.Forms.Padding(3);
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmListTestAppointment";
@@ -203,10 +214,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem takeTestToolStripMenuItem;
         private System.Windows.Forms.ImageList imageList1;
+        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
     }
 }

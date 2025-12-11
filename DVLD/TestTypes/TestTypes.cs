@@ -81,10 +81,7 @@ namespace DVLD.TestTypes
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+      
 
         private void TestTypes_Load(object sender, EventArgs e)
         {
@@ -102,6 +99,11 @@ namespace DVLD.TestTypes
             EditTestTypes editTestTypes = new EditTestTypes((int)dataGridView1.CurrentRow.Cells[0].Value);
             editTestTypes.ShowDialog();
             RefreshTestTypes();
+        }
+
+        private void guna2TileButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

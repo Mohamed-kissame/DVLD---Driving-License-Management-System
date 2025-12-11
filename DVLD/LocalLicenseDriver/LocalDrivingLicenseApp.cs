@@ -303,7 +303,9 @@ namespace DVLD.LocalLicenseDriver
 
         private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Is Still This Option dosent Implement", "Implement Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
+
+
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -433,6 +435,9 @@ namespace DVLD.LocalLicenseDriver
 
         }
 
-        
+        private void guna2TileButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

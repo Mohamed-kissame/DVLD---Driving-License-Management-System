@@ -124,7 +124,6 @@
     <Compile Include="Applications\ReplaceForDamagedOrLost\ReplaceForDamagedLicense.Designer.cs">
       <DependentUpon>ReplaceForDamagedLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="BussniesDVLDLayer\ClsLicense.cs" />
     <Compile Include="Classes\clsFormat.cs" />
     <Compile Include="Classes\clsUtilty.cs" />
     <Compile Include="Classes\clsValidation.cs" />

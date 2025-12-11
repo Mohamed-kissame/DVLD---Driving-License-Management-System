@@ -249,5 +249,11 @@ namespace DVLD
             ReleaseLicense release = new ReleaseLicense();
             release.ShowDialog();
         }
+
+        private void relaseLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReleaseLicense release = new ReleaseLicense();
+            release.ShowDialog();
+        }
     }
 }

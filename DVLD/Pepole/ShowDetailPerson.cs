@@ -22,13 +22,11 @@ namespace DVLD.Pepole
 
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void ShowDetailPerson_Load(object sender, EventArgs e) { }
 
-        
+        private void guna2TileButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

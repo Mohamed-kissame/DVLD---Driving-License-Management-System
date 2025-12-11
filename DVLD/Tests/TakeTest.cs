@@ -67,7 +67,14 @@ namespace DVLD.Tests
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+
+
+        private void guna2TileButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
 
             if (MessageBox.Show("Are you sure you want to save? After that you cannot change the Pass/Fail results after you save?.",
@@ -93,11 +100,6 @@ namespace DVLD.Tests
                 MessageBox.Show("Failed to save test result", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

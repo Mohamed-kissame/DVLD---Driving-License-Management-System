@@ -70,7 +70,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(396, 445);
+            this.panel1.Size = new System.Drawing.Size(396, 400);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox3
@@ -89,9 +89,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(293, 405);
+            this.label5.Location = new System.Drawing.Point(294, 350);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 20);
+            this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Version 1.0";
             // 
@@ -102,7 +102,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(22, 206);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(360, 180);
+            this.label4.Size = new System.Drawing.Size(243, 120);
             this.label4.TabIndex = 11;
             this.label4.Text = " WELCOM TO DRIVING -\r\nVEHICLE LICENSE DEPARTMENT\r\n\r\n\r\n(DVLD) SYSTEM\r\n\r\n";
             // 
@@ -112,7 +112,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(540, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 28);
+            this.label1.Size = new System.Drawing.Size(159, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Login To Your Account";
             // 
@@ -122,7 +122,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(417, 141);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 25);
+            this.label2.Size = new System.Drawing.Size(63, 15);
             this.label2.TabIndex = 3;
             this.label2.Text = "Username:";
             // 
@@ -132,7 +132,7 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(417, 193);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 25);
+            this.label3.Size = new System.Drawing.Size(60, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Password:";
             // 
@@ -141,7 +141,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox1.Location = new System.Drawing.Point(566, 140);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 26);
+            this.textBox1.Size = new System.Drawing.Size(236, 20);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
@@ -149,7 +149,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox2.Location = new System.Drawing.Point(566, 192);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(236, 26);
+            this.textBox2.Size = new System.Drawing.Size(236, 20);
             this.textBox2.TabIndex = 6;
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -160,7 +160,7 @@
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox1.Location = new System.Drawing.Point(566, 235);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(135, 24);
+            this.checkBox1.Size = new System.Drawing.Size(91, 17);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Remember me";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -182,7 +182,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::DVLD.Properties.Resources.user_5_;
-            this.pictureBox2.Location = new System.Drawing.Point(523, 194);
+            this.pictureBox2.Location = new System.Drawing.Point(513, 194);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -192,7 +192,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DVLD.Properties.Resources.user_4_;
-            this.pictureBox1.Location = new System.Drawing.Point(523, 142);
+            this.pictureBox1.Location = new System.Drawing.Point(513, 142);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -204,7 +204,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ImageIndex = 1;
             this.btnLogin.ImageList = this.imageList1;
-            this.btnLogin.Location = new System.Drawing.Point(719, 296);
+            this.btnLogin.Location = new System.Drawing.Point(797, 296);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnLogin.Size = new System.Drawing.Size(104, 44);
@@ -219,7 +219,7 @@
             // 
             this.button1.ImageIndex = 0;
             this.button1.ImageList = this.imageList1;
-            this.button1.Location = new System.Drawing.Point(830, 12);
+            this.button1.Location = new System.Drawing.Point(876, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(53, 48);
             this.button1.TabIndex = 0;
@@ -229,9 +229,8 @@
             // Login
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 445);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(941, 400);
             this.Controls.Add(this.btnShowPassword);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -246,6 +245,7 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.panel1.ResumeLayout(false);

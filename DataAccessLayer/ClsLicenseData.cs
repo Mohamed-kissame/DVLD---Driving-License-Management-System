@@ -147,13 +147,14 @@ namespace DataAccessLayer
 
 
                 string Query = @"SELECT     
-                           Licenses.LicenseID,
+                           LicenseID,
                            ApplicationID,
-		                   LicenseClasses.ClassName, Licenses.IssueDate, 
-		                   Licenses.ExpirationDate, Licenses.IsActive
+		                   LicenseClasses.ClassName, IssueDate, 
+		                   ExpirationDate, IsActive
                            FROM Licenses 
+                           Join LicenseClasses On LicenseClasses.LicenseClassID = Licenses.LicenseClass
                             where DriverID=@DriverID
-                            Order By IsActive Desc, ExpirationDate Desc ";
+                            Order By IsActive Desc, ExpirationDate Desc;";
 
 
                 using(SqlCommand command = new SqlCommand(Query , connection))

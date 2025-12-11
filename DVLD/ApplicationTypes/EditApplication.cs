@@ -46,11 +46,14 @@ namespace DVLD.ApplicationTypes
         }
 
 
-        
-
-        private void btnSave_Click(object sender, EventArgs e)
+        private void EditApplication_Load_1(object sender, EventArgs e)
         {
 
+            LoadData();
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
             Application.ApplicationName = txtApplicationTitle.Text;
             Application.ApplicationFees = Convert.ToDecimal(txtFees.Text);
 
@@ -64,18 +67,11 @@ namespace DVLD.ApplicationTypes
 
                 MessageBox.Show("Data Save Failed", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void EditApplication_Load_1(object sender, EventArgs e)
-        {
-
-            LoadData();
         }
     }
 }

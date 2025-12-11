@@ -83,6 +83,22 @@ namespace BussniesDVLDLayer
 
         }
 
+        public static clsUsers FindByUsernameAndPassword(string Username , string Password)
+        {
+
+            int UserID = -1, PersonID = -1;
+            bool IsActive = false;
+
+            if (clsUsersData.GetUserInfoBuUsernameAndPassword(Username, Password, ref UserID, ref PersonID, ref IsActive))
+            {
+                return new clsUsers(UserID, PersonID, Username, Password, IsActive);
+
+            }
+            else
+                return null;
+
+        }
+
         private  bool _AddNewUser() {
 
 

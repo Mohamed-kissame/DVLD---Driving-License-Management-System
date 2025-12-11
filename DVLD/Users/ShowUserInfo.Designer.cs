@@ -30,31 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowUserInfo));
-            this.btnClose = new System.Windows.Forms.Button();
-            this.showUserCard1 = new DVLD.controlls.ShowUserCard();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.showUserCard1 = new DVLD.controlls.ShowUserCard();
+            this.BtnClose = new Guna.UI2.WinForms.Guna2TileButton();
             this.SuspendLayout();
-            // 
-            // btnClose
-            // 
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ImageIndex = 0;
-            this.btnClose.ImageList = this.imageList1;
-            this.btnClose.Location = new System.Drawing.Point(860, 546);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(123, 55);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "   Close";
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // showUserCard1
-            // 
-            this.showUserCard1.Location = new System.Drawing.Point(12, 0);
-            this.showUserCard1.Name = "showUserCard1";
-            this.showUserCard1.Size = new System.Drawing.Size(989, 530);
-            this.showUserCard1.TabIndex = 0;
             // 
             // imageList1
             // 
@@ -62,12 +41,37 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "Close.png");
             // 
+            // showUserCard1
+            // 
+            this.showUserCard1.Location = new System.Drawing.Point(12, 0);
+            this.showUserCard1.Margin = new System.Windows.Forms.Padding(2);
+            this.showUserCard1.Name = "showUserCard1";
+            this.showUserCard1.Size = new System.Drawing.Size(1064, 530);
+            this.showUserCard1.TabIndex = 0;
+            this.showUserCard1.Load += new System.EventHandler(this.showUserCard1_Load);
+            // 
+            // BtnClose
+            // 
+            this.BtnClose.Animated = true;
+            this.BtnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnClose.FillColor = System.Drawing.Color.Red;
+            this.BtnClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClose.ForeColor = System.Drawing.Color.White;
+            this.BtnClose.Location = new System.Drawing.Point(966, 551);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(97, 50);
+            this.BtnClose.TabIndex = 1;
+            this.BtnClose.Text = "Close";
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click_1);
+            // 
             // ShowUserInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 613);
-            this.Controls.Add(this.btnClose);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1088, 625);
+            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.showUserCard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ShowUserInfo";
@@ -79,7 +83,7 @@
         #endregion
 
         private ShowUserCard showUserCard1;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ImageList imageList1;
+        private Guna.UI2.WinForms.Guna2TileButton BtnClose;
     }
 }

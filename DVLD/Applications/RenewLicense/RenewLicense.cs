@@ -76,17 +76,34 @@ namespace DVLD.Application.RenewLicense
             btnRenew.Enabled = true;
         }
 
-        private void btnRenew_Click(object sender, EventArgs e)
+        private void linkNewLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            ShowLicenseInfo showLicenseInfo = new ShowLicenseInfo(_NewLicenseID);
+            showLicenseInfo.ShowDialog();
 
-           if(MessageBox.Show("Are you sure you want to renew this license ?","Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.No)
+        }
+
+        private void linkShowLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ShowPersonLicensesHistory licensesHistory = new ShowPersonLicensesHistory(ctrlDriverInfoWithFilter1.SelectedLicenseInfo.DriverInfo._PersonID);
+            licensesHistory.ShowDialog();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnRenew_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to renew this license ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;
             }
 
             ClsLicense NewLicense = ctrlDriverInfoWithFilter1.SelectedLicenseInfo.RenewLicense(txtNotes.Text.Trim(), LoginInfo.SelectUserInfo._UserID);
 
-            if(NewLicense == null)
+            if (NewLicense == null)
             {
                 MessageBox.Show("Error occured while renewing the license", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -102,25 +119,6 @@ namespace DVLD.Application.RenewLicense
             ctrlDriverInfoWithFilter1.Enabled = false;
             linkNewLicenseInfo.Enabled = true;
 
-
-        }
-
-        private void linkNewLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ShowLicenseInfo showLicenseInfo = new ShowLicenseInfo(_NewLicenseID);
-            showLicenseInfo.ShowDialog();
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void linkShowLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ShowPersonLicensesHistory licensesHistory = new ShowPersonLicensesHistory(ctrlDriverInfoWithFilter1.SelectedLicenseInfo.DriverInfo._PersonID);
-            licensesHistory.ShowDialog();
         }
     }
 }

@@ -30,26 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmScheduleTest));
-            this.btnClose = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.ctrlScheduleTest1 = new DVLD.Tests.Controlls.ctrlScheduleTest();
+            this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.SuspendLayout();
-            // 
-            // btnClose
-            // 
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.ImageIndex = 0;
-            this.btnClose.ImageList = this.imageList1;
-            this.btnClose.Location = new System.Drawing.Point(250, 718);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(81, 40);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "Close";
-            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // imageList1
             // 
@@ -60,21 +44,40 @@
             // ctrlScheduleTest1
             // 
             this.ctrlScheduleTest1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ctrlScheduleTest1.Location = new System.Drawing.Point(12, 1);
+            this.ctrlScheduleTest1.Location = new System.Drawing.Point(8, 1);
+            this.ctrlScheduleTest1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.ctrlScheduleTest1.Name = "ctrlScheduleTest1";
-            this.ctrlScheduleTest1.Size = new System.Drawing.Size(585, 711);
+            this.ctrlScheduleTest1.Size = new System.Drawing.Size(422, 485);
             this.ctrlScheduleTest1.TabIndex = 0;
             this.ctrlScheduleTest1.TestType = BussniesDVLDLayer.clsTestType.enTestType.VisionTest;
             this.ctrlScheduleTest1.Load += new System.EventHandler(this.ctrlScheduleTest1_Load);
             // 
+            // guna2TileButton1
+            // 
+            this.guna2TileButton1.Animated = true;
+            this.guna2TileButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2TileButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2TileButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2TileButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2TileButton1.FillColor = System.Drawing.Color.Red;
+            this.guna2TileButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2TileButton1.Location = new System.Drawing.Point(168, 505);
+            this.guna2TileButton1.Name = "guna2TileButton1";
+            this.guna2TileButton1.Size = new System.Drawing.Size(79, 42);
+            this.guna2TileButton1.TabIndex = 1;
+            this.guna2TileButton1.Text = "Close";
+            this.guna2TileButton1.Click += new System.EventHandler(this.guna2TileButton1_Click);
+            // 
             // FrmScheduleTest
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 766);
-            this.Controls.Add(this.btnClose);
+            this.ClientSize = new System.Drawing.Size(421, 572);
+            this.Controls.Add(this.guna2TileButton1);
             this.Controls.Add(this.ctrlScheduleTest1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmScheduleTest";
             this.Text = "Schedule Test";
             this.Load += new System.EventHandler(this.FrmScheduleTest_Load);
@@ -85,7 +88,7 @@
         #endregion
 
         private Controlls.ctrlScheduleTest ctrlScheduleTest1;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ImageList imageList1;
+        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
     }
 }

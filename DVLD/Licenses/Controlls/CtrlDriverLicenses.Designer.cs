@@ -59,9 +59,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tabcontrol1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1040, 365);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(693, 237);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Driver Licenses";
@@ -71,10 +73,11 @@
             // 
             this.tabcontrol1.Controls.Add(this.tabpageLocal);
             this.tabcontrol1.Controls.Add(this.tabPageInternational);
-            this.tabcontrol1.Location = new System.Drawing.Point(6, 25);
+            this.tabcontrol1.Location = new System.Drawing.Point(4, 16);
+            this.tabcontrol1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabcontrol1.Name = "tabcontrol1";
             this.tabcontrol1.SelectedIndex = 0;
-            this.tabcontrol1.Size = new System.Drawing.Size(1028, 334);
+            this.tabcontrol1.Size = new System.Drawing.Size(685, 217);
             this.tabcontrol1.TabIndex = 0;
             // 
             // tabpageLocal
@@ -82,10 +85,11 @@
             this.tabpageLocal.Controls.Add(this.lblCount);
             this.tabpageLocal.Controls.Add(this.dgvLocal);
             this.tabpageLocal.Controls.Add(this.label2);
-            this.tabpageLocal.Location = new System.Drawing.Point(4, 29);
+            this.tabpageLocal.Location = new System.Drawing.Point(4, 22);
+            this.tabpageLocal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabpageLocal.Name = "tabpageLocal";
-            this.tabpageLocal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabpageLocal.Size = new System.Drawing.Size(1020, 301);
+            this.tabpageLocal.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabpageLocal.Size = new System.Drawing.Size(677, 191);
             this.tabpageLocal.TabIndex = 0;
             this.tabpageLocal.Text = "Local ";
             this.tabpageLocal.UseVisualStyleBackColor = true;
@@ -94,9 +98,10 @@
             // 
             this.lblCount.AutoSize = true;
             this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCount.Location = new System.Drawing.Point(6, 264);
+            this.lblCount.Location = new System.Drawing.Point(4, 172);
+            this.lblCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(128, 20);
+            this.lblCount.Size = new System.Drawing.Size(92, 13);
             this.lblCount.TabIndex = 2;
             this.lblCount.Text = "Local Licenses";
             // 
@@ -122,7 +127,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvLocal.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvLocal.GridColor = System.Drawing.Color.Gray;
-            this.dgvLocal.Location = new System.Drawing.Point(10, 35);
+            this.dgvLocal.Location = new System.Drawing.Point(7, 23);
+            this.dgvLocal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvLocal.Name = "dgvLocal";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -134,7 +140,7 @@
             this.dgvLocal.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvLocal.RowHeadersWidth = 62;
             this.dgvLocal.RowTemplate.Height = 28;
-            this.dgvLocal.Size = new System.Drawing.Size(1004, 216);
+            this.dgvLocal.Size = new System.Drawing.Size(669, 140);
             this.dgvLocal.TabIndex = 1;
             this.dgvLocal.Paint += new System.Windows.Forms.PaintEventHandler(this.dgvLocal_Paint);
             // 
@@ -144,13 +150,13 @@
             this.ctmLocal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showLicenseInfoToolStripMenuItem});
             this.ctmLocal.Name = "ctmLocal";
-            this.ctmLocal.Size = new System.Drawing.Size(235, 36);
+            this.ctmLocal.Size = new System.Drawing.Size(178, 34);
             // 
             // showLicenseInfoToolStripMenuItem
             // 
             this.showLicenseInfoToolStripMenuItem.Image = global::DVLD.Properties.Resources.show;
             this.showLicenseInfoToolStripMenuItem.Name = "showLicenseInfoToolStripMenuItem";
-            this.showLicenseInfoToolStripMenuItem.Size = new System.Drawing.Size(234, 32);
+            this.showLicenseInfoToolStripMenuItem.Size = new System.Drawing.Size(177, 30);
             this.showLicenseInfoToolStripMenuItem.Text = "Show License Info";
             this.showLicenseInfoToolStripMenuItem.Click += new System.EventHandler(this.showLicenseInfoToolStripMenuItem_Click);
             // 
@@ -158,9 +164,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 12);
+            this.label2.Location = new System.Drawing.Point(4, 8);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 20);
+            this.label2.Size = new System.Drawing.Size(143, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Local Licenses History :";
             // 
@@ -169,10 +176,11 @@
             this.tabPageInternational.Controls.Add(this.lblCount1);
             this.tabPageInternational.Controls.Add(this.dgvInternational);
             this.tabPageInternational.Controls.Add(this.label1);
-            this.tabPageInternational.Location = new System.Drawing.Point(4, 29);
+            this.tabPageInternational.Location = new System.Drawing.Point(4, 22);
+            this.tabPageInternational.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPageInternational.Name = "tabPageInternational";
-            this.tabPageInternational.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInternational.Size = new System.Drawing.Size(1020, 301);
+            this.tabPageInternational.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageInternational.Size = new System.Drawing.Size(677, 191);
             this.tabPageInternational.TabIndex = 1;
             this.tabPageInternational.Text = "International";
             this.tabPageInternational.UseVisualStyleBackColor = true;
@@ -181,9 +189,10 @@
             // 
             this.lblCount1.AutoSize = true;
             this.lblCount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCount1.Location = new System.Drawing.Point(6, 268);
+            this.lblCount1.Location = new System.Drawing.Point(4, 174);
+            this.lblCount1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCount1.Name = "lblCount1";
-            this.lblCount1.Size = new System.Drawing.Size(197, 20);
+            this.lblCount1.Size = new System.Drawing.Size(140, 13);
             this.lblCount1.TabIndex = 2;
             this.lblCount1.Text = "International Licenses :";
             // 
@@ -207,7 +216,8 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvInternational.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvInternational.Location = new System.Drawing.Point(10, 38);
+            this.dgvInternational.Location = new System.Drawing.Point(7, 25);
+            this.dgvInternational.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvInternational.Name = "dgvInternational";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
@@ -219,7 +229,7 @@
             this.dgvInternational.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvInternational.RowHeadersWidth = 62;
             this.dgvInternational.RowTemplate.Height = 28;
-            this.dgvInternational.Size = new System.Drawing.Size(1004, 216);
+            this.dgvInternational.Size = new System.Drawing.Size(669, 140);
             this.dgvInternational.TabIndex = 1;
             this.dgvInternational.Paint += new System.Windows.Forms.PaintEventHandler(this.dgvInternational_Paint);
             // 
@@ -227,19 +237,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 15);
+            this.label1.Location = new System.Drawing.Point(4, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 20);
+            this.label1.Size = new System.Drawing.Size(183, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "International Licenses History :";
             // 
             // CtrlDriverLicenses
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CtrlDriverLicenses";
-            this.Size = new System.Drawing.Size(1046, 383);
+            this.Size = new System.Drawing.Size(697, 249);
+            this.Load += new System.EventHandler(this.CtrlDriverLicenses_Load);
             this.groupBox1.ResumeLayout(false);
             this.tabcontrol1.ResumeLayout(false);
             this.tabpageLocal.ResumeLayout(false);

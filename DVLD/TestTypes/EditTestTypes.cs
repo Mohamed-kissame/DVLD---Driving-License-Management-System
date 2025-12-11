@@ -48,12 +48,8 @@ namespace DVLD.TestTypes
             LoadData();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
+      
+        private void BtnSAve_Click_1(object sender, EventArgs e)
         {
 
             Test.TestName = txtTitle.Text;
@@ -69,7 +65,11 @@ namespace DVLD.TestTypes
             {
                 MessageBox.Show("Data Failed To Save", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

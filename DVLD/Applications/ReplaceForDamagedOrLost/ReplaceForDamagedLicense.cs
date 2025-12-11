@@ -135,5 +135,39 @@ namespace DVLD.Application.ReplaceForDamagedOrLost
             ShowPersonLicensesHistory licensesHistory = new ShowPersonLicensesHistory(ctrlDriverInfoWithFilter1.SelectedLicenseInfo.DriverInfo._PersonID);
             licensesHistory.ShowDialog();
         }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to issue a replacement license ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+
+            ClsLicense NewLicense = ctrlDriverInfoWithFilter1.SelectedLicenseInfo.Replace(_GetIssueReason(), LoginInfo.SelectUserInfo._UserID);
+
+            if (NewLicense == null)
+            {
+                MessageBox.Show("Error occured while issuing the replacement license", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _NewLicenseID = NewLicense._LicenseID;
+
+            lblLEAppID.Text = NewLicense._ApplicationID.ToString();
+
+            lblReplacedLicenseID.Text = _NewLicenseID.ToString();
+
+            MessageBox.Show("Replacement License issued successfully with ID = " + _NewLicenseID.ToString(), "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            btnIssueReplace.Enabled = false;
+            gpReplaceFor.Enabled = false;
+            ctrlDriverInfoWithFilter1.Enabled = false;
+            linkShowLicensesInfo.Enabled = true;
+        }
     }
 }

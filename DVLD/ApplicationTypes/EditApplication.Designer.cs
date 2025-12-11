@@ -33,10 +33,10 @@
             this.lblID = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.txtApplicationTitle = new System.Windows.Forms.TextBox();
             this.txtFees = new System.Windows.Forms.TextBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // label1
@@ -44,9 +44,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(261, 30);
+            this.label1.Location = new System.Drawing.Point(174, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 22);
+            this.label1.Size = new System.Drawing.Size(128, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Update Application";
             // 
@@ -54,9 +55,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(136, 98);
+            this.label2.Location = new System.Drawing.Point(91, 64);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 20);
+            this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "ID :";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -65,9 +67,10 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(211, 98);
+            this.lblID.Location = new System.Drawing.Point(141, 64);
+            this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(19, 20);
+            this.lblID.Size = new System.Drawing.Size(14, 13);
             this.lblID.TabIndex = 2;
             this.lblID.Text = "?";
             // 
@@ -75,9 +78,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 155);
+            this.label3.Location = new System.Drawing.Point(18, 101);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 20);
+            this.label3.Size = new System.Drawing.Size(107, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Application Title :";
             // 
@@ -85,65 +89,81 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 219);
+            this.label4.Location = new System.Drawing.Point(14, 142);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 20);
+            this.label4.Size = new System.Drawing.Size(109, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Application Fees :";
-            // 
-            // btnSave
-            // 
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(566, 321);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(95, 45);
-            this.btnSave.TabIndex = 5;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(430, 321);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(95, 45);
-            this.btnClose.TabIndex = 6;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtApplicationTitle
             // 
             this.txtApplicationTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtApplicationTitle.Location = new System.Drawing.Point(205, 155);
+            this.txtApplicationTitle.Location = new System.Drawing.Point(137, 101);
+            this.txtApplicationTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtApplicationTitle.Name = "txtApplicationTitle";
-            this.txtApplicationTitle.Size = new System.Drawing.Size(348, 26);
+            this.txtApplicationTitle.Size = new System.Drawing.Size(233, 20);
             this.txtApplicationTitle.TabIndex = 7;
             // 
             // txtFees
             // 
             this.txtFees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFees.Location = new System.Drawing.Point(205, 213);
+            this.txtFees.Location = new System.Drawing.Point(137, 138);
+            this.txtFees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFees.Name = "txtFees";
-            this.txtFees.Size = new System.Drawing.Size(173, 26);
+            this.txtFees.Size = new System.Drawing.Size(116, 20);
             this.txtFees.TabIndex = 8;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Animated = true;
+            this.btnClose.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClose.FillColor = System.Drawing.Color.Red;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(288, 209);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(69, 29);
+            this.btnClose.TabIndex = 9;
+            this.btnClose.Text = "Close";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Animated = true;
+            this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave.FillColor = System.Drawing.Color.Green;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(389, 209);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(69, 29);
+            this.btnSave.TabIndex = 10;
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // EditApplication
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 409);
+            this.ClientSize = new System.Drawing.Size(470, 266);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtFees);
             this.Controls.Add(this.txtApplicationTitle);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EditApplication";
             this.Text = "EditApplication";
             this.Load += new System.EventHandler(this.EditApplication_Load_1);
@@ -159,9 +179,9 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtApplicationTitle;
         private System.Windows.Forms.TextBox txtFees;
+        private Guna.UI2.WinForms.Guna2Button btnClose;
+        private Guna.UI2.WinForms.Guna2Button btnSave;
     }
 }

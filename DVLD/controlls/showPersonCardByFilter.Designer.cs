@@ -37,7 +37,8 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.showPersonCard1 = new DVLD.controlls.ShowPersonCard();
+          
+            this.showPersonCard2 = new DVLD.controlls.ShowPersonCard();
             this.gbFilter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,20 +51,24 @@
             this.gbFilter.Controls.Add(this.comboBox2);
             this.gbFilter.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbFilter.Location = new System.Drawing.Point(0, 0);
+            this.gbFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(962, 100);
+            this.gbFilter.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbFilter.Size = new System.Drawing.Size(955, 75);
             this.gbFilter.TabIndex = 1;
             this.gbFilter.TabStop = false;
             this.gbFilter.Text = "Filter";
+            this.gbFilter.Enter += new System.EventHandler(this.gbFilter_Enter);
             // 
             // btnAdd
             // 
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ImageIndex = 0;
             this.btnAdd.ImageList = this.imageList1;
-            this.btnAdd.Location = new System.Drawing.Point(718, 49);
+            this.btnAdd.Location = new System.Drawing.Point(479, 32);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(41, 37);
+            this.btnAdd.Size = new System.Drawing.Size(27, 24);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -80,9 +85,10 @@
             this.BtnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSearch.ImageIndex = 1;
             this.BtnSearch.ImageList = this.imageList1;
-            this.BtnSearch.Location = new System.Drawing.Point(651, 49);
+            this.BtnSearch.Location = new System.Drawing.Point(434, 32);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(43, 37);
+            this.BtnSearch.Size = new System.Drawing.Size(29, 24);
             this.BtnSearch.TabIndex = 3;
             this.BtnSearch.UseVisualStyleBackColor = true;
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
@@ -90,9 +96,10 @@
             // txtSearch
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Location = new System.Drawing.Point(380, 52);
+            this.txtSearch.Location = new System.Drawing.Point(253, 34);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(206, 26);
+            this.txtSearch.Size = new System.Drawing.Size(138, 20);
             this.txtSearch.TabIndex = 2;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
@@ -101,9 +108,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 52);
+            this.label1.Location = new System.Drawing.Point(20, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Find By :";
             // 
@@ -116,40 +124,46 @@
             "",
             "NationalNo",
             "PersonID"});
-            this.comboBox2.Location = new System.Drawing.Point(128, 49);
+            this.comboBox2.Location = new System.Drawing.Point(85, 32);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(223, 28);
+            this.comboBox2.Size = new System.Drawing.Size(150, 21);
             this.comboBox2.TabIndex = 0;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // showPersonCard1
+           
+         
             // 
-            this.showPersonCard1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.showPersonCard1.Location = new System.Drawing.Point(0, 118);
-            this.showPersonCard1.Name = "showPersonCard1";
-            this.showPersonCard1.Size = new System.Drawing.Size(962, 394);
-            this.showPersonCard1.TabIndex = 0;
-            this.showPersonCard1.Load += new System.EventHandler(this.showPersonCard1_Load);
+            // showPersonCard2
+            // 
+            this.showPersonCard2.AutoSize = true;
+            this.showPersonCard2.Location = new System.Drawing.Point(3, 114);
+            this.showPersonCard2.Name = "showPersonCard2";
+            this.showPersonCard2.Size = new System.Drawing.Size(949, 392);
+            this.showPersonCard2.TabIndex = 2;
             // 
             // showPersonCardByFilter
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Controls.Add(this.showPersonCard2);
             this.Controls.Add(this.gbFilter);
-            this.Controls.Add(this.showPersonCard1);
+          
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "showPersonCardByFilter";
-            this.Size = new System.Drawing.Size(962, 512);
+            this.Size = new System.Drawing.Size(955, 509);
             this.Load += new System.EventHandler(this.showPersonCardByFilter_Load);
             this.gbFilter.ResumeLayout(false);
             this.gbFilter.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private ShowPersonCard showPersonCard1;
+      
         private System.Windows.Forms.GroupBox gbFilter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -157,5 +171,6 @@
         private System.Windows.Forms.Button BtnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ImageList imageList1;
+        private ShowPersonCard showPersonCard2;
     }
 }

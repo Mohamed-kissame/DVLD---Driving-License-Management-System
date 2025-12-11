@@ -14,11 +14,23 @@ namespace DVLD.controlls {
         public ShowUserInfo(int userid)
         {
             InitializeComponent();
+           
+
 
             showUserCard1.LoadUserData(userid);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void showUserCard1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

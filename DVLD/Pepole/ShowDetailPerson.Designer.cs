@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.showPersonCard1 = new DVLD.controlls.ShowPersonCard();
+            this.guna2TileButton1 = new Guna.UI2.WinForms.Guna2TileButton();
             this.SuspendLayout();
             // 
             // label1
@@ -38,39 +38,49 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(381, 9);
+            this.label1.Location = new System.Drawing.Point(397, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 22);
+            this.label1.Size = new System.Drawing.Size(129, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Person Information";
             // 
-            // btnClose
-            // 
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(797, 434);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(105, 42);
-            this.btnClose.TabIndex = 2;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // showPersonCard1
             // 
-            this.showPersonCard1.Location = new System.Drawing.Point(12, 50);
+            this.showPersonCard1.AutoSize = true;
+            this.showPersonCard1.Location = new System.Drawing.Point(8, 32);
+            this.showPersonCard1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.showPersonCard1.Name = "showPersonCard1";
-            this.showPersonCard1.Size = new System.Drawing.Size(945, 378);
+            this.showPersonCard1.Size = new System.Drawing.Size(927, 345);
             this.showPersonCard1.TabIndex = 1;
+            // 
+            // guna2TileButton1
+            // 
+            this.guna2TileButton1.Animated = true;
+            this.guna2TileButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2TileButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2TileButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2TileButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2TileButton1.FillColor = System.Drawing.Color.Red;
+            this.guna2TileButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TileButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2TileButton1.Location = new System.Drawing.Point(822, 390);
+            this.guna2TileButton1.Name = "guna2TileButton1";
+            this.guna2TileButton1.Size = new System.Drawing.Size(102, 46);
+            this.guna2TileButton1.TabIndex = 2;
+            this.guna2TileButton1.Text = "Close";
+            this.guna2TileButton1.Click += new System.EventHandler(this.guna2TileButton1_Click);
             // 
             // ShowDetailPerson
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 489);
-            this.Controls.Add(this.btnClose);
+            this.ClientSize = new System.Drawing.Size(946, 448);
+            this.Controls.Add(this.guna2TileButton1);
             this.Controls.Add(this.showPersonCard1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ShowDetailPerson";
             this.Text = "ShowDetailPerson";
             this.Load += new System.EventHandler(this.ShowDetailPerson_Load);
@@ -83,6 +93,6 @@
 
         private System.Windows.Forms.Label label1;
         private controlls.ShowPersonCard showPersonCard1;
-        private System.Windows.Forms.Button btnClose;
+        private Guna.UI2.WinForms.Guna2TileButton guna2TileButton1;
     }
 }

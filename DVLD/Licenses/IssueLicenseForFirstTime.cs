@@ -64,15 +64,14 @@ namespace DVLD.Licenses
 
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+
+        private void guna2TileButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnIssue_Click(object sender, EventArgs e)
+        private void btnIssue_Click_1(object sender, EventArgs e)
         {
-
-
             if (LicenseDrivingLocal != null)
             {
 

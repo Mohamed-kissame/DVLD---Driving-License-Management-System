@@ -28,6 +28,9 @@ namespace DVLD.Users
         {
             InitializeComponent();
 
+            this.AutoScaleMode = AutoScaleMode.None;
+            this.AutoSize = false;
+
             _Mode = enMode.AddNew;
 
         }
@@ -135,29 +138,6 @@ namespace DVLD.Users
           
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-
-            user._PersonID = showPersonCardByFilter1._PersonID;
-            user._UserName = txtUserName.Text.Trim();
-            user._Password = txtConfirm.Text.Trim();
-            user._IsActive = checkIsActive.Checked;
-
-
-            if (user.Save())
-            {
-                lblID.Text = user._UserID.ToString();
-                _Mode = enMode.Update;
-                lblTitle.Text = "Update User";
-                MessageBox.Show("Data Saved Successfully");
-
-            }
-            else
-            {
-                MessageBox.Show("Error in Saving Data");
-            }
-        }
-
 
         private void txtUserName_Validating(object sender, CancelEventArgs e)
         {
@@ -235,6 +215,33 @@ namespace DVLD.Users
         {
             txtConfirm.UseSystemPasswordChar = true;
             txtConfirm.PasswordChar = '*';
+        }
+
+        private void guna2TileButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnSave_Click_1(object sender, EventArgs e)
+        {
+            user._PersonID = showPersonCardByFilter1._PersonID;
+            user._UserName = txtUserName.Text.Trim();
+            user._Password = txtConfirm.Text.Trim();
+            user._IsActive = checkIsActive.Checked;
+
+
+            if (user.Save())
+            {
+                lblID.Text = user._UserID.ToString();
+                _Mode = enMode.Update;
+                lblTitle.Text = "Update User";
+                MessageBox.Show("Data Saved Successfully");
+
+            }
+            else
+            {
+                MessageBox.Show("Error in Saving Data");
+            }
         }
     }
 }
