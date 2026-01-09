@@ -15,8 +15,8 @@ namespace DataAccessLayer
         public static bool GetDetainedLicenseInfoByID(int DetainID,
               ref int LicenseID, ref DateTime DetainDate,
               ref float FineFees, ref int CreatedByUserID,
-              ref bool IsReleased, ref DateTime ReleaseDate,
-              ref int ReleasedByUserID, ref int ReleaseApplicationID)
+              ref bool IsReleased, ref DateTime? ReleaseDate,
+              ref int? ReleasedByUserID, ref int? ReleaseApplicationID)
         {
             bool isFound = false;
 
@@ -51,20 +51,20 @@ namespace DataAccessLayer
 
                                 if (reader["ReleaseDate"] == DBNull.Value)
 
-                                    ReleaseDate = DateTime.MaxValue;
+                                    ReleaseDate = null;
                                 else
                                     ReleaseDate = (DateTime)reader["ReleaseDate"];
 
 
                                 if (reader["ReleasedByUserID"] == DBNull.Value)
 
-                                    ReleasedByUserID = -1;
+                                    ReleasedByUserID = null;
                                 else
                                     ReleasedByUserID = (int)reader["ReleasedByUserID"];
 
                                 if (reader["ReleaseApplicationID"] == DBNull.Value)
 
-                                    ReleaseApplicationID = -1;
+                                    ReleaseApplicationID = null;
                                 else
                                     ReleaseApplicationID = (int)reader["ReleaseApplicationID"];
 
@@ -94,8 +94,8 @@ namespace DataAccessLayer
         public static bool GetDetainedLicenseInfoByLicenseID(int LicenseID,
          ref int DetainID, ref DateTime DetainDate,
          ref float FineFees, ref int CreatedByUserID,
-         ref bool IsReleased, ref DateTime ReleaseDate,
-         ref int ReleasedByUserID, ref int ReleaseApplicationID)
+         ref bool IsReleased, ref DateTime? ReleaseDate,
+         ref int? ReleasedByUserID, ref int? ReleaseApplicationID)
         {
             bool isFound = false;
 
@@ -130,20 +130,20 @@ namespace DataAccessLayer
 
                                 if (reader["ReleaseDate"] == DBNull.Value)
 
-                                    ReleaseDate = DateTime.MaxValue;
+                                    ReleaseDate = null;
                                 else
                                     ReleaseDate = (DateTime)reader["ReleaseDate"];
 
 
                                 if (reader["ReleasedByUserID"] == DBNull.Value)
 
-                                    ReleasedByUserID = -1;
+                                    ReleasedByUserID = null;
                                 else
                                     ReleasedByUserID = (int)reader["ReleasedByUserID"];
 
                                 if (reader["ReleaseApplicationID"] == DBNull.Value)
 
-                                    ReleaseApplicationID = -1;
+                                    ReleaseApplicationID = null;
                                 else
                                     ReleaseApplicationID = (int)reader["ReleaseApplicationID"];
 

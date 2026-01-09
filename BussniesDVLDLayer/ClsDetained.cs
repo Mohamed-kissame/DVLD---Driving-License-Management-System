@@ -29,13 +29,13 @@ namespace BussniesDVLDLayer
 
         public bool IsReleased { get; set; }
 
-        public DateTime ReleasedDate { get; set; }
+        public DateTime? ReleasedDate { get; set; }
 
-        public int ReleaseByUserID { get; set; }
+        public int? ReleaseByUserID { get; set; }
 
         public clsUsers ReleaseUserInfo;
 
-        public int ReleaseApplicationID { get; set; }
+        public int? ReleaseApplicationID { get; set; }
 
 
         public ClsDetained()
@@ -47,16 +47,16 @@ namespace BussniesDVLDLayer
             this.FineFees = 0;
             this.CreatedByUserID = -1;
             this.IsReleased = true;
-            this.ReleasedDate = DateTime.MaxValue;
-            this.ReleaseByUserID = -1;
-            this.ReleaseApplicationID = -1;
+            this.ReleasedDate = null;
+            this.ReleaseByUserID = null;
+            this.ReleaseApplicationID = null;
 
             Mode = _enMode.Add;
 
 
         }
 
-        private ClsDetained(int DetainId , int LicenseID , DateTime DetainDate , float FineFees , int CreatedByUserID , bool IsReleased , DateTime ReleaseDate , int ReleaseByUserID , int ReleaseApplicationID)
+        private ClsDetained(int DetainId , int LicenseID , DateTime DetainDate , float FineFees , int CreatedByUserID , bool IsReleased , DateTime? ReleaseDate , int? ReleaseByUserID , int? ReleaseApplicationID)
         {
 
             this.DetainID = DetainId;
@@ -68,7 +68,10 @@ namespace BussniesDVLDLayer
             this.IsReleased = IsReleased;
             this.ReleasedDate = ReleaseDate;
             this.ReleaseByUserID = ReleaseByUserID;
-            this.ReleaseUserInfo = clsUsers.Find(this.ReleaseByUserID);
+
+            this.ReleaseUserInfo = this.ReleaseByUserID.HasValue ? clsUsers.Find(this.ReleaseByUserID.Value) : null;
+         
+
             this.ReleaseApplicationID = ReleaseApplicationID;
 
             Mode = _enMode.Update;
@@ -79,13 +82,19 @@ namespace BussniesDVLDLayer
         public static ClsDetained Find(int DetainID)
         {
 
-            int LicenseID = -1, CreatedByUserID = -1, ReleaseByUserID = -1, ReleaseApplicationsID = -1;
-
-            DateTime DetainDate = DateTime.Now, ReleaseDate = DateTime.Now;
+            int LicenseID = -1, CreatedByUserID = -1;
+            
+            DateTime DetainDate = DateTime.Now;
 
             float FineFees = 0;
 
             bool IsReleased = false;
+
+            int? ReleaseApplicationsID = null;
+            int? ReleaseByUserID = null;
+            DateTime? ReleaseDate = null;
+
+            
 
             if (ClsDetainLicenseData.GetDetainedLicenseInfoByID(DetainID, ref LicenseID, ref DetainDate, ref FineFees, ref CreatedByUserID, ref IsReleased, ref ReleaseDate, ref ReleaseByUserID, ref ReleaseApplicationsID))
 
@@ -100,9 +109,9 @@ namespace BussniesDVLDLayer
         public static ClsDetained FindByLicenseID(int LicenseID)
         {
 
-            int DetainID = -1, CreatedByUserID = -1, ReleaseByUserID = -1, ReleaseApplicationsID = -1;
+            int DetainID = -1, CreatedByUserID = -1; int? ReleaseByUserID = null, ReleaseApplicationsID = null;
 
-            DateTime DetainDate = DateTime.Now, ReleaseDate = DateTime.Now;
+            DateTime DetainDate = DateTime.Now; DateTime? ReleaseDate = null;
 
             float FineFees = 0;
 

@@ -3,7 +3,25 @@
   "WorkspaceRootPath": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\DVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\DVLD\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{886827C1-3FD0-439E-86EF-AA8C720EAE84}|..\\BussniesDVLDLayer\\BussniesDVLDLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\projects\\dvld\\bussniesdvldlayer\\clsusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{886827C1-3FD0-439E-86EF-AA8C720EAE84}|..\\BussniesDVLDLayer\\BussniesDVLDLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\projects\\dvld\\bussniesdvldlayer\\clstesttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{886827C1-3FD0-439E-86EF-AA8C720EAE84}|..\\BussniesDVLDLayer\\BussniesDVLDLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\projects\\dvld\\bussniesdvldlayer\\clstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{886827C1-3FD0-439E-86EF-AA8C720EAE84}|..\\BussniesDVLDLayer\\BussniesDVLDLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\projects\\dvld\\bussniesdvldlayer\\clstestappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{886827C1-3FD0-439E-86EF-AA8C720EAE84}|..\\BussniesDVLDLayer\\BussniesDVLDLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\projects\\dvld\\bussniesdvldlayer\\clsdetained.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D785F7B6-9810-43DB-8DBB-CB736624BF28}|..\\DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\mkiss\\onedrive\\bureau\\projects\\dvld\\dataaccesslayer\\clstestappoitmentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|c:\\users\\mkiss\\onedrive\\bureau\\projects\\dvld\\dvld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E89C18C0-CDBB-4E62-83D0-77D0CD3EBAE4}|DVLD.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,8 +32,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clsUsers.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\BussniesDVLDLayer\\clsUsers.cs",
+              "RelativeDocumentMoniker": "..\\BussniesDVLDLayer\\clsUsers.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\BussniesDVLDLayer\\clsUsers.cs",
+              "RelativeToolTip": "..\\BussniesDVLDLayer\\clsUsers.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAuwDwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T17:56:29.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsTestType.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\BussniesDVLDLayer\\clsTestType.cs",
+              "RelativeDocumentMoniker": "..\\BussniesDVLDLayer\\clsTestType.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\BussniesDVLDLayer\\clsTestType.cs",
+              "RelativeToolTip": "..\\BussniesDVLDLayer\\clsTestType.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA9wDcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T17:56:16.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClsTests.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\BussniesDVLDLayer\\ClsTests.cs",
+              "RelativeDocumentMoniker": "..\\BussniesDVLDLayer\\ClsTests.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\BussniesDVLDLayer\\ClsTests.cs",
+              "RelativeToolTip": "..\\BussniesDVLDLayer\\ClsTests.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAYwD8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T17:55:49.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClsDetained.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\BussniesDVLDLayer\\ClsDetained.cs",
+              "RelativeDocumentMoniker": "..\\BussniesDVLDLayer\\ClsDetained.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\BussniesDVLDLayer\\ClsDetained.cs",
+              "RelativeToolTip": "..\\BussniesDVLDLayer\\ClsDetained.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAQwE0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T17:52:52.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClsTestAppoitmentData.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\DataAccessLayer\\ClsTestAppoitmentData.cs",
+              "RelativeDocumentMoniker": "..\\DataAccessLayer\\ClsTestAppoitmentData.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\DataAccessLayer\\ClsTestAppoitmentData.cs",
+              "RelativeToolTip": "..\\DataAccessLayer\\ClsTestAppoitmentData.cs",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAcwP0AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T17:48:48.164Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -38,7 +121,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "clsTestAppointment.cs",
+              "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\BussniesDVLDLayer\\clsTestAppointment.cs",
+              "RelativeDocumentMoniker": "..\\BussniesDVLDLayer\\clsTestAppointment.cs",
+              "ToolTip": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\BussniesDVLDLayer\\clsTestAppointment.cs",
+              "RelativeToolTip": "..\\BussniesDVLDLayer\\clsTestAppointment.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAAAIgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T17:48:41.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mkiss\\OneDrive\\Bureau\\Projects\\DVLD\\DVLD\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

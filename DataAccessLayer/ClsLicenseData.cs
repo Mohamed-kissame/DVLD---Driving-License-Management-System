@@ -51,7 +51,7 @@ namespace DataAccessLayer
                                 ExpirationDate = (DateTime)reader["ExpirationDate"];
                                 if (reader["Notes"] == DBNull.Value)
                                 {
-                                    Notes = "";
+                                    Notes = null;
 
                                 }
                                 else

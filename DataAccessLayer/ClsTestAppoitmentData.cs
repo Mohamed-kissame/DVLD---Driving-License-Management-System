@@ -13,7 +13,7 @@ namespace DataAccessLayer
     {
 
 
-        public static bool GetAllTestAppoitmentByID(int TestAppoitmentID , ref int TestTypeID ,ref int LocalDriningLicenseApplicationID , ref DateTime AppoitmentDate , ref float PaidFees ,ref int CreatedByUserId , ref bool IsLocked , ref int RetakeTestApplicationID)
+        public static bool GetAllTestAppoitmentByID(int TestAppoitmentID , ref int TestTypeID ,ref int LocalDriningLicenseApplicationID , ref DateTime AppoitmentDate , ref float PaidFees ,ref int CreatedByUserId , ref bool IsLocked , ref int? RetakeTestApplicationID)
         {
             bool isFound = false;
 
@@ -53,7 +53,7 @@ namespace DataAccessLayer
 
                                 else
 
-                                    RetakeTestApplicationID = -1;
+                                    RetakeTestApplicationID = null;
 
                             }
                         }
@@ -193,7 +193,7 @@ namespace DataAccessLayer
 
         }
 
-        public static int AddNewTestAppointment(int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate, float PaidFees, int CreatedByUserID , bool IsLcked  , int RetakeTestApplicationID)
+        public static int AddNewTestAppointment(int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate, float PaidFees, int CreatedByUserID , bool IsLcked  , int? RetakeTestApplicationID)
         {
 
             int NewTestAppointmentID = -1;
@@ -214,10 +214,10 @@ namespace DataAccessLayer
                     command.Parameters.AddWithValue("@PaidFees", PaidFees);
                     command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
                     command.Parameters.AddWithValue("@IsLocked", IsLcked);
-                    if(RetakeTestApplicationID == -1)
-                        command.Parameters.AddWithValue("@RetakeTestApplicationID", DBNull.Value);
-                    else
+                    if(RetakeTestApplicationID.HasValue)
                         command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
+                    else
+                        command.Parameters.AddWithValue("@RetakeTestApplicationID", null);
 
                     try
                     {
@@ -240,7 +240,7 @@ namespace DataAccessLayer
             return NewTestAppointmentID;
         }
 
-        public static bool UpdateTestAppointment(int TestAppointmentID , int TestTypeID , int LocalDrivingLicenseApplicationID , DateTime AppointmentDate , float PaidFees , int CreatedByUserID , bool IsLocked , int RetakeTestApplicationsID)
+        public static bool UpdateTestAppointment(int TestAppointmentID , int TestTypeID , int LocalDrivingLicenseApplicationID , DateTime AppointmentDate , float PaidFees , int CreatedByUserID , bool IsLocked , int? RetakeTestApplicationsID)
         {
 
             int RowAffected = 0;

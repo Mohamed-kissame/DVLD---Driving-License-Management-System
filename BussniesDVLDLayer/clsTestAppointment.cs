@@ -30,7 +30,7 @@ namespace BussniesDVLDLayer
 
         public bool _IsLocked { get; set; }
 
-        public int _RetakeTestAppointmentID { get; set; }
+        public int? _RetakeTestAppointmentID { get; set; }
 
         public ClsApplication RetakeTestAppInfo { set; get; }
 
@@ -52,23 +52,23 @@ namespace BussniesDVLDLayer
             this._PaidFees = 0;
             this._CreatedByUserID = -1;
             this._IsLocked = false;
-            this._RetakeTestAppointmentID = -1;
+            this._RetakeTestAppointmentID = null;
             _Mode = enMode.AddNew;
 
         }
 
-        private clsTestAppointment(int TestAppointmentID , int TestTypeID , int LocalDrivingLicenseApplicationID , DateTime AppointmentDate , float PaidFees , int CreatedByUserID , bool IsLocked , int RetakeTestAppintmentID)
+        private clsTestAppointment(int TestAppointmentID , int TestTypeID , int LocalDrivingLicenseApplicationID , DateTime AppointmentDate , float PaidFees , int CreatedByUserID , bool IsLocked , int? RetakeTestAppintmentID)
         {
 
             this._TestAppointmentID = TestAppointmentID;
             this._TestTypeID = (clsTestType.enTestType)TestTypeID;
             this._LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID;
             this._AppointmentDate = AppointmentDate;
-            this._PaidFees = 0;
+            this._PaidFees = PaidFees;
             this._CreatedByUserID = CreatedByUserID;
             this._IsLocked = IsLocked;
             this._RetakeTestAppointmentID = RetakeTestAppintmentID;
-            RetakeTestAppInfo = ClsApplication.FindBaseApplication(RetakeTestAppintmentID);
+            this.RetakeTestAppInfo = RetakeTestAppintmentID.HasValue ? ClsApplication.FindBaseApplication(this._RetakeTestAppointmentID.Value) : null;
 
             _Mode = enMode.Update;
         }
@@ -76,7 +76,7 @@ namespace BussniesDVLDLayer
 
         public static clsTestAppointment FindById(int TestAppointmentID)
         {
-            int LocalDrivingLicenseApplicationID = -1, CreatedByUserID = -1, RetakeTestAppointmentID = -1;
+            int LocalDrivingLicenseApplicationID = -1, CreatedByUserID = -1; int? RetakeTestAppointmentID = null;
              int TestTypeID = -1;
             DateTime AppintmentDate = DateTime.Now;
             float PaidFees = 0;
@@ -92,7 +92,7 @@ namespace BussniesDVLDLayer
         public static clsTestAppointment FindLastTestAppointment(int LocalDrivingLicenseApplicationID , clsTestType.enTestType TestTypeID)
         {
 
-            int TestAppointment = -1, CreatedyUserID = -1, RetakeTestAppointmentID = -1;
+            int TestAppointment = -1, CreatedyUserID = -1 ,RetakeTestAppointmentID = -1;
             DateTime AppintmentDate = DateTime.Now;
             float PaidFees = 0;
             bool IsLocked = false;
