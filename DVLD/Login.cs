@@ -34,7 +34,7 @@ namespace DVLD
 
             string UserName = "" ,  Password = "";
 
-            if(LoginInfo.GetStoredInfo(ref UserName , ref Password))
+            if(LoginInfo.GetStoreInfoFromRegistry(ref UserName , ref Password))
             {
 
                 textBox1.Text = UserName;
@@ -72,12 +72,12 @@ namespace DVLD
 
                 if (checkBox1.Checked)
                 {
-                    LoginInfo.RememberUserNameAndPassword(textBox1.Text.Trim(), textBox2.Text.Trim());
+                    LoginInfo.SaveTheUsernameAndPasswordInRegistry(textBox1.Text.Trim(), textBox2.Text.Trim());
                 }
                 else
                 {
 
-                    LoginInfo.RememberUserNameAndPassword("", "");
+                    LoginInfo.SaveTheUsernameAndPasswordInRegistry("", "");
 
                 }
 
