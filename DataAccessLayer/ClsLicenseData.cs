@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Logging;
 
 namespace DataAccessLayer
 {
@@ -66,18 +67,14 @@ namespace DataAccessLayer
 
 
                             }
-                            else
-                            {
-
-                                isFound = false;
-                            }
-
+                          
                         }
 
                     }
                     catch (Exception ex)
                     {
-
+                        isFound = false;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
 
                     }
 
@@ -127,6 +124,8 @@ namespace DataAccessLayer
                     }catch(Exception ex)
                     {
                         dt = null;
+
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
                 }
@@ -174,11 +173,7 @@ namespace DataAccessLayer
 
                                 dt.Load(reader);
                             }
-                            else
-                            {
-
-                                dt = null;
-                            }
+                           
 
                         }
 
@@ -187,6 +182,9 @@ namespace DataAccessLayer
 
                     }catch(Exception ex)
                     {
+
+                        dt = null;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
 
                     }
 
@@ -244,9 +242,10 @@ namespace DataAccessLayer
                         {
                             LicenseID = insertedID;
                         }
+
                     }catch(Exception ex)
                     {
-
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
 
@@ -310,9 +309,10 @@ namespace DataAccessLayer
                         connection.Open();
 
                         RowsAffected = command.ExecuteNonQuery();
+
                     }catch(Exception ex)
                     {
-
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
                 }
@@ -363,7 +363,7 @@ namespace DataAccessLayer
                     }
                     catch(Exception ex)
                     {
-
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
                 }
@@ -403,7 +403,7 @@ namespace DataAccessLayer
 
                     }catch(Exception ex)
                     {
-
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
                 }

@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Logging;
 
 namespace DataAccessLayer
 {
@@ -61,6 +62,7 @@ namespace DataAccessLayer
                     }catch(Exception ex)
                     {
                         isFound = false;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }
@@ -110,6 +112,7 @@ namespace DataAccessLayer
                     }catch(Exception ex)
                     {
                         isFound = false;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
 
@@ -147,6 +150,8 @@ namespace DataAccessLayer
                     {
 
                         dt = null;
+
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
                 }
@@ -184,6 +189,7 @@ namespace DataAccessLayer
                     }catch(Exception ex)
                     {
                         dt = null;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
 
@@ -229,9 +235,11 @@ namespace DataAccessLayer
                         if (Resulta != null && int.TryParse(Resulta.ToString(), out int NewTestAppo))
 
                             NewTestAppointmentID = NewTestAppo;
+
                     }catch(Exception ex)
                     {
                         NewTestAppointmentID = 1;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
                 }
@@ -280,7 +288,7 @@ namespace DataAccessLayer
                     }catch(Exception ex)
                     {
 
-                        RowAffected = 0;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
                 }
@@ -316,9 +324,11 @@ namespace DataAccessLayer
                             TestID = IDTest;
                             
                         }
+
                     }catch(Exception ex)
                     {
                         TestID = -1;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
 

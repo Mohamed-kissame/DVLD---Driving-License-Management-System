@@ -498,6 +498,10 @@
       <Project>{886827c1-3fd0-439e-86ef-aa8c720eae84}</Project>
       <Name>BussniesDVLDLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{c60cd657-0563-46a7-a66b-020088aec015}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user%284%29.png" />

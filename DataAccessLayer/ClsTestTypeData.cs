@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Logging;
 
 namespace DataAccessLayer
 {
@@ -51,6 +52,8 @@ namespace DataAccessLayer
                     {
 
                         IsFound = false;
+
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }
@@ -90,7 +93,7 @@ namespace DataAccessLayer
                     }
                     catch(Exception ex)
                     {
-
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
 
@@ -135,7 +138,7 @@ namespace DataAccessLayer
                     {
 
                         AddNewTest = -1;
-
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
                 
@@ -176,7 +179,7 @@ namespace DataAccessLayer
                         RowAffected = command.ExecuteNonQuery();
                     }catch(Exception ex)
                     {
-
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
 
                     }
 

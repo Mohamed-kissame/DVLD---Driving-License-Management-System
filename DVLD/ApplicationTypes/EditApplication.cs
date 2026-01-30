@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BussniesDVLDLayer;
+using Logging;
 
 namespace DVLD.ApplicationTypes
 {
@@ -59,12 +60,12 @@ namespace DVLD.ApplicationTypes
 
             if (Application.Update())
             {
-
+                Log.WriteLogger("Data Save Successfully", System.Diagnostics.EventLogEntryType.Information);
                 MessageBox.Show("Data Save Successfully", "Update Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-
+                Log.WriteLogger("Data Failed To Save", System.Diagnostics.EventLogEntryType.Error);
                 MessageBox.Show("Data Save Failed", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

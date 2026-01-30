@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer;
+using Logging;
 
 namespace BussniesDVLDLayer
 {
@@ -137,6 +138,7 @@ namespace BussniesDVLDLayer
 
                 return new ClsApplication(ApplicationID, PersonID, ApplicationDate, ApplicationTypeID, (enApplicationStatus)ApplicationStatus, LastStatusDate, PaidFees, CreatedByUser);
             else
+                Log.WriteLogger($"The Information with Id {ApplicationID} is Dosent Found Please check the Right ID", System.Diagnostics.EventLogEntryType.Warning);
                 return null;
 
         }

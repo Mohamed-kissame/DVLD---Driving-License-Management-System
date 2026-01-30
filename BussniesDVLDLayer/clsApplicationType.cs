@@ -6,6 +6,8 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer;
+using Logging;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BussniesDVLDLayer
 {
@@ -38,7 +40,7 @@ namespace BussniesDVLDLayer
 
                 return new clsApplicationType(ID, ApplicationType, Fees);
             else
-
+                Log.WriteLogger($"The Information with Id {ID} is Dosent Found Please check the Right ID", System.Diagnostics.EventLogEntryType.Warning);
                 return null;
 
         }

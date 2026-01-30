@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Logging;
 
 namespace DataAccessLayer
 {
@@ -59,6 +60,7 @@ namespace DataAccessLayer
                     } catch (Exception ex)
                     {
                         isFound = false;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
                 }
@@ -100,6 +102,7 @@ namespace DataAccessLayer
                     } catch (Exception ex)
                     {
                         dt = null;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }
@@ -149,6 +152,7 @@ namespace DataAccessLayer
                     catch (Exception ex)
                     {
                         NewInternationalLicenseID = -1;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
 
                     }
                 }
@@ -191,7 +195,7 @@ namespace DataAccessLayer
                     catch (Exception ex)
                     {
                         rowsAffected = 0;
-
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }
@@ -231,6 +235,8 @@ namespace DataAccessLayer
                     {
 
                         dt = null;
+
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }
@@ -266,6 +272,7 @@ namespace DataAccessLayer
                     }catch(Exception ex)
                     {
                         InternationalLicenseID = -1;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }

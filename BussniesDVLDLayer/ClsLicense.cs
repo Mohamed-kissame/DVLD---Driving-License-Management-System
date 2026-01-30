@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer;
+using Logging;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace BussniesDVLDLayer
 {
@@ -236,6 +238,8 @@ namespace BussniesDVLDLayer
 
             if (!Application.Save())
             {
+
+                Log.WriteLogger($"The Information About Application is Dosent Save", System.Diagnostics.EventLogEntryType.Error);
                 return null;
             }
 
@@ -258,6 +262,8 @@ namespace BussniesDVLDLayer
 
             if (!NewLicense.Save())
             {
+
+                Log.WriteLogger($"The Information About The NewLicense is dosent Save", System.Diagnostics.EventLogEntryType.Error);
                 return null;
             }
 
@@ -288,6 +294,7 @@ namespace BussniesDVLDLayer
 
             if (!Application.Save())
             {
+                Log.WriteLogger($"The Information About Application is Dosent Save", System.Diagnostics.EventLogEntryType.Error);
                 return null;
             }
 
@@ -308,6 +315,7 @@ namespace BussniesDVLDLayer
 
             if (!NewLicense.Save())
             {
+                Log.WriteLogger($"The Information About The Replace License is dosent Save", System.Diagnostics.EventLogEntryType.Error);
                 return null;
             }
 
@@ -352,6 +360,7 @@ namespace BussniesDVLDLayer
             if (!Application.Save())
             {
                 ApplicationID = -1;
+                Log.WriteLogger($"The Information About Application is dosent Save", System.Diagnostics.EventLogEntryType.Error);
                 return false;
             }
 

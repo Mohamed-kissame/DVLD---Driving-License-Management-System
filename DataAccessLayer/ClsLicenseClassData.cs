@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Logging;
 
 namespace DataAccessLayer
 {
@@ -50,6 +51,8 @@ namespace DataAccessLayer
                     {
 
                         isFound = false;
+
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
 
                     }
                 }
@@ -100,6 +103,8 @@ namespace DataAccessLayer
 
                         isFound = false;
 
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
+
                     }
                 }
             }
@@ -137,6 +142,8 @@ namespace DataAccessLayer
                     }catch(Exception ex)
                     {
                         dt = null;
+
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }

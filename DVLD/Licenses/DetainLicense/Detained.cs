@@ -143,5 +143,10 @@ namespace DVLD.Licenses.DetainLicense
             this.Close();
 
         }
+
+        private void ctrlDriverInfoWithFilter1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

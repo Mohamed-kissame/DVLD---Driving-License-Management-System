@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BussniesDVLDLayer;
 using DVLD.Classes;
 using DVLD.Licenses;
+using Logging;
 using static BussniesDVLDLayer.ClsLicense;
 
 namespace DVLD.Application.ReplaceForDamagedOrLost
@@ -74,6 +75,7 @@ namespace DVLD.Application.ReplaceForDamagedOrLost
 
             if (!ctrlDriverInfoWithFilter1.SelectedLicenseInfo._isActive)
             {
+                Log.WriteLogger("Selected License is not Not Active, choose an active license.", System.Diagnostics.EventLogEntryType.Error);
                 MessageBox.Show("Selected License is not Not Active, choose an active license.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 btnIssueReplace.Enabled = false;
                 return;
@@ -92,6 +94,7 @@ namespace DVLD.Application.ReplaceForDamagedOrLost
 
             if(NewLicense == null)
             {
+                Log.WriteLogger("Error occured while issuing the replacement license", System.Diagnostics.EventLogEntryType.Error);
                 MessageBox.Show("Error occured while issuing the replacement license","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return;
             }
@@ -152,6 +155,7 @@ namespace DVLD.Application.ReplaceForDamagedOrLost
 
             if (NewLicense == null)
             {
+                Log.WriteLogger("Error occured while issuing the replacement license", System.Diagnostics.EventLogEntryType.Error);
                 MessageBox.Show("Error occured while issuing the replacement license", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }

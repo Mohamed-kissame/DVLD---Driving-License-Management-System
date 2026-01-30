@@ -6,6 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using Logging;
 
 namespace DataAccessLayer
 {
@@ -49,6 +50,7 @@ namespace DataAccessLayer
                     }catch(Exception ex)
                     {
                         isFound = false;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }
@@ -93,6 +95,7 @@ namespace DataAccessLayer
                     }catch(Exception ex)
                     {
                         isFound = false;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
                 }
@@ -139,7 +142,7 @@ namespace DataAccessLayer
 
                     }catch(Exception ex)
                     {
-
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
 
                     }
                 
@@ -188,6 +191,7 @@ namespace DataAccessLayer
                     {
 
                         NewDriverID = -1;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
 
@@ -227,6 +231,7 @@ namespace DataAccessLayer
                     }catch(Exception ex)
                     {
                         RowAffected = 0;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }

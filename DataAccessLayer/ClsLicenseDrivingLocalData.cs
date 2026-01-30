@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Logging;
 
 namespace DataAccessLayer
 {
@@ -50,6 +51,7 @@ namespace DataAccessLayer
                     catch (Exception ex)
                     {
                         isFound = false;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
 
                     }
 
@@ -87,6 +89,7 @@ namespace DataAccessLayer
                     catch (Exception ex)
                     {
                         isFound = false;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
 
@@ -135,7 +138,7 @@ namespace DataAccessLayer
                     catch (Exception ex)
                     {
                         NewLicenseDrivingLocalID = -1;
-
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
 
@@ -173,9 +176,10 @@ namespace DataAccessLayer
                         RowAffected = command.ExecuteNonQuery();
 
                     }
-                    catch
+                    catch(Exception ex)
                     {
                         RowAffected = 0;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }
@@ -202,9 +206,10 @@ namespace DataAccessLayer
                         connection.Open();
                         RowAffected = command.ExecuteNonQuery();
                     }
-                    catch
+                    catch(Exception ex)
                     {
                         RowAffected = 0;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }
@@ -245,6 +250,8 @@ namespace DataAccessLayer
                     {
 
                         dt = null;
+
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
                 }
@@ -293,11 +300,12 @@ namespace DataAccessLayer
 
                             Result = Found;
                         }
+
                     }catch(Exception Ex)
                     {
 
                         Result = false;
-                      
+                        Log.WriteLogger(Ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
                 }
@@ -342,13 +350,11 @@ namespace DataAccessLayer
                         {
                             isFound = true;
                         }
-                        else
-                        {
-                            isFound = false;
-                        }
+                       
                     }catch(Exception Ex)
                     {
                         isFound = false;
+                        Log.WriteLogger(Ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
 
                 }
@@ -397,6 +403,7 @@ namespace DataAccessLayer
                     }catch(Exception Ex)
                     {
 
+                        Log.WriteLogger(Ex.Message, System.Diagnostics.EventLogEntryType.Error);
 
                     }
 
@@ -445,9 +452,10 @@ namespace DataAccessLayer
                         {
                             Result = false;
                         }
+
                     }catch(Exception Ex)
                     {
-
+                        Log.WriteLogger(Ex.Message, System.Diagnostics.EventLogEntryType.Error);
 
                     }
 

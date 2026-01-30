@@ -1,0 +1,6 @@
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\Logging\bin\Debug\Logging.dll
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\Logging\bin\Debug\Logging.pdb
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\Logging\obj\Debug\Logging.csproj.AssemblyReference.cache
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\Logging\obj\Debug\Logging.csproj.CoreCompileInputs.cache
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\Logging\obj\Debug\Logging.dll
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\Logging\obj\Debug\Logging.pdb

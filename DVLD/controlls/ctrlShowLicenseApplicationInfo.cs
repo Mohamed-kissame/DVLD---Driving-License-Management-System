@@ -11,6 +11,7 @@ using BussniesDVLDLayer;
 using DVLD.Classes;
 using DVLD.Licenses;
 using DVLD.Pepole;
+using Logging;
 
 namespace DVLD.controlls
 {
@@ -148,6 +149,7 @@ namespace DVLD.controlls
             }
             else
             {
+                Log.WriteLogger("No Active License for this Person", System.Diagnostics.EventLogEntryType.Information);
                 MessageBox.Show("No Active License for this Person", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 

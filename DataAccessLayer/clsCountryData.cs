@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Logging;
 
 namespace DataAccessLayer
 {
@@ -48,9 +49,10 @@ namespace DataAccessLayer
 
 
                     }
-                    catch (DataException ex)
+                    catch (Exception ex)
                     {
-                        Console.WriteLine("Error  : " + ex.Message);
+
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Warning);
                         
                     }
                 }
@@ -93,18 +95,17 @@ namespace DataAccessLayer
 
 
                             }
-                            else
-                            {
-                                isFound = false;
-                            }
+                          
                         }
 
 
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("Error  : " + ex.Message);
+                       
                         isFound = false;
+
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }
@@ -147,6 +148,7 @@ namespace DataAccessLayer
                     }catch(Exception ex)
                     {
 
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                        
                     }
                 }

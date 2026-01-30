@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BussniesDVLDLayer;
 using DVLD.Classes;
 using DVLD.Licenses;
+using Logging;
 
 namespace DVLD.InternationalLicense
 {
@@ -50,6 +51,7 @@ namespace DVLD.InternationalLicense
 
             if (ctrlDriverInfoWithFilter1.SelectedLicenseInfo._LicnseClass != 3)
             {
+                Log.WriteLogger("Selected License should be Class 3, select another one.", System.Diagnostics.EventLogEntryType.Information);
                 MessageBox.Show("Selected License should be Class 3, select another one.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -97,6 +99,8 @@ namespace DVLD.InternationalLicense
 
             if (!InternationalLicense.Save())
             {
+
+                Log.WriteLogger("Failed to Issue International License", System.Diagnostics.EventLogEntryType.Error);
                 MessageBox.Show("Faild to Issue International License", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return;
@@ -128,6 +132,11 @@ namespace DVLD.InternationalLicense
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ctrlDriverInfoWithFilter1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

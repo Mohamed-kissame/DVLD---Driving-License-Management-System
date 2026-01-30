@@ -90,6 +90,7 @@
             this.ctrlDriverInfoWithFilter1.Size = new System.Drawing.Size(631, 382);
             this.ctrlDriverInfoWithFilter1.TabIndex = 0;
             this.ctrlDriverInfoWithFilter1.OnLicenseSelected += new System.Action<int>(this.ctrlDriverInfoWithFilter1_OnLicenseSelected);
+            this.ctrlDriverInfoWithFilter1.Load += new System.EventHandler(this.ctrlDriverInfoWithFilter1_Load);
             // 
             // groupBox1
             // 

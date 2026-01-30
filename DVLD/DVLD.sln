@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussniesDVLDLayer", "..\Bus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "..\DataAccessLayer\DataAccessLayer.csproj", "{D785F7B6-9810-43DB-8DBB-CB736624BF28}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "..\Logging\Logging.csproj", "{C60CD657-0563-46A7-A66B-020088AEC015}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D785F7B6-9810-43DB-8DBB-CB736624BF28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D785F7B6-9810-43DB-8DBB-CB736624BF28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D785F7B6-9810-43DB-8DBB-CB736624BF28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C60CD657-0563-46A7-A66B-020088AEC015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C60CD657-0563-46A7-A66B-020088AEC015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C60CD657-0563-46A7-A66B-020088AEC015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C60CD657-0563-46A7-A66B-020088AEC015}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

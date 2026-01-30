@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Logging;
 
 namespace DataAccessLayer
 {
@@ -64,6 +65,7 @@ namespace DataAccessLayer
                     catch (Exception ex)
                     {
                         isFound = false;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Warning);
 
                     }
 
@@ -127,6 +129,7 @@ namespace DataAccessLayer
                     catch (Exception ex)
                     {
 
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
 
                     }
                 }
@@ -170,6 +173,7 @@ namespace DataAccessLayer
                     catch (Exception ex)
                     {
 
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
 
                     }
 
@@ -224,6 +228,7 @@ namespace DataAccessLayer
                     catch (Exception ex)
                     {
 
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
 
                     }
                 }
@@ -298,15 +303,15 @@ namespace DataAccessLayer
                         {
                             ActiveApplication = applicationID;
                         }
-                        else
-                        {
-                            ActiveApplication = -1;
-                        }
+                      
 
                     }
                     catch (Exception ex)
                     {
 
+                        ActiveApplication = -1;
+
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                     }
                 }
             }
@@ -349,8 +354,10 @@ namespace DataAccessLayer
                     }
                     catch (Exception ex)
                     {
+
+                        ActiveApplicationID = -1;
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Error);
                         
-                        return ActiveApplicationID;
                     }
                 }
             }
@@ -389,6 +396,8 @@ namespace DataAccessLayer
                     }
                     catch (Exception ex)
                     {
+
+                        Log.WriteLogger(ex.Message, System.Diagnostics.EventLogEntryType.Warning);
 
                     }
                 }

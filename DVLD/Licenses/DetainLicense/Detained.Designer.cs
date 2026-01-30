@@ -35,6 +35,11 @@
             this.lblDetainDate = new System.Windows.Forms.Label();
             this.lblLicense = new System.Windows.Forms.Label();
             this.lblDetainID = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,18 +51,13 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.ctrlDriverInfoWithFilter1 = new DVLD.Licenses.Controlls.CtrlDriverInfoWithFilter();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -77,9 +77,11 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 620);
+            this.groupBox1.Location = new System.Drawing.Point(8, 403);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(983, 181);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(655, 118);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detain Info";
@@ -87,9 +89,10 @@
             // txtFineFees
             // 
             this.txtFineFees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFineFees.Location = new System.Drawing.Point(235, 130);
+            this.txtFineFees.Location = new System.Drawing.Point(157, 84);
+            this.txtFineFees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFineFees.Name = "txtFineFees";
-            this.txtFineFees.Size = new System.Drawing.Size(100, 26);
+            this.txtFineFees.Size = new System.Drawing.Size(67, 20);
             this.txtFineFees.TabIndex = 14;
             this.txtFineFees.Validating += new System.ComponentModel.CancelEventHandler(this.txtFineFees_Validating);
             // 
@@ -97,9 +100,10 @@
             // 
             this.lblCreatedBy.AutoSize = true;
             this.lblCreatedBy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreatedBy.Location = new System.Drawing.Point(731, 86);
+            this.lblCreatedBy.Location = new System.Drawing.Point(487, 56);
+            this.lblCreatedBy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCreatedBy.Name = "lblCreatedBy";
-            this.lblCreatedBy.Size = new System.Drawing.Size(49, 20);
+            this.lblCreatedBy.Size = new System.Drawing.Size(36, 13);
             this.lblCreatedBy.TabIndex = 13;
             this.lblCreatedBy.Text = "[???]";
             // 
@@ -107,9 +111,10 @@
             // 
             this.lblDetainDate.AutoSize = true;
             this.lblDetainDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetainDate.Location = new System.Drawing.Point(231, 83);
+            this.lblDetainDate.Location = new System.Drawing.Point(154, 54);
+            this.lblDetainDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDetainDate.Name = "lblDetainDate";
-            this.lblDetainDate.Size = new System.Drawing.Size(109, 20);
+            this.lblDetainDate.Size = new System.Drawing.Size(83, 13);
             this.lblDetainDate.TabIndex = 12;
             this.lblDetainDate.Text = "[dd/mm/yyyy]";
             // 
@@ -117,9 +122,10 @@
             // 
             this.lblLicense.AutoSize = true;
             this.lblLicense.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLicense.Location = new System.Drawing.Point(731, 37);
+            this.lblLicense.Location = new System.Drawing.Point(487, 24);
+            this.lblLicense.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLicense.Name = "lblLicense";
-            this.lblLicense.Size = new System.Drawing.Size(39, 20);
+            this.lblLicense.Size = new System.Drawing.Size(29, 13);
             this.lblLicense.TabIndex = 11;
             this.lblLicense.Text = "[??]";
             // 
@@ -127,19 +133,76 @@
             // 
             this.lblDetainID.AutoSize = true;
             this.lblDetainID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetainID.Location = new System.Drawing.Point(231, 37);
+            this.lblDetainID.Location = new System.Drawing.Point(154, 24);
+            this.lblDetainID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDetainID.Name = "lblDetainID";
-            this.lblDetainID.Size = new System.Drawing.Size(39, 20);
+            this.lblDetainID.Size = new System.Drawing.Size(29, 13);
             this.lblDetainID.TabIndex = 10;
             this.lblDetainID.Text = "[??]";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::DVLD.Properties.Resources.user_4_;
+            this.pictureBox5.Location = new System.Drawing.Point(448, 54);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(16, 15);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 9;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::DVLD.Properties.Resources.id_card;
+            this.pictureBox4.Location = new System.Drawing.Point(448, 24);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(16, 15);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 8;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::DVLD.Properties.Resources.money;
+            this.pictureBox3.Location = new System.Drawing.Point(111, 86);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(16, 15);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::DVLD.Properties.Resources.calendar;
+            this.pictureBox2.Location = new System.Drawing.Point(111, 54);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(16, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DVLD.Properties.Resources.id_card;
+            this.pictureBox1.Location = new System.Drawing.Point(111, 24);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(548, 86);
+            this.label5.Location = new System.Drawing.Point(365, 56);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 20);
+            this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Created By :";
             // 
@@ -147,9 +210,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(548, 37);
+            this.label4.Location = new System.Drawing.Point(365, 24);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 20);
+            this.label4.Size = new System.Drawing.Size(76, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "License ID :";
             // 
@@ -157,9 +221,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 136);
+            this.label3.Location = new System.Drawing.Point(11, 88);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 20);
+            this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Fine Fees :";
             // 
@@ -167,9 +232,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 86);
+            this.label2.Location = new System.Drawing.Point(11, 56);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 20);
+            this.label2.Size = new System.Drawing.Size(83, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Detain Date :";
             // 
@@ -177,18 +243,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 37);
+            this.label1.Location = new System.Drawing.Point(11, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Detain ID :";
             // 
             // linkShowHistory
             // 
             this.linkShowHistory.AutoSize = true;
-            this.linkShowHistory.Location = new System.Drawing.Point(28, 821);
+            this.linkShowHistory.Location = new System.Drawing.Point(19, 534);
+            this.linkShowHistory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkShowHistory.Name = "linkShowHistory";
-            this.linkShowHistory.Size = new System.Drawing.Size(161, 20);
+            this.linkShowHistory.Size = new System.Drawing.Size(109, 13);
             this.linkShowHistory.TabIndex = 2;
             this.linkShowHistory.TabStop = true;
             this.linkShowHistory.Text = "Show License History";
@@ -198,9 +266,10 @@
             // 
             this.linkShowInfo.AutoSize = true;
             this.linkShowInfo.Enabled = false;
-            this.linkShowInfo.Location = new System.Drawing.Point(243, 821);
+            this.linkShowInfo.Location = new System.Drawing.Point(162, 534);
+            this.linkShowInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkShowInfo.Name = "linkShowInfo";
-            this.linkShowInfo.Size = new System.Drawing.Size(140, 20);
+            this.linkShowInfo.Size = new System.Drawing.Size(95, 13);
             this.linkShowInfo.TabIndex = 3;
             this.linkShowInfo.TabStop = true;
             this.linkShowInfo.Text = "Show License Info";
@@ -216,9 +285,10 @@
             this.btnDetain.FillColor = System.Drawing.Color.Green;
             this.btnDetain.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetain.ForeColor = System.Drawing.Color.White;
-            this.btnDetain.Location = new System.Drawing.Point(881, 807);
+            this.btnDetain.Location = new System.Drawing.Point(587, 525);
+            this.btnDetain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDetain.Name = "btnDetain";
-            this.btnDetain.Size = new System.Drawing.Size(114, 45);
+            this.btnDetain.Size = new System.Drawing.Size(76, 29);
             this.btnDetain.TabIndex = 4;
             this.btnDetain.Text = "Detain";
             this.btnDetain.Click += new System.EventHandler(this.btnDetain_Click);
@@ -233,9 +303,10 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Red;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(734, 807);
+            this.guna2Button2.Location = new System.Drawing.Point(489, 525);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(96, 45);
+            this.guna2Button2.Size = new System.Drawing.Size(64, 29);
             this.guna2Button2.TabIndex = 5;
             this.guna2Button2.Text = "Close";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -247,68 +318,20 @@
             // ctrlDriverInfoWithFilter1
             // 
             this.ctrlDriverInfoWithFilter1.FilterEnabled = true;
-            this.ctrlDriverInfoWithFilter1.Location = new System.Drawing.Point(32, 12);
+            this.ctrlDriverInfoWithFilter1.Location = new System.Drawing.Point(21, 8);
+            this.ctrlDriverInfoWithFilter1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.ctrlDriverInfoWithFilter1.Name = "ctrlDriverInfoWithFilter1";
-            this.ctrlDriverInfoWithFilter1.Size = new System.Drawing.Size(940, 602);
+            this.ctrlDriverInfoWithFilter1.Size = new System.Drawing.Size(627, 391);
             this.ctrlDriverInfoWithFilter1.TabIndex = 0;
             this.ctrlDriverInfoWithFilter1.OnLicenseSelected += new System.Action<int>(this.ctrlDriverInfoWithFilter1_OnLicenseSelected);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::DVLD.Properties.Resources.user_4_;
-            this.pictureBox5.Location = new System.Drawing.Point(672, 83);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 23);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 9;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::DVLD.Properties.Resources.id_card;
-            this.pictureBox4.Location = new System.Drawing.Point(672, 37);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 23);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::DVLD.Properties.Resources.money;
-            this.pictureBox3.Location = new System.Drawing.Point(167, 133);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 23);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::DVLD.Properties.Resources.calendar;
-            this.pictureBox2.Location = new System.Drawing.Point(167, 83);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 23);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::DVLD.Properties.Resources.id_card;
-            this.pictureBox1.Location = new System.Drawing.Point(167, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 23);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.ctrlDriverInfoWithFilter1.Load += new System.EventHandler(this.ctrlDriverInfoWithFilter1_Load);
             // 
             // Detained
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1007, 944);
+            this.ClientSize = new System.Drawing.Size(671, 614);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.btnDetain);
             this.Controls.Add(this.linkShowInfo);
@@ -316,17 +339,18 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ctrlDriverInfoWithFilter1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Detained";
             this.Text = "Detained";
             this.Load += new System.EventHandler(this.Detained_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

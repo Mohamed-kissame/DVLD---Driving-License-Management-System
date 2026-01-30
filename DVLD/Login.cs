@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BussniesDVLDLayer;
 using DVLD.Classes;
+using Logging;
 
 
 namespace DVLD
@@ -83,6 +84,7 @@ namespace DVLD
 
                 if (!_Users._IsActive)
                 {
+                    Log.WriteLogger("Your Account is Desactivated", System.Diagnostics.EventLogEntryType.Error);
                     MessageBox.Show("Your Account is Deactivated Please Contact Your Admin", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
@@ -96,6 +98,7 @@ namespace DVLD
             else
             {
                 textBox1.Focus();
+                Log.WriteLogger("Invalid Username/Password check your Information", System.Diagnostics.EventLogEntryType.Error);
                 MessageBox.Show("Invalid UserName/Password", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 

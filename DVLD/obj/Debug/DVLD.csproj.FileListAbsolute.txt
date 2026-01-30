@@ -135,3 +135,5 @@ C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.InternationalLi
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Applications.Release_Detained_Licenses.ListDetainedLicense.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Licenses.DetainLicense.Detained.resources
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\obj\Debug\DVLD.Licenses.ReleaseLicense.ReleaseLicense.resources
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\bin\Debug\Logging.dll
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DVLD\bin\Debug\Logging.pdb

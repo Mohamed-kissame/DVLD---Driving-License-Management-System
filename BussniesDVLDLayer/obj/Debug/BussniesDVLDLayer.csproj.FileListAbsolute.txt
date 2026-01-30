@@ -16,3 +16,5 @@ C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\BussniesDVLDLayer\obj\Debug\Bussnie
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\BussniesDVLDLayer\obj\Debug\Bussnies.31C39C61.Up2Date
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\BussniesDVLDLayer\obj\Debug\BussniesDVLDLayer.dll
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\BussniesDVLDLayer\obj\Debug\BussniesDVLDLayer.pdb
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\BussniesDVLDLayer\bin\Debug\Logging.dll
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\BussniesDVLDLayer\bin\Debug\Logging.pdb

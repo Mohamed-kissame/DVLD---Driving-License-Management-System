@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BussniesDVLDLayer;
 using DVLD.Classes;
 using DVLD.Licenses;
+using Logging;
 
 namespace DVLD.Application.RenewLicense
 {
@@ -58,7 +59,7 @@ namespace DVLD.Application.RenewLicense
 
             if (!ctrlDriverInfoWithFilter1.SelectedLicenseInfo.IsLicenseExpired())
             {
-
+                Log.WriteLogger("License is not expired yet , It Will Expire on " + clsFormat.DateToShort(ctrlDriverInfoWithFilter1.SelectedLicenseInfo._ExperienceDate), System.Diagnostics.EventLogEntryType.Warning);
                 MessageBox.Show("License is not expired yet , It Will Expire on " + clsFormat.DateToShort(ctrlDriverInfoWithFilter1.SelectedLicenseInfo._ExperienceDate), "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 btnRenew.Enabled = false;
                 return;
@@ -67,6 +68,8 @@ namespace DVLD.Application.RenewLicense
 
             if (!ctrlDriverInfoWithFilter1.SelectedLicenseInfo._isActive)
             {
+
+                Log.WriteLogger("License is not active chose another License", System.Diagnostics.EventLogEntryType.Information);
                 MessageBox.Show("License is not active chose another License", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 btnRenew.Enabled = false;
                 return;
@@ -105,6 +108,7 @@ namespace DVLD.Application.RenewLicense
 
             if (NewLicense == null)
             {
+                Log.WriteLogger("Error occured while renewing the license", System.Diagnostics.EventLogEntryType.Error);
                 MessageBox.Show("Error occured while renewing the license", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -118,6 +122,11 @@ namespace DVLD.Application.RenewLicense
             btnRenew.Enabled = false;
             ctrlDriverInfoWithFilter1.Enabled = false;
             linkNewLicenseInfo.Enabled = true;
+
+        }
+
+        private void ctrlDriverInfoWithFilter1_Load(object sender, EventArgs e)
+        {
 
         }
     }
