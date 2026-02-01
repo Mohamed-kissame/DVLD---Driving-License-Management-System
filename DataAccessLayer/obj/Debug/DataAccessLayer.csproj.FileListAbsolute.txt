@@ -4,12 +4,12 @@ C:\Users\mkiss\OneDrive\Bureau\DVLD\DataAccessLayer\obj\Debug\DataAccessLayer.cs
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\mkiss\OneDrive\Bureau\DVLD\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
-C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\bin\Debug\DataAccessLayer.dll
-C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
-C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\obj\Debug\DataAccessLayer.dll
-C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\bin\Debug\Logging.dll
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\bin\Debug\Logging.pdb
 C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\obj\Debug\DataAcce.E67BD773.Up2Date
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\mkiss\OneDrive\Bureau\Projects\DVLD\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
